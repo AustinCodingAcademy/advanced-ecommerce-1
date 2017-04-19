@@ -236,7 +236,7 @@ function App() {
                             <img src="http://placehold.it/320x150" alt=""/>
                             <div className="caption">
                                 <h4 className="pull-right">$94.99</h4>
-                                <h4><a href="#">Eitgh Product</a>
+                                <h4><a href="#">Eighth Product</a>
                                 </h4>
                                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
