@@ -5,10 +5,10 @@ import './App.css';
 function App() {
     return (
       <div className="App">
-     
+
     <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div className="container">
-          
+
             <div className="navbar-header">
                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span className="sr-only">Toggle navigation</span>
@@ -18,7 +18,7 @@ function App() {
                 </button>
                 <a className="navbar-brand" href="#">Start Bootstrap</a>
             </div>
-          
+
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul className="nav navbar-nav">
                     <li>
@@ -32,24 +32,15 @@ function App() {
                     </li>
                 </ul>
             </div>
-         
+
         </div>
-      
+
     </nav>
 
- 
+
     <div className="container">
 
         <div className="row">
-
-            <div className="col-md-3">
-                <p className="lead">Shop Name</p>
-                <div className="list-group">
-                    <a href="#" className="list-group-item">Category 1</a>
-                    <a href="#" className="list-group-item">Category 2</a>
-                    <a href="#" className="list-group-item">Category 3</a>
-                </div>
-            </div>
 
             <div className="col-md-9">
 
@@ -197,11 +188,93 @@ function App() {
                     </div>
 
                     <div className="col-sm-4 col-lg-4 col-md-4">
-                        <h4><a href="#">Like this template?</a>
-                        </h4>
-                        <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
-                        <a className="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
+                        <div className="thumbnail">
+                            <img src="http://placehold.it/320x150" alt=""/>
+                            <div className="caption">
+                                <h4 className="pull-right">$94.99</h4>
+                                <h4><a href="#">Sixth Product</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div className="ratings">
+                                <p className="pull-right">18 reviews</p>
+                                <p>
+                                    <span className="glyphicon glyphicon-star"></span>
+                                    <span className="glyphicon glyphicon-star"></span>
+                                    <span className="glyphicon glyphicon-star"></span>
+                                    <span className="glyphicon glyphicon-star"></span>
+                                    <span className="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
+
+                    <div className="col-sm-4 col-lg-4 col-md-4">
+                        <div className="thumbnail">
+                            <img src="http://placehold.it/320x150" alt=""/>
+                            <div className="caption">
+                                <h4 className="pull-right">$94.99</h4>
+                                <h4><a href="#">Seventh Product</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div className="ratings">
+                                <p className="pull-right">18 reviews</p>
+                                <p>
+                                    <span className="glyphicon glyphicon-star"></span>
+                                    <span className="glyphicon glyphicon-star"></span>
+                                    <span className="glyphicon glyphicon-star"></span>
+                                    <span className="glyphicon glyphicon-star"></span>
+                                    <span className="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-sm-4 col-lg-4 col-md-4">
+                        <div className="thumbnail">
+                            <img src="http://placehold.it/320x150" alt=""/>
+                            <div className="caption">
+                                <h4 className="pull-right">$94.99</h4>
+                                <h4><a href="#">Eitgh Product</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div className="ratings">
+                                <p className="pull-right">18 reviews</p>
+                                <p>
+                                    <span className="glyphicon glyphicon-star"></span>
+                                    <span className="glyphicon glyphicon-star"></span>
+                                    <span className="glyphicon glyphicon-star"></span>
+                                    <span className="glyphicon glyphicon-star"></span>
+                                    <span className="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-sm-4 col-lg-4 col-md-4">
+                        <div className="thumbnail">
+                            <img src="http://placehold.it/320x150" alt=""/>
+                            <div className="caption">
+                                <h4 className="pull-right">$94.99</h4>
+                                <h4><a href="#">Ninth Product</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div className="ratings">
+                                <p className="pull-right">18 reviews</p>
+                                <p>
+                                    <span className="glyphicon glyphicon-star"></span>
+                                    <span className="glyphicon glyphicon-star"></span>
+                                    <span className="glyphicon glyphicon-star"></span>
+                                    <span className="glyphicon glyphicon-star"></span>
+                                    <span className="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
 
@@ -210,12 +283,12 @@ function App() {
         </div>
 
     </div>
-   
+
     <div className="container">
 
         <hr/>
 
-      
+
         <footer>
             <div className="row">
                 <div className="col-lg-12">
