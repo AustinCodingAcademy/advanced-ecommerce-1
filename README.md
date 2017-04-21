@@ -14,3 +14,5 @@ Fork, clone, run yarn install, yarn start, pull request
 * App should map the array of products into an array of ProductDetails
 * ProductDetail should take one product
 * Make the star images represent the number rating from data
+
+James Puckett
