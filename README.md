@@ -7,6 +7,7 @@ Fork, clone, run yarn install, yarn start, pull request
    * Header
    * Footer
    * Carousel
+   * StarRating
  * Create a component folder to hold component files
  * Make sure each component is in its own file and imported into App.js
  * Use the provided data in state.js to dynamically populate information instead of the hard coded html that is there now.
