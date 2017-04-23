@@ -2,8 +2,9 @@ import React from 'react';
 
 function StarRating(props){
     let stars = props.stars;
-    let starRating = []
-    for(var i =0; i < 5; i++){
+    let starRating = [];
+    const MAX_STARS = 5;
+    for(var i =0; i < MAX_STARS; i++){
       if(stars>0){
         starRating.push(<span className="glyphicon glyphicon-star"></span>);
         stars--;
