@@ -1,7 +1,8 @@
 import React from "react";
 // import "./App.css";
 
-function NavBar () {
+function NavBar (props) {
+  let NavBar = props.NavBar;
   return (
   <nav id="navbar" className="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div className="container">
