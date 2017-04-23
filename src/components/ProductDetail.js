@@ -6,7 +6,7 @@ function ProductDetail(props){
     let itemDivs = items.map(function (item, index) {
       return (
 
-          <div>
+          <div key={index}>
 
               <div className="col-sm-4 col-lg-4 col-md-4">
                   <div className="thumbnail">
