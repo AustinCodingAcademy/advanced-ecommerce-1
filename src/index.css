@@ -1,0 +1,13 @@
+.product-image{
+  height: 350px !important;
+  width: 350px !important;;
+}
+
+@media (max-width: 767px){
+  .product-image{
+    height: 550px !important;
+    width: 600px !important;
+  }
+
+
+}
