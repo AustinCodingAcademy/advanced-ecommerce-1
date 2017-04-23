@@ -34,7 +34,7 @@ export default {
   }, {
     "id": 5,
     "name": "Decolorized Iodine",
-    "description": "Injury of prostate",
+    "description": "Injury treatment",
     "reviews": 20,
     "rating": 1,
     "imgUrl": "http://dummyimage.com/120x245.jpg/cc0000/ffffff",
@@ -42,7 +42,7 @@ export default {
   }, {
     "id": 6,
     "name": "Fresh Sugar Honey Tinted Lip Treatment SPF15",
-    "description": "Unspecified open wound of vagina and vulva",
+    "description": "Unspecified wound balm",
     "reviews": 79,
     "rating": 3,
     "imgUrl": "http://dummyimage.com/211x227.bmp/5fa2dd/ffffff",

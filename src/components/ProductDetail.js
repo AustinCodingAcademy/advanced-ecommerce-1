@@ -1,119 +1,50 @@
 import React from "react";
 
-function ProductDetail(){
+
+
+function fillStars(value){
+  var arr=[];
+  for (var i=0; i<value; i++){
+    arr.push(<span className="glyphicon glyphicon-star"></span>)
+  }
+  return arr;
+};
+
+function ProductDetail(props){
+
+
+let state = props.state
+
+
+let productDivs = state.map(function(product, index){
+
+  return (
+  <div key={index}>
+    <div className="col-sm-4 col-lg-4 col-md-4">
+      <div className="thumbnail">
+          <img src={product.imgUrl} alt="" className="size"/>
+          <div className="caption">
+              <h4 className="pull-right">{product.price}</h4>
+              <br />
+              <h4 className="title"><a href="#">{product.name}</a>
+              </h4>
+              <p>{product.description}</p>
+          </div>
+          <div className="ratings">
+              <p className="pull-right">{product.reviews} Reviews</p>
+              <p>
+                {fillStars(product.rating)}
+              </p>
+          </div>
+      </div>
+    </div>
+  </div>)
+});
+
   return(
     <div className="row">
 
-        <div className="col-sm-4 col-lg-4 col-md-4">
-            <div className="thumbnail">
-                <img src="http://placehold.it/320x150" alt=""/>
-                <div className="caption">
-                    <h4 className="pull-right">$24.99</h4>
-                    <h4><a href="#">First Product</a>
-                    </h4>
-                    <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-                </div>
-                <div className="ratings">
-                    <p className="pull-right">15 reviews</p>
-                    <p>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star"></span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div className="col-sm-4 col-lg-4 col-md-4">
-            <div className="thumbnail">
-                <img src="http://placehold.it/320x150" alt=""/>
-                <div className="caption">
-                    <h4 className="pull-right">$64.99</h4>
-                    <h4><a href="#">Second Product</a>
-                    </h4>
-                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div className="ratings">
-                    <p className="pull-right">12 reviews</p>
-                    <p>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star-empty"></span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div className="col-sm-4 col-lg-4 col-md-4">
-            <div className="thumbnail">
-                <img src="http://placehold.it/320x150" alt=""/>
-                <div className="caption">
-                    <h4 className="pull-right">$74.99</h4>
-                    <h4><a href="#">Third Product</a>
-                    </h4>
-                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div className="ratings">
-                    <p className="pull-right">31 reviews</p>
-                    <p>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star-empty"></span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div className="col-sm-4 col-lg-4 col-md-4">
-            <div className="thumbnail">
-                <img src="http://placehold.it/320x150" alt=""/>
-                <div className="caption">
-                    <h4 className="pull-right">$84.99</h4>
-                    <h4><a href="#">Fourth Product</a>
-                    </h4>
-                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div className="ratings">
-                    <p className="pull-right">6 reviews</p>
-                    <p>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star-empty"></span>
-                        <span className="glyphicon glyphicon-star-empty"></span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div className="col-sm-4 col-lg-4 col-md-4">
-            <div className="thumbnail">
-                <img src="http://placehold.it/320x150" alt=""/>
-                <div className="caption">
-                    <h4 className="pull-right">$94.99</h4>
-                    <h4><a href="#">Fifth Product</a>
-                    </h4>
-                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div className="ratings">
-                    <p className="pull-right">18 reviews</p>
-                    <p>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star-empty"></span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
+    {productDivs}
         <div className="col-sm-4 col-lg-4 col-md-4">
             <h4><a href="#">Like this template?</a>
             </h4>
