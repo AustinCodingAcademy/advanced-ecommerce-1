@@ -3,7 +3,7 @@ import StarRating from './StarRating'
 
 function ProductDetail(props) {
   const { product } = props;
-  
+
   return (
     <div className="col-sm-4 col-lg-4 col-md-4">
       <div className="thumbnail">
@@ -15,7 +15,7 @@ function ProductDetail(props) {
         </div>
         <div className="ratings">
           <p className="pull-right">{product.reviews} reviews</p>
-          <StarRating product={product} />
+          <StarRating rating={product.rating} />
         </div>
       </div>
     </div>
