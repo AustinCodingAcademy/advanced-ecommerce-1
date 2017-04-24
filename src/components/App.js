@@ -6,7 +6,22 @@ import Carousel from "./Carousel";
 import ProductDetail from "./ProductDetail";
 import TemplateTutorial from "./TemplateTutorial";
 
-function App() {
+function App(props) {
+  const productDetails = props.state.products.map((each, index) => {
+    return (
+    [
+      <ProductDetail
+        key={index}
+        name={props.state.products[index].name}
+        desc={props.state.products[index].description}
+        reviews={props.state.products[index].reviews}
+        rating={props.state.products[index].rating}
+        imgUrl={props.state.products[index].imgUrl}
+        price={props.state.products[index].price}
+      />,
+    ]
+    );
+  });
   return (
     <div className="App">
       <Header />
@@ -21,11 +36,7 @@ function App() {
         </div>
 
         <div className="row">
-          <ProductDetail />
-          <ProductDetail />
-          <ProductDetail />
-          <ProductDetail />
-          <ProductDetail />
+          {productDetails}
           <TemplateTutorial />
         </div>
 

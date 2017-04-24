@@ -1,38 +1,30 @@
 import React from "react";
 
-function ProductDetail() {
+function ProductDetail(props) {
   return (
     <div className="col-sm-4 col-lg-4 col-md-4">
       <div className="thumbnail">
         <img
-          src="http://placehold.it/320x150"
+          src={props.imgUrl}
           alt=""
         />
         <div className="caption">
-          <h4 className="pull-right">
-            $24.99
-          ]</h4>
           <h4>
-            <a href="#">First Product</a>
+            <a href="#">{props.name}</a>
+          </h4>
+          <h4 className="">
+            {props.price}
           </h4>
           <p>
-            See more snippets like this online store item at
-            <a
-              target="_blank"
-              href="http://www.bootsnipp.com">
-              Bootsnipp
-            </a>
+            {props.desc}
           </p>
         </div>
         <div className="ratings">
           <p className="pull-right">
-            15 reviews
+            {props.reviews} reviews
           </p>
           <p>
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star" />
+            {props.rating}
             <span className="glyphicon glyphicon-star" />
           </p>
         </div>
