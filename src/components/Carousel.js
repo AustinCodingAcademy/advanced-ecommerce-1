@@ -3,13 +3,6 @@ import React from "react";
 
 
 class Carousel extends React.Component {
-  constructor(props) {
-    super(props);
-//    console.log("contructor", props);
-//		this.props = {
-//			name: this.user.name,
-//		}
-  }
   render() {
     return (
       <div className="row carousel-holder">

@@ -3,13 +3,7 @@ import React from "react";
 
 
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
-//    console.log("contructor", props);
-//		this.state = {
-//			id: this.products.id,
-//		}
-  }
+
   render() {
     return (
       <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">

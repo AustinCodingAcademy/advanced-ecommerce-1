@@ -5,36 +5,10 @@ import Carousel from "./Carousel";
 
 
 class ProductDetail extends React.Component {
-//  constructor(props) {
-//    super(props);
-//    const initProps = props.props;
-//    console.log("initProps", initProps);
-//    const propsArray = initProps.products;
-//    console.log("propsArray", propsArray);
-//    console.log("products id", props.props.products[0]);
-// //    const propsMap = propsArray.map(function (product, index) {
-// //      return {
-// //        id: props.id,
-// //      };
-// //    });
-// //    this.state = {
-// //      id: this.products.id,
-// //    };
-// //    const userDivs = props.products.map(function (user, index) {
-// //      return {
-// //        id: props.id,
-// //				name: props.name,
-// //				
-// //      };
-// //    });
-// //		<div key={index}>{users.first_name}</div>;
-//  }
-  render(props) {
-    
-    console.log("in render", this.props);
+  render() {
     const products = this.props;
-    console.log("products", products.props.products);
     const ProductList = products.props.products.map(function (product, index) {
+      console.log("starnumber", product.rating);
       const stars = function () {
         if (product.rating === 5) {
           return (
@@ -53,6 +27,7 @@ class ProductDetail extends React.Component {
               <span className="glyphicon glyphicon-star" />
               <span className="glyphicon glyphicon-star" />
               <span className="glyphicon glyphicon-star" />
+              <span className="glyphicon glyphicon-star-empty" />
             </p>
           );
         } else if (product.rating === 3) {
@@ -61,6 +36,8 @@ class ProductDetail extends React.Component {
               <span className="glyphicon glyphicon-star" />
               <span className="glyphicon glyphicon-star" />
               <span className="glyphicon glyphicon-star" />
+              <span className="glyphicon glyphicon-star-empty" />
+              <span className="glyphicon glyphicon-star-empty" />
             </p>
           );
         } else if (product.rating === 2) {
@@ -68,33 +45,40 @@ class ProductDetail extends React.Component {
             <p>
               <span className="glyphicon glyphicon-star" />
               <span className="glyphicon glyphicon-star" />
+              <span className="glyphicon glyphicon-star-empty" />
+              <span className="glyphicon glyphicon-star-empty" />
+              <span className="glyphicon glyphicon-star-empty" />
             </p>
           );
         } 
         return (
           <p>
             <span className="glyphicon glyphicon-star" />
+            <span className="glyphicon glyphicon-star-empty" />
+            <span className="glyphicon glyphicon-star-empty" />
+            <span className="glyphicon glyphicon-star-empty" />
+            <span className="glyphicon glyphicon-star-empty" />
           </p>
         );
 				
       };
       console.log("stars", stars);
       return (
-          <div className="col-sm-4 col-lg-4 col-md-4 key={index}">
-            <div className="thumbnail">
-              <img src={product.imgUrl} alt="" />
-              <div className="caption">
-                <h4 className="pull-right">{product.price}</h4>
-                <h4><a href="#">{product.name}</a>
-                </h4>
-                <p>{product.description}</p>
-              </div>
-              <div className="ratings">
-                <p className="pull-right">{product.reviews}</p>
-                
-              </div>
+        <div className="col-sm-4 col-lg-4 col-md-4" key={index}>
+          <div className="thumbnail">
+            <img src={product.imgUrl} alt="" />
+            <div className="caption">
+              <h4 className="pull-right">{product.price}</h4>
+              <h4><a href="#">{product.name}</a>
+              </h4>
+              <p>{product.description}</p>
+            </div>
+            <div className="ratings">
+              <p className="pull-right">{product.reviews}</p>
+              {stars}
             </div>
           </div>
+        </div>
       );
     });
     console.log("prodcut list", ProductList);
@@ -132,6 +116,5 @@ class ProductDetail extends React.Component {
   }
 }
 
-		 
 export default ProductDetail;
 
