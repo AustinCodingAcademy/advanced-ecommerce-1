@@ -1,5 +1,7 @@
 import React from "react";
 import Carousel from "./Carousel";
+// import Productz from "./Productz";
+
 
 
 class ProductDetail extends React.Component {
@@ -28,7 +30,74 @@ class ProductDetail extends React.Component {
 // //		<div key={index}>{users.first_name}</div>;
 //  }
   render(props) {
+    
     console.log("in render", this.props);
+    const products = this.props;
+    console.log("products", products.props.products);
+    const ProductList = products.props.products.map(function (product, index) {
+      const stars = function () {
+        if (product.rating === 5) {
+          return (
+            <p>
+              <span className="glyphicon glyphicon-star" />
+              <span className="glyphicon glyphicon-star" />
+              <span className="glyphicon glyphicon-star" />
+              <span className="glyphicon glyphicon-star" />
+              <span className="glyphicon glyphicon-star" />
+            </p>
+          );
+        } else if (product.rating === 4) {
+          return (
+            <p>
+              <span className="glyphicon glyphicon-star" />
+              <span className="glyphicon glyphicon-star" />
+              <span className="glyphicon glyphicon-star" />
+              <span className="glyphicon glyphicon-star" />
+            </p>
+          );
+        } else if (product.rating === 3) {
+          return (
+            <p>
+              <span className="glyphicon glyphicon-star" />
+              <span className="glyphicon glyphicon-star" />
+              <span className="glyphicon glyphicon-star" />
+            </p>
+          );
+        } else if (product.rating === 2) {
+          return (
+            <p>
+              <span className="glyphicon glyphicon-star" />
+              <span className="glyphicon glyphicon-star" />
+            </p>
+          );
+        } 
+        return (
+          <p>
+            <span className="glyphicon glyphicon-star" />
+          </p>
+        );
+				
+      };
+      console.log("stars", stars);
+      return (
+          <div className="col-sm-4 col-lg-4 col-md-4 key={index}">
+            <div className="thumbnail">
+              <img src={product.imgUrl} alt="" />
+              <div className="caption">
+                <h4 className="pull-right">{product.price}</h4>
+                <h4><a href="#">{product.name}</a>
+                </h4>
+                <p>{product.description}</p>
+              </div>
+              <div className="ratings">
+                <p className="pull-right">{product.reviews}</p>
+                
+              </div>
+            </div>
+          </div>
+      );
+    });
+    console.log("prodcut list", ProductList);
     return ( 
       <div className="container">
 				
@@ -49,133 +118,20 @@ class ProductDetail extends React.Component {
 
             <div className="row">
 
-              <div className="col-sm-4 col-lg-4 col-md-4">
-                <div className="thumbnail">
-                  <img src="http://placehold.it/320x150" alt="" />
-                  <div className="caption">
-                    <h4 className="pull-right">$24.99</h4>
-                    <h4><a href="#">First Product</a>
-                    </h4>
-                    <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-                  </div>
-                  <div className="ratings">
-                    <p className="pull-right">15 reviews</p>
-                    <p>
-                      <span className="glyphicon glyphicon-star" />
-                      <span className="glyphicon glyphicon-star" />
-                      <span className="glyphicon glyphicon-star" />
-                      <span className="glyphicon glyphicon-star" />
-                      <span className="glyphicon glyphicon-star" />
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-sm-4 col-lg-4 col-md-4">
-                <div className="thumbnail">
-                  <img src="http://placehold.it/320x150" alt="" />
-                  <div className="caption">
-                    <h4 className="pull-right">$64.99</h4>
-                    <h4><a href="#">Second Product</a>
-                    </h4>
-                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                  <div className="ratings">
-                    <p className="pull-right">12 reviews</p>
-                    <p>
-                      <span className="glyphicon glyphicon-star" />
-                      <span className="glyphicon glyphicon-star" />
-                      <span className="glyphicon glyphicon-star" />
-                      <span className="glyphicon glyphicon-star" />
-                      <span className="glyphicon glyphicon-star-empty" />
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-sm-4 col-lg-4 col-md-4">
-                <div className="thumbnail">
-                  <img src="http://placehold.it/320x150" alt="" />
-                  <div className="caption">
-                    <h4 className="pull-right">$74.99</h4>
-                    <h4><a href="#">Third Product</a>
-                    </h4>
-                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                  <div className="ratings">
-                    <p className="pull-right">31 reviews</p>
-                    <p>
-                      <span className="glyphicon glyphicon-star" />
-                      <span className="glyphicon glyphicon-star" />
-                      <span className="glyphicon glyphicon-star" />
-                      <span className="glyphicon glyphicon-star" />
-                      <span className="glyphicon glyphicon-star-empty" />
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-sm-4 col-lg-4 col-md-4">
-                <div className="thumbnail">
-                  <img src="http://placehold.it/320x150" alt="" />
-                  <div className="caption">
-                    <h4 className="pull-right">$84.99</h4>
-                    <h4><a href="#">Fourth Product</a>
-                    </h4>
-                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                  <div className="ratings">
-                    <p className="pull-right">6 reviews</p>
-                    <p>
-                      <span className="glyphicon glyphicon-star" />
-                      <span className="glyphicon glyphicon-star" />
-                      <span className="glyphicon glyphicon-star" />
-                      <span className="glyphicon glyphicon-star-empty" />
-                      <span className="glyphicon glyphicon-star-empty" />
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-sm-4 col-lg-4 col-md-4">
-                <div className="thumbnail">
-                  <img src="http://placehold.it/320x150" alt="" />
-                  <div className="caption">
-                    <h4 className="pull-right">$94.99</h4>
-                    <h4><a href="#">Fifth Product</a>
-                    </h4>
-                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                  <div className="ratings">
-                    <p className="pull-right">18 reviews</p>
-                    <p>
-                      <span className="glyphicon glyphicon-star" />
-                      <span className="glyphicon glyphicon-star" />
-                      <span className="glyphicon glyphicon-star" />
-                      <span className="glyphicon glyphicon-star" />
-                      <span className="glyphicon glyphicon-star-empty" />
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-sm-4 col-lg-4 col-md-4">
-                <h4><a href="#">Like this template?</a>
-                </h4>
-                <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
-                <a className="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
-              </div>
+              {ProductList}
 
             </div>
 
           </div>
 
         </div>
-
+				
       </div>
+			
     );
   }
 }
 
 		 
 export default ProductDetail;
+
