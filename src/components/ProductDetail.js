@@ -1,5 +1,6 @@
 import React from "react";
 import StarRating from "./StarRating";
+import propTypes from "prop-types";
 
 function ProductDetail(props) {
   const {product} = props;
@@ -21,5 +22,9 @@ function ProductDetail(props) {
     </div>
   );
 }
+
+ProductDetail.propTypes = {
+  product: propTypes.object.isRequired
+};
 
 export default ProductDetail;

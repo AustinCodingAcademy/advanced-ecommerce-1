@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from "prop-types";
 
 function StarRating(props) {
   const {rating} = props;
@@ -11,4 +12,9 @@ function StarRating(props) {
     <p>{starSpans}</p>
   );
 }
+
+StarRating.propTypes = {
+  rating: propTypes.object.isRequired
+};
+
 export default StarRating;

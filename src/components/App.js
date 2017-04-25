@@ -3,6 +3,7 @@ import Header from "./Header";
 import Carousel from "./Carousel";
 import ProductDetail from "./ProductDetail";
 import Footer from "./Footer";
+import propTypes from "prop-types";
 
 function App(props) {
   const {products} = props;
@@ -35,4 +36,9 @@ function App(props) {
     </div>
   );
 }
+
+App.propTypes = {
+  products: propTypes.object.isRequired
+};
+
 export default App;
