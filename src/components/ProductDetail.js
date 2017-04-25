@@ -1,70 +1,26 @@
 import React from "react";
 import Carousel from "./Carousel";
-// import Productz from "./Productz";
-
+const _ = require("lodash");
 
 
 class ProductDetail extends React.Component {
   render() {
-    const products = this.props;
-    const ProductList = products.props.products.map(function (product, index) {
-      console.log("starnumber", product.rating);
-      const stars = function () {
-        if (product.rating === 5) {
-          return (
-            <p>
-              <span className="glyphicon glyphicon-star" />
-              <span className="glyphicon glyphicon-star" />
-              <span className="glyphicon glyphicon-star" />
-              <span className="glyphicon glyphicon-star" />
-              <span className="glyphicon glyphicon-star" />
-            </p>
-          );
-        } else if (product.rating === 4) {
-          return (
-            <p>
-              <span className="glyphicon glyphicon-star" />
-              <span className="glyphicon glyphicon-star" />
-              <span className="glyphicon glyphicon-star" />
-              <span className="glyphicon glyphicon-star" />
-              <span className="glyphicon glyphicon-star-empty" />
-            </p>
-          );
-        } else if (product.rating === 3) {
-          return (
-            <p>
-              <span className="glyphicon glyphicon-star" />
-              <span className="glyphicon glyphicon-star" />
-              <span className="glyphicon glyphicon-star" />
-              <span className="glyphicon glyphicon-star-empty" />
-              <span className="glyphicon glyphicon-star-empty" />
-            </p>
-          );
-        } else if (product.rating === 2) {
-          return (
-            <p>
-              <span className="glyphicon glyphicon-star" />
-              <span className="glyphicon glyphicon-star" />
-              <span className="glyphicon glyphicon-star-empty" />
-              <span className="glyphicon glyphicon-star-empty" />
-              <span className="glyphicon glyphicon-star-empty" />
-            </p>
-          );
-        } 
-        return (
-          <p>
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star-empty" />
-            <span className="glyphicon glyphicon-star-empty" />
-            <span className="glyphicon glyphicon-star-empty" />
-            <span className="glyphicon glyphicon-star-empty" />
-          </p>
-        );
-				
-      };
-      console.log("stars", stars);
+    const paper = this.props;
+    const ProductList = paper.props.products.map(function (product, index) {
+			// cannot figure out how to give these keys without it throwing errors in the code.
+      const initialRatings = [
+        <span key={index + product.id + "a"} className="glyphicon glyphicon-star" />,
+        <span key={index + product.id + "b"} className="glyphicon glyphicon-star" />,
+        <span key={index + product.id + "c"} className="glyphicon glyphicon-star" />,
+        <span key={index + product.id + "d"} className="glyphicon glyphicon-star" />,
+        <span key={index + product.id + "e"} className="glyphicon glyphicon-star" />
+      ];
+      const notEmptyRating = <span className="glyphicon glyphicon-star-empty" />;
+      const filledRating = _.fill(initialRatings, notEmptyRating, product.rating, initialRatings.length);
+
+			
       return (
-        <div className="col-sm-4 col-lg-4 col-md-4" key={index}>
+        <div className="col-sm-4 col-lg-4 col-md-4" key={product.id}>
           <div className="thumbnail">
             <img src={product.imgUrl} alt="" />
             <div className="caption">
@@ -75,7 +31,7 @@ class ProductDetail extends React.Component {
             </div>
             <div className="ratings">
               <p className="pull-right">{product.reviews}</p>
-              {stars}
+              {filledRating}
             </div>
           </div>
         </div>
@@ -117,4 +73,3 @@ class ProductDetail extends React.Component {
 }
 
 export default ProductDetail;
-
