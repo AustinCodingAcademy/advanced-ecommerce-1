@@ -34,13 +34,4 @@ function ProductDetail(props) {
   );
 }
 
-ProductDetail.propTypes = {
-  imgUrl: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
-  desc: PropTypes.string.isRequired,
-  reviews: PropTypes.integer.isRequired,
-  rating: PropTypes.integer.isRequired
-};
-
 export default ProductDetail;

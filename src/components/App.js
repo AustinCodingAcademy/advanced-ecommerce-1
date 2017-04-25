@@ -5,7 +5,6 @@ import CategoryList from "./CategoryList";
 import Carousel from "./Carousel";
 import ProductDetail from "./ProductDetail";
 import TemplateTutorial from "./TemplateTutorial";
-import PropTypes from "prop-types";
 
 function App(props) {
   const productDetails = props.state.products.map(product => {
@@ -50,10 +49,5 @@ function App(props) {
     </div>
   );
 }
-
-App.propTypes = {
-  state: PropTypes.object.isRequired,
-  products: PropTypes.array.isRequired
-};
 
 export default App;
