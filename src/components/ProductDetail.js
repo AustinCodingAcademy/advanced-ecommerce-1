@@ -21,8 +21,8 @@ function Stars(props) {
 
 function ProductDetail(props) {
   let items = props.items.products;
-  // const {name, description, reviews, rating, imgUrl, price} = state;
   let productDivs = items.map(function (item, index) {
+
     return (
       <div key={index}>
         <div className="col-sm-4 col-lg-4 col-md-4">
@@ -37,7 +37,7 @@ function ProductDetail(props) {
             <div className="ratings">
               <p className="pull-right">{item.reviews} reviews</p>
 
-              <p> {/* write loop that returns x number of spans = {rating} */}
+              <p>
                 <Stars stars={item.rating} />
               </p>
             </div>

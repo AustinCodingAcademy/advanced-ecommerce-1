@@ -10,8 +10,6 @@ import Footer from "./components/Footer";
 
 function App(props) {
 
-  // var items = props.items;
-
   return (
 
     <div className="App">
