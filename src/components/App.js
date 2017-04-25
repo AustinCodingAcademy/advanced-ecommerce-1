@@ -30,7 +30,14 @@ export default class App extends React.Component {
                 {
                   state.products.map((product) => {
                     return (
-                      <ProductDetail key={product.id} product={product} />
+                      <ProductDetail
+                        key={product.id}
+                        product={product.name}
+                        description={product.description}
+                        reviews={product.reviews}
+                        rating={product.rating}
+                        imgUrl={product.imgUrl}
+                        price={product.price} />
                     );
                   })
                 }
