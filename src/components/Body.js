@@ -7,30 +7,26 @@ function Body() {
   console.log(products);
   return (
     <div className="container">
-
       <div className="row">
-
-        <div className="col-md-9">
-
+        <div className="col-md-10 col-xs-offset-1">
           <div className="row">
             {
               products.map(product => {
                 return (
                   <ProductDetail
+                    key={product.id}
                     price={product.price}
                     description={product.description}
                     reviews={product.reviews}
                     name={product.name}
+                    url={product.imgUrl}
                   />
                 );
               })
             }
           </div>
-
         </div>
-
       </div>
-
     </div>
   );
 }

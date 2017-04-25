@@ -5,9 +5,9 @@ function ProductDetail(props) {
   return (
     <div className="col-sm-4 col-lg-4 col-md-4">
       <div className="thumbnail">
-        <img src="http://placehold.it/320x150" alt="" />
+        <img src={props.url} alt="" />
         <div className="caption">
-          <h4 className="pull-right">{props.price}</h4>
+          <h4>{props.price}</h4>
           <h4><a href="#">{props.name}</a>
           </h4>
           <p>{props.description}</p>
