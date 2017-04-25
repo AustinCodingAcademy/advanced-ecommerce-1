@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function ProductDetail(props) {
   return (
@@ -32,5 +33,14 @@ function ProductDetail(props) {
     </div>
   );
 }
+
+ProductDetail.propTypes = {
+  imgUrl: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  reviews: PropTypes.integer.isRequired,
+  rating: PropTypes.integer.isRequired
+};
 
 export default ProductDetail;

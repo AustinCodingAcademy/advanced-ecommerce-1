@@ -5,21 +5,16 @@ import CategoryList from "./CategoryList";
 import Carousel from "./Carousel";
 import ProductDetail from "./ProductDetail";
 import TemplateTutorial from "./TemplateTutorial";
+import PropTypes from "prop-types";
 
 function App(props) {
-  const productDetails = props.state.products.map((each, index) => {
+  const productDetails = props.state.products.map(product => {
     return (
-    [
       <ProductDetail
-        key={index}
-        name={props.state.products[index].name}
-        desc={props.state.products[index].description}
-        reviews={props.state.products[index].reviews}
-        rating={props.state.products[index].rating}
-        imgUrl={props.state.products[index].imgUrl}
-        price={props.state.products[index].price}
-      />,
-    ]
+        {...product}
+        key={product.id}
+        desc={product.description}
+      />
     );
   });
   return (
@@ -55,5 +50,10 @@ function App(props) {
     </div>
   );
 }
+
+App.propTypes = {
+  state: PropTypes.object.isRequired,
+  products: PropTypes.array.isRequired
+};
 
 export default App;
