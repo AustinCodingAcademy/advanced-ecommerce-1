@@ -5,7 +5,7 @@ function ProductDetail(product) {
   return (
     <div className="col-sm-4 col-lg-4 col-md-4">
       <div className="thumbnail">
-        <img src="{product.imgUrl}" alt="" />
+        <img src={product.imgUrl} alt="" />
         <div className="caption">
           <h4 className="pull-right">
             {product.price}
