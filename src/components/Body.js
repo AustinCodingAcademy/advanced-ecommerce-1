@@ -1,5 +1,6 @@
 import React from "react";
 import ProductDetail from "./ProductDetail";
+import StarRating from "./StarRating";
 import productsData from "../state.js";
 
 function Body() {
@@ -20,6 +21,7 @@ function Body() {
                     reviews={product.reviews}
                     name={product.name}
                     url={product.imgUrl}
+                    stars={product.rating}
                   />
                 );
               })

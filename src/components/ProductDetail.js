@@ -8,19 +8,13 @@ function ProductDetail(props) {
         <img src={props.url} alt="" />
         <div className="caption">
           <h4>{props.price}</h4>
-          <h4><a href="#">{props.name}</a>
-          </h4>
+          <h5><a href="#">{props.name}</a>
+          </h5>
           <p>{props.description}</p>
         </div>
         <div className="ratings">
           <p className="pull-right">{props.reviews}</p>
-          <p>
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star" />
-          </p>
+          <p>{props.stars}</p>
         </div>
       </div>
     </div>

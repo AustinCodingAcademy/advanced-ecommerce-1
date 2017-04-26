@@ -16,7 +16,7 @@ function Nav() {
             <span className="icon-bar" />
             <span className="icon-bar" />
           </button>
-          <a className="navbar-brand" href="#">Start Bootstrap</a>
+          <a className="navbar-brand" href="#">Weird Store</a>
         </div>
 
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

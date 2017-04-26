@@ -7,12 +7,12 @@ import Carousel from "./Carousel";
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      <Carousel />
-      <Body />
-      <Footer />
-    </div>
+  <div className="App">
+    <Nav />
+    <Carousel />
+    <Body />
+    <Footer />
+  </div>
   );
 }
 

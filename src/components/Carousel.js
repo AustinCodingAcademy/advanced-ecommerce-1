@@ -4,7 +4,7 @@ function Carousel() {
   return (
     <div className="container">
       <div className="row carousel-holder">
-        <div className="col-md-12">
+        <div className="col-md-10 col-md-offset-1">
           <div id="carousel-example-generic" className="carousel slide" data-ride="carousel">
             <ol className="carousel-indicators">
               <li data-target="#carousel-example-generic" data-slide-to="0" className="active" />
