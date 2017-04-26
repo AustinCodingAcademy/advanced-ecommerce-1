@@ -2,6 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function ProductDetail({imgUrl, name, price, desc, reviews, rating}) {
+  const stars = [];
+  let i = 0;
+  for (i; i < rating; i++) {
+    stars.push(<span className="glyphicon glyphicon-star" />);
+  }
   return (
     <div className="col-sm-4 col-lg-4 col-md-4">
       <div className="thumbnail">
@@ -25,8 +30,7 @@ function ProductDetail({imgUrl, name, price, desc, reviews, rating}) {
             {reviews} reviews
           </p>
           <p>
-            {rating}
-            <span className="glyphicon glyphicon-star" />
+            {stars}
           </p>
         </div>
       </div>
