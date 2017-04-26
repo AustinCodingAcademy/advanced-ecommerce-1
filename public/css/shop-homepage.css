@@ -22,16 +22,20 @@ body {
 }
 
 .caption {
-    height: 130px;
+    height: 175px;
     overflow: hidden;
 }
 
 .caption h4 {
-    white-space: nowrap;
+    white-space: inherit;
+    text-align: left;
+    margin: 20px 0;
+
 }
 
 .thumbnail img {
-    width: 100%;
+    width: 220px;
+    height: 220px;
 }
 
 .ratings {
@@ -43,6 +47,7 @@ body {
 .thumbnail {
     padding: 0;
 }
+
 
 .thumbnail .caption-full {
     padding: 9px;
