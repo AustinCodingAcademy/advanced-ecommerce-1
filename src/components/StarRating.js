@@ -1,23 +1,20 @@
 import React from "react";
 
 function StarRating(props) {
-  let stars = props.stars;
-  let starRating = [];
-  const MAX_STARS = 5;
-    for(var i =0; i < MAX_STARS; i++) {
-      if(stars>0){
-      starRating.push(<span className="glyphicon glyphicon-star"></span>);
-      stars--;
-      }
-      else{
-      starRating.push(<span className="glyphicon glyphicon-star-empty"></span>);
-      }
+  const { rating } = props;
+  const starSpans = [];
 
-      }
-      return(
-      <p>{starRating}</p>
+  for (let i = 1; i <= rating; i++) {
+    starSpans.push(<span key={i} className="glyphicon glyphicon-star" />);
+  }
+
+  for (let j = 1; j <= 5 - rating; j++) {
+    starSpans.push(<span key={j + 10} className="glyphicon glyphicon-star-empty" />);
+  }
+
+  return (
+    <p>{starSpans}</p>
   );
-
 }
 
 export default StarRating;

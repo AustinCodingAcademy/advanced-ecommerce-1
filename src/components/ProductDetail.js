@@ -1,5 +1,5 @@
 import React from "react";
-
+import StarRating from "./StarRating";
 
 function ProductDetail(props) {
   return (
@@ -14,7 +14,7 @@ function ProductDetail(props) {
         </div>
         <div className="ratings">
           <p className="pull-right">{props.reviews}</p>
-          <p>{props.stars}</p>
+          <StarRating rating={props.rating} />
         </div>
       </div>
     </div>

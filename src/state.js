@@ -42,7 +42,7 @@ export default {
   }, {
     "id": 6,
     "name": "Fresh Sugar Honey Tinted Lip Treatment SPF15",
-    "description": "Unspecified open wound of vagina and vulva",
+    "description": "Unspecified open wound of the arm",
     "reviews": 79,
     "rating": 3,
     "imgUrl": "http://dummyimage.com/211x227.bmp/5fa2dd/ffffff",
@@ -66,7 +66,7 @@ export default {
   }, {
     "id": 9,
     "name": "Risperidone",
-    "description": "Poisn by cephalospor/oth beta-lactm antibiot, undet, sequela",
+    "description": "Poison by cephalospor/oth beta-lactm antibiot, undet, sequela",
     "reviews": 9,
     "rating": 1,
     "imgUrl": "http://dummyimage.com/212x108.bmp/cc0000/ffffff",

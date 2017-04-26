@@ -25,7 +25,8 @@ function Carousel() {
             <a className="left carousel-control" href="#carousel-example-generic" data-slide="prev">
               <span className="glyphicon glyphicon-chevron-left" />
             </a>
-            <a className="right carousel-control" href="#carousel-example-generic" data-slide="next">
+            <a className="right carousel-control"
+              href="#carousel-example-generic" data-slide="next">
               <span className="glyphicon glyphicon-chevron-right" />
             </a>
           </div>
