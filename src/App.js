@@ -1,41 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Header from "./components/Header";
+import ProductDetail from "./components/ProductDetail";
+import Footer from "./components/Footer";
 function App() {
     return (
       <div className="App">
      
-    <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div className="container">
-          
-            <div className="navbar-header">
-                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span className="sr-only">Toggle navigation</span>
-                    <span className="icon-bar"></span>
-                    <span className="icon-bar"></span>
-                    <span className="icon-bar"></span>
-                </button>
-                <a className="navbar-brand" href="#">Start Bootstrap</a>
-            </div>
-          
-            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul className="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-         
-        </div>
-      
-    </nav>
+      <Header />
 
  
     <div className="container">
@@ -111,12 +84,7 @@ function App() {
                     <div className="col-sm-4 col-lg-4 col-md-4">
                         <div className="thumbnail">
                             <img src="http://placehold.it/320x150" alt=""/>
-                            <div className="caption">
-                                <h4 className="pull-right">$64.99</h4>
-                                <h4><a href="#">Second Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
+                            <ProductDetail />
                             <div className="ratings">
                                 <p className="pull-right">12 reviews</p>
                                 <p>
@@ -215,14 +183,7 @@ function App() {
 
         <hr/>
 
-      
-        <footer>
-            <div className="row">
-                <div className="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
-            </div>
-        </footer>
+    <Footer />
 
     </div>
       </div>
