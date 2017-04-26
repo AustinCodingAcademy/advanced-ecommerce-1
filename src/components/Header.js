@@ -1,7 +1,7 @@
-function Header(){
-  return(
-    <div className="App">
+import React from 'react';
 
+ export default function Header() {
+  return (
   <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div className="container">
 
@@ -32,20 +32,6 @@ function Header(){
       </div>
 
   </nav>
-
-
-  <div className="container">
-
-      <div className="row">
-
-          <div className="col-md-3">
-              <p className="lead">Shop Name</p>
-              <div className="list-group">
-                  <a href="#" className="list-group-item">Category 1</a>
-                  <a href="#" className="list-group-item">Category 2</a>
-                  <a href="#" className="list-group-item">Category 3</a>
-              </div>
-          </div>
 
   );
 }
