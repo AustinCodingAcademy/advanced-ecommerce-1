@@ -1,30 +1,31 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-function ProductDetail(props) {
+function ProductDetail({imgUrl, name, price, desc, reviews, rating}) {
   return (
     <div className="col-sm-4 col-lg-4 col-md-4">
       <div className="thumbnail">
         <img
-          src={props.imgUrl}
+          src={imgUrl}
           alt=""
         />
         <div className="caption">
           <h4>
-            <a href="#">{props.name}</a>
+            <a href="#">{name}</a>
           </h4>
           <h4 className="">
-            {props.price}
+            {price}
           </h4>
           <p>
-            {props.desc}
+            {desc}
           </p>
         </div>
         <div className="ratings">
           <p className="pull-right">
-            {props.reviews} reviews
+            {reviews} reviews
           </p>
           <p>
-            {props.rating}
+            {rating}
             <span className="glyphicon glyphicon-star" />
           </p>
         </div>
@@ -32,5 +33,14 @@ function ProductDetail(props) {
     </div>
   );
 }
+
+ProductDetail.propTypes = {
+  imgUrl: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  reviews: PropTypes.number.isRequired,
+  rating: PropTypes.number.isRequired
+};
 
 export default ProductDetail;
