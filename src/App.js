@@ -8,33 +8,55 @@ import ProductInfo from "./components/ProductInfo";
 import State from "./state";
 import SideBar from "./components/SideBar";
 
-function App() {
-  const ObjectOfUsers = State.products.map(function (item) {
-    return (
-      <ProductInfo key={item.key} name={item.name} description={item.description}
-        reviews={item.reviews} ratings={item.ratings}
-        img={item.imgUrl} price={item.price} />
-    );
-  });
+class App extends Component {
+  constructor(props) {
+    super(props);
 
-  return (
-    <div className="App">
-      <Header />
-      <div className="container">
-        <div className="row">
-          <SideBar />
-          <div className="col-md-9">
-            <Carousel />
-            <div className="row">
-              {ObjectOfUsers}
-              <ProductDetails />
+    this.state = {
+      imageWasClicked: false
+    };
+  }
+
+  handleImageClick(event) {
+    console.log("Handled Image Click", event);
+    this.setState({
+      imageWasClicked : !this.state.imageWasClicked
+    });
+  }
+
+  render() {
+    const myItems = this.props.products.map((item, index) => {
+      return (
+        <ProductInfo
+          key={item.id}
+          inner={item}
+          onClick={() => {
+            this.handleImageClick(item.id);
+          }}
+          />
+      );
+    });
+
+    return (
+      <div className="App">
+        <Header />
+        <div className="container">
+          <div className="row">
+            <SideBar />
+            <div className="col-md-9">
+              <Carousel />
+              <div className="row">
+                {myItems}
+                <ProductDetails />
+              </div>
             </div>
           </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  );
+    );
+  }
 }
+
 
 export default App;
