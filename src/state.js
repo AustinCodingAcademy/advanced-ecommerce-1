@@ -37,7 +37,7 @@ export default {
     "description": "Injury of prostate",
     "reviews": 20,
     "rating": 1,
-    "imgUrl": "http://dummyimage.com/120x245.jpg/cc0000/ffffff",
+    "imgUrl": "http://dummyimage.com/162x153.jpg/cc0000/ffffff",
     "price": "$70.10"
   }, {
     "id": 6,
