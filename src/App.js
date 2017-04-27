@@ -20,7 +20,7 @@ export default class App extends React.Component {
         </div>
         <div className="container">
           <div className="row">
-            {state.products.map((item) => {
+            {state.products.map(item => {
               return (
                 <ProductInfo key={item.id} item={item} />
               );
