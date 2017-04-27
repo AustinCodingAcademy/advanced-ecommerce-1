@@ -1,5 +1,6 @@
 import React from "react";
 import StarRating from "./StarRating";
+import PropTypes from "prop-types";
 
 function ProductDetail(props) {
   return (
@@ -20,5 +21,16 @@ function ProductDetail(props) {
     </div>
   );
 }
+
+ProductDetail.propTypes = {
+  products: PropTypes.arrayOf.shape({
+    price: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    reviews: PropTypes.number.isRequired,
+    rating: PropTypes.number.isRequired,
+  })
+};
 
 export default ProductDetail;
