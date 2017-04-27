@@ -1,17 +1,23 @@
 import React from "react";
-// import "./App.css";
 
-function Footer (props) {
-  let Footer = props.Footer;
+function Footer() {
   return (
-    <footer>
+
+    <div className="container">
+
+      <hr />
+
+      <footer>
         <div className="row">
-            <div className="col-lg-12">
-                <p>Copyright &copy; Your Website 2014</p>
-            </div>
+          <div className="col-lg-12">
+            <p>Copyright &copy; Your Website 2014</p>
+          </div>
         </div>
-    </footer>
-);
+      </footer>
+
+    </div>
+
+  );
 }
 
 export default Footer;

@@ -14,7 +14,8 @@
     "json-server": "^0.9.6",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "undefsafe": "^2.0.1"
   },
   "scripts": {
     "start": "nf start",

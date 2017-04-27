@@ -1,56 +1,39 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import NavBar from './components/NavBar'
-import SideNav from './components/SideNav'
-import Carousel from './components/Carousel'
-import ProductDetails from './components/ProductDetails'
-import ShamelessPlug from './components/ShamelessPlug'
-import Rating from './components/Rating'
-import Footer from './components/Footer'
-import state from './state.js'
+import React from "react";
+// import logo from "./logo.svg";
+import "./App.css";
+import Header from "./components/Header";
+import Categories from "./components/Categories";
+import Carousel from "./components/Carousel";
+import ProductDetail from "./components/ProductDetails";
+import Footer from "./components/Footer";
+import ShamelessPlug from "./components/ShamelessPlug";
+
 
 function App(props) {
-    const products = props;
-    return (
-      <div className="App">
 
-    <NavBar />
+  return (
 
+    <div className="App">
 
-    <div className="container">
+      <Header />
+
+      <div className="container">
 
         <div className="row">
 
-            <SideNav />
-
-            <div className="col-md-9">
-
-                <Carousel />
-
-                <div className="row">
-
-                    <ProductDetails state={props.state}/>
-
-
-                </div>
-
-            </div>
+          <Categories />
+          <Carousel />&nbsp; {/* had to remove a random semicolon*/}
+          <ProductDetail items={props.items} />
+          <ShamelessPlug />
 
         </div>
 
-    </div>
-
-    <div className="container">
-
-        <hr/>
-
-        <Footer />
-
-
-    </div>
       </div>
-    );
+
+      <Footer />
+
+    </div>
+  );
 }
 
 export default App;
