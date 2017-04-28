@@ -5,8 +5,8 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import ProductDetails from "./components/ProductDetails";
 import ProductInfo from "./components/ProductInfo";
-import State from "./state";
 import SideBar from "./components/SideBar";
+
 
 class App extends Component {
   constructor(props) {
@@ -17,23 +17,21 @@ class App extends Component {
     };
   }
 
-  handleImageClick(event) {
-    console.log("Handled Image Click", event);
+  handleImageClick() {
+    console.log("handled event");
     this.setState({
-      imageWasClicked : !this.state.imageWasClicked
+      imageWasClicked: true
     });
   }
 
+
   render() {
-    const myItems = this.props.products.map((item, index) => {
+    const myItems = this.props.list.products.map((item, index) => {
       return (
         <ProductInfo
-          key={item.id}
+          key={index}
           inner={item}
-          onClick={() => {
-            this.handleImageClick(item.id);
-          }}
-          />
+          onClick={this.handleImageClick.bind(this)} />
       );
     });
 
