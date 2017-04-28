@@ -7,18 +7,30 @@ class Reviews extends Component {
     super(props);
 
     this.state = {
-      hide: true,
+      hide: false,
     };
   }
+
+  handleBtnClick() {
+    console.log("Btn Clicked");
+    this.setState({
+      hide: !this.state.hide
+    })
+  }
+
   render() {
     const customerReviews = this.props.snips;
     console.log(customerReviews + "from Reviews");
     return (
-      <div />
+      <div>
+        <button className="btn btn-success" onClick={this.handleBtnClick.bind(this)}> Hide </button>
+      </div>
     );
 
   }
 }
+
+// <button onClick={reviewBoxes}> Hide </button>
 
 Reviews.propTypes = {
   props: PropTypes.array,

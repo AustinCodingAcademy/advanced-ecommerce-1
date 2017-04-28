@@ -5,17 +5,15 @@ import Reviews from "./Reviews";
 
 function ProductInfo(props) {
   const stars = [];
-
   for (let totalOfStars = 0; totalOfStars < props.inner.rating; totalOfStars++) {
     stars.push(<span className="glyphicon glyphicon-star" key={totalOfStars} />);
   }
-  const multipleStars = stars.map((star,) => star);
-  console.log(props.inner.comments + "from ProductInfo");
+  const multipleStars = stars.map((star) => star);
 
   return (
     <div className="col-sm-4 col-lg-4 col-md-4 {this.props.inner.key}" >
       <div className="thumbnail">
-        <img src={props.imageToUse} alt=""
+        <img src={props.inner.imgUrl} alt=""
           onClick={props.onClick} />
         <div className="caption">
           <h4 className="pull-right">
@@ -34,19 +32,20 @@ function ProductInfo(props) {
           <p>
             {multipleStars}
           </p>
-          <Reviews snips={props.inner.comments} />
+          <div>
+            <Reviews snips={props.inner.comments} />
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-
-
 ProductInfo.propTypes = {
   imageToUse: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
   inner: PropTypes.shape({
+    comments: PropTypes.array.isRequired,
     description: PropTypes.string.isRequired,
     imgUrl: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,

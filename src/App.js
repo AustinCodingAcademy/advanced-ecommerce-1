@@ -22,8 +22,7 @@ class App extends Component {
   handleImageClick() {
     console.log("handled event");
     this.setState({
-      imageWasClicked: true,
-      newImage: !"http://lorempixel.com/output/animals-q-c-216-204-10.jpg"
+      imageWasClicked: !this.state.imageWasClicked,
     });
   }
 
@@ -35,7 +34,6 @@ class App extends Component {
           key={index}
           inner={item}
           onClick={this.handleImageClick.bind(this)}
-          imageToUse={this.state.newImage}
         />
       );
     });
