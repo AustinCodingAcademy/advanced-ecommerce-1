@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import Reviews from "./Reviews";
 
 
 function ProductInfo(props) {
@@ -10,12 +10,12 @@ function ProductInfo(props) {
     stars.push(<span className="glyphicon glyphicon-star" key={totalOfStars} />);
   }
   const multipleStars = stars.map((star,) => star);
-
+  console.log(props.inner.comments + "from ProductInfo");
 
   return (
     <div className="col-sm-4 col-lg-4 col-md-4 {this.props.inner.key}" >
       <div className="thumbnail">
-        <img src={props.inner.imgUrl} alt=""
+        <img src={props.imageToUse} alt=""
           onClick={props.onClick} />
         <div className="caption">
           <h4 className="pull-right">
@@ -34,13 +34,17 @@ function ProductInfo(props) {
           <p>
             {multipleStars}
           </p>
+          <Reviews snips={props.inner.comments} />
         </div>
       </div>
     </div>
   );
 }
 
+
+
 ProductInfo.propTypes = {
+  imageToUse: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
   inner: PropTypes.shape({
     description: PropTypes.string.isRequired,
