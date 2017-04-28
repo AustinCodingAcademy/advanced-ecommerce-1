@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import ProductDetails from "./components/ProductDetails";
 import ProductInfo from "./components/ProductInfo";
+import PropTypes from "prop-types";
 import SideBar from "./components/SideBar";
 
 
@@ -31,7 +32,8 @@ class App extends Component {
         <ProductInfo
           key={index}
           inner={item}
-          onClick={this.handleImageClick.bind(this)} />
+          onClick={this.handleImageClick.bind(this)}
+        />
       );
     });
 
@@ -55,6 +57,12 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  list: PropTypes.shape({
+    products: PropTypes.array.isRequired,
+  })
+};
 
 
 export default App;

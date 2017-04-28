@@ -1,6 +1,17 @@
 import React from "react";
+import PropTypes from "prop-types";
+
+
 
 function ProductInfo(props) {
+  const stars = [];
+
+  for (let totalOfStars = 0; totalOfStars < props.inner.rating; totalOfStars++) {
+    stars.push(<span className="glyphicon glyphicon-star" key={totalOfStars} />);
+  }
+  const multipleStars = stars.map((star,) => star);
+
+
   return (
     <div className="col-sm-4 col-lg-4 col-md-4 {this.props.inner.key}" >
       <div className="thumbnail">
@@ -19,13 +30,9 @@ function ProductInfo(props) {
           </p>
         </div>
         <div className="ratings">
-          <p className="pull-right">{props.inner.reviews} </p>
+          <p className="pull-right">{props.inner.reviews}</p>
           <p>
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star" />
+            {multipleStars}
           </p>
         </div>
       </div>
@@ -33,5 +40,16 @@ function ProductInfo(props) {
   );
 }
 
+ProductInfo.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  inner: PropTypes.shape({
+    description: PropTypes.string.isRequired,
+    imgUrl: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
+    reviews: PropTypes.number.isRequired
+  })
+};
 
 export default ProductInfo;
