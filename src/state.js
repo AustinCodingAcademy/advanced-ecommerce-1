@@ -1,7 +1,7 @@
 export default {
   products: [{
     "id": 1,
-    "name": "Body Luxuries Sweet Lavender Hand Sanitizer",
+    "name": "Body Luxuries Sweets",
     "description": "Psychotropic drugs, not elsewhere classified",
     "reviews": 46,
     "rating": 2,

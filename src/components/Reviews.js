@@ -7,16 +7,52 @@ class Reviews extends Component {
     super(props);
 
     this.state = {
-      hide: false,
+      hide: true,
     };
   }
 
+
+
   handleBtnClick() {
-    console.log("Btn Clicked");
+    console.log("Btn Clicked " + this.state.hide);
     this.setState({
       hide: !this.state.hide
     })
   }
+
+  doReviews() {
+    if(this.state.hide === false){
+      this.props.snips.map((snip) => {
+        return(
+          <p>
+            <h4>
+              {customerReviews.description}
+            </h4>
+          </p>
+        ) 
+      })
+    } else {
+        return(
+          <div />
+        )
+    }
+  }
+    // if(this.state.hide === false){
+    //   customerReviews.map((snip) => {
+    //    return(
+    //         <p>
+    //           <h4>
+    //             {customerReviews.description}
+    //           </h4>
+    //         </p>
+    //     ) )
+    //   } else {
+    //       return (
+    //         <div />
+    //       )
+    //   }
+    // }
+  // }
 
   render() {
     const customerReviews = this.props.snips;
@@ -24,13 +60,12 @@ class Reviews extends Component {
     return (
       <div>
         <button className="btn btn-success" onClick={this.handleBtnClick.bind(this)}> Hide </button>
-      </div>
+        {this.doReviews()}
+      <div />
     );
-
   }
 }
 
-// <button onClick={reviewBoxes}> Hide </button>
 
 Reviews.propTypes = {
   props: PropTypes.array,

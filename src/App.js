@@ -20,7 +20,7 @@ class App extends Component {
   }
 
   handleImageClick() {
-    console.log("handled event");
+    console.log("handled event " + this.state.imageWasClicked);
     this.setState({
       imageWasClicked: !this.state.imageWasClicked,
     });
