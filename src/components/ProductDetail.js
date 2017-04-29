@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Rating from "./Rating";
 
 function ProductDetail(product) {
   return (
@@ -13,16 +14,12 @@ function ProductDetail(product) {
           <h4>
             <a href="#">{product.name}</a>
           </h4>
-          <p>{product.description}<a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+          <p>{product.description}</p>
         </div>
         <div className="ratings">
           <p className="pull-right">{product.reviews} reviews</p>
           <p>
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star" />
+            <Rating key={product.id} rating={product.rating} />
           </p>
         </div>
       </div>

@@ -2,15 +2,7 @@ import React from "react";
 import "./App.css";
 import state from "../state";
 
-function Carousel() {
-  function showProducts(product) {
-    return (
-      <div className="item">
-        {product.name}
-        <img className="slide-image" src={product.imgUrl} alt="" />
-      </div>
-    );
-  }
+function Carousel(product) {
   return (
     <div className="carousel-holder">
       <div className="col-md-12">
@@ -24,7 +16,9 @@ function Carousel() {
             {
               state.products.map((product) => {
                 return (
-                  <showProducts key={product.id} imgUrl={product.imgUrl} />
+                  <div key={product.id} className="item">
+                    <img className="slide-image" src={product.imgUrl} alt="" />
+                  </div>
                 );
               })
             }

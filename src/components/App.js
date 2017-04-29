@@ -32,7 +32,7 @@ export default class App extends React.Component {
                     return (
                       <ProductDetail
                         key={product.id}
-                        product={product.name}
+                        name={product.name}
                         description={product.description}
                         reviews={product.reviews}
                         rating={product.rating}
