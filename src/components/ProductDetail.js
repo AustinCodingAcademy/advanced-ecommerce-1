@@ -1,12 +1,17 @@
 import React from "react";
 import StarRating from "./StarRating";
-import propTypes from "prop-types";
 
 function ProductDetail(props) {
-  const {product} = props;
+  const product = props.product;
+  console.log(product);
 
   return (
-    <div className="col-sm-4 col-lg-4 col-md-4">
+    <div>{product.name}  {product.reviews} {product.description} {product.rating} {product.id} </div>
+  );
+};
+
+{/*<div>
+      <div className="col-sm-4 col-lg-4 col-md-4">
       <div className="thumbnail">
         <img src={product.imgUrl} alt={product.name} />
         <div className="caption">
@@ -20,11 +25,8 @@ function ProductDetail(props) {
         </div>
       </div>
     </div>
-  );
-}
+    </div>*/}
 
-ProductDetail.propTypes = {
-  product: propTypes.object.isRequired
-};
+
 
 export default ProductDetail;

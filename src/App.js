@@ -1,14 +1,15 @@
 import React from "react";
-import Header from "./Header";
-import Carousel from "./Carousel";
-import ProductDetail from "./ProductDetail";
-import Footer from "./Footer";
-import propTypes from "prop-types";
+import Header from "./components/Header";
+import Carousel from "./components/Carousel";
+import ProductDetail from "./components/ProductDetail";
+import Footer from "./components/Footer";
 
 function App(props) {
-  const {products} = props;
+  const products = props.products;
+  console.log(products);
+  
   const productDetails = products.map((product) => {
-    return <ProductDetail key={product.id} product={product} />;
+  return (<ProductDetail key={product.id} name={product.name} />);
   });
 
   return (
@@ -27,7 +28,13 @@ function App(props) {
           <div className="col-md-9">
             <Carousel />
             <div className="row">
-              {productDetails}
+              {products.map(prod => {
+                  return(
+                    <ProductDetail 
+                      key={prod.id} 
+                      product={prod} 
+                    />)
+              })}
             </div>
           </div>
         </div>
@@ -35,10 +42,6 @@ function App(props) {
       <Footer />
     </div>
   );
-}
-
-App.propTypes = {
-  products: propTypes.object.isRequired
 };
 
 export default App;
