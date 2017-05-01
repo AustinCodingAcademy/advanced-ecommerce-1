@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Reviews from "./Reviews";
+import CreateStars from "./CreateStars";
 
 
 function ProductInfo(props) {
