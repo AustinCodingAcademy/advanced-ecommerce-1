@@ -24,12 +24,12 @@ function ProductDetail(props) {
 
 ProductDetail.propTypes = {
   products: PropTypes.arrayOf.shape({
-    price: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
+    price: PropTypes.arrayOf.isRequired,
+    url: PropTypes.arrayOf.isRequired,
     description: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    reviews: PropTypes.number.isRequired,
-    rating: PropTypes.number.isRequired,
+    reviews: PropTypes.arrayOf.isRequired,
+    rating: PropTypes.arrayOf.isRequired,
   })
 };
 
