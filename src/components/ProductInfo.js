@@ -5,12 +5,6 @@ import CreateStars from "./CreateStars";
 
 
 function ProductInfo(props) {
-  const stars = [];
-  for (let totalOfStars = 0; totalOfStars < props.inner.rating; totalOfStars++) {
-    stars.push(<span className="glyphicon glyphicon-star" key={totalOfStars} />);
-  }
-  const multipleStars = stars.map((star) => star);
-
   return (
     <div className="col-sm-4 col-lg-4 col-md-4 {this.props.inner.key}" >
       <div className="thumbnail">
@@ -30,9 +24,7 @@ function ProductInfo(props) {
         </div>
         <div className="ratings">
           <p className="pull-right">{props.inner.reviews}</p>
-          <p>
-            {multipleStars}
-          </p>
+          <CreateStars starsSent={props.inner.rating} />
           <div>
             <Reviews snips={props.inner.comments} />
           </div>

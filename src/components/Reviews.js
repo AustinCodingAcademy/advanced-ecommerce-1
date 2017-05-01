@@ -13,7 +13,6 @@ class Reviews extends Component {
   }
 
   handleBtnClick() {
-    console.log("Btn Clicked " + this.state.hide);
     this.setState({
       hide: !this.state.hide
     });
@@ -27,7 +26,7 @@ class Reviews extends Component {
   }
 
   render() {
-    const customerReviews = this.props.snips;
+    // const customerReviews = this.props.snips;
     const ReviewItems = this.props.snips.map((box, index) => {
       return (<CreateReviews
         key={index}
@@ -37,7 +36,6 @@ class Reviews extends Component {
       );
     });
 
-    console.log(customerReviews + "from Reviews");
     return (
       <div>
         <button className="btn btn-success"

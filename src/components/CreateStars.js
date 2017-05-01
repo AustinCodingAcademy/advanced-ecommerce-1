@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function CreateStars(props) {
   const collectionOfStars = [];
@@ -8,7 +9,7 @@ function CreateStars(props) {
 
   const newStars = collectionOfStars.map((starGlyph) =>
     starGlyph );
-  
+
   return (
     <p>
       {newStars}
@@ -16,7 +17,9 @@ function CreateStars(props) {
   );
 }
 
-export default CreateStars;
+CreateStars.propTypes = {
+  starsSent: PropTypes.number.isRequired
+};
 
-// <CreateStars starsSent={props.info.rating} />
-// <CreateStars starsSent={props.inner.rating} />
+
+export default CreateStars;
