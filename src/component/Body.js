@@ -4,7 +4,7 @@ import productsData from "./state.js";
 
 function Body() {
   const { products } = productsData;
-  console.log(products, " from body");
+  //console.log(products, " from body");
   return (
     <div className="container">
       <div className="col-md-9">

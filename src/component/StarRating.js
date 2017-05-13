@@ -19,7 +19,7 @@ function StarRating(props) {
 }
 
 StarRating.propTypes = {
-  rating: PropTypes.array.isRequired,
+  rating: PropTypes.number.isRequired,
 };
 
 export default StarRating;

@@ -7,8 +7,11 @@ import Footer from "./component/Footer.js";
 import Carousel from "./component/Carousel.js";
 // import Navigation from "./component/Navigation.js"
 // import ProductDetail from './component/ProductDetail.js';
+// import productsData from "./state.js"
+
 
 function App() {
+//  console.log(productsData[0]);
   return (
     <div className="App">
       <Header />
