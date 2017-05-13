@@ -7,7 +7,7 @@ function ProductDetail(props) {
   return (
     <div className="col-sm-4 col-lg-4 col-md-4">
       <div className="thumbnail">
-        <img src={props.url} alt="not found" />
+        <img style={{width: "320px", height: "150px"}} src={props.url} alt="not found" />
         <div className="caption">
           <h4>{props.price}</h4>
           <h5><a href="#">{props.name} </a>
