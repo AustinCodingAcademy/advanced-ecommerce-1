@@ -1,6 +1,6 @@
 #### Setup
 Fork, clone, run yarn install, yarn start, pull request
-
+jon woo
 #### Do
  * Create a component folder to hold component files
  * Organize this web page into appropriate components
