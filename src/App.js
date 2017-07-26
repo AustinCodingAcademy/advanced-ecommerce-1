@@ -5,7 +5,7 @@ import HeaderNav from './components/HeaderNav';
 import SideBar from './components/SideBar';
 import Carousel from './components/Carousel';
 import ProductDetail from './components/ProductDetail';
-
+import StarRating from './components/StarRating';
 function App(props) {
   console.log(props.products)
     return (
@@ -14,8 +14,9 @@ function App(props) {
     <HeaderNav />
 
     <div className="container">
-
+        <StarRating />
         <div className="row">
+  
 
             <SideBar />
 
@@ -23,7 +24,7 @@ function App(props) {
               <Carousel />
 
                 <div className="row">
-                      <ProductDetail products={props.products} />
+                  <ProductDetail products={props.products} />
 
 
                     <div className="col-sm-4 col-lg-4 col-md-4">
