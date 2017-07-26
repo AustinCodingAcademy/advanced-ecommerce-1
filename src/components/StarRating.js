@@ -37,8 +37,8 @@ export default class StarRating extends React.Component {
 
         <div className="ratings">
 
-
-           <div style={{fontSize: 24}}>
+ {/* style={{fontSize: 24}} */}
+           <div>
 
              <StarRating
                name="app5"

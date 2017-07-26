@@ -1,10 +1,11 @@
 import React from 'react';
-// import StarRating from './StarRating';
+import StarRating from './StarRating';
 
 export default function ProductDetail(props){
 
   var products = props.products.products;
     console.log(products);
+<<<<<<< HEAD
   return({products.map(function(att){
   <div>
     <div className="col-sm-4 col-lg-4 col-md-4">
@@ -33,4 +34,28 @@ export default function ProductDetail(props){
 })
 
 
+=======
+
+    var mapProd = products.map(function(product){
+       return(
+         
+        <div className="col-sm-4 col-lg-4 col-md-4">
+                        <div className="thumbnail">
+                            <img src={product.imgUrl} alt=""/>
+                            <div className="caption">
+                                <h4 className="pull-right">{product.price}</h4>
+                                <h4><a href="#">{product.name}</a>
+                                </h4>
+                                <p>{product.description}</p>
+                            </div> 
+                  </div>
+        </div>
+                
+)});
+    console.log(mapProd);
+    return(<div>
+        
+          <div>{mapProd.map(x=>x)}</div> 
+        </div>);
+>>>>>>> 3a0653052b7174899c4709610b82a9a6d255571a
 }
