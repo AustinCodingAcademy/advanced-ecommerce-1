@@ -5,19 +5,19 @@ export default function ProductDetail(props){
 
   var products = props.products.products;
     console.log(products);
-  return(
+  return({products.map(function(att){
   <div>
     <div className="col-sm-4 col-lg-4 col-md-4">
         <div className="thumbnail">
 
-            <img src={products[0].imgUrl} alt=""/>
+            <img src={att.imgUrl} alt=""/>
             <div className="caption">
-                <h4 className="pull-right">{}</h4>
-                <h4><a href="#">{products[0].name}</a>
+                <h4 className="pull-right"></h4>
+                <h4><a href="#">{att.name}</a>
                 </h4>
-                <p>{products[0].description}<a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                <p>{att.description}<a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
             </div>
-                <p className="pull-right">{products[0].price}reviews</p>
+                <p className="pull-right">{att.price}reviews</p>
                 <p>
                     <span className="glyphicon glyphicon-star"></span>
                     <span className="glyphicon glyphicon-star"></span>
@@ -28,7 +28,9 @@ export default function ProductDetail(props){
             </div>
         </div>
     </div>
-)
+    )
+  }
+})
 
 
 }
