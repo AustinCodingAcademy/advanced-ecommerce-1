@@ -9,9 +9,9 @@ import Carousel from './components/Carousel';
 function App(props) {
     const productDiv = props.products.map((product) => {
         return (
-        <ProductDetail
-            key={product.id}
-            product={product} />
+            <ProductDetail
+                key={product.id}
+                product={product} />
         )
     });
 
