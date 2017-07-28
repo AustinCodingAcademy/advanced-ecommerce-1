@@ -11,14 +11,18 @@ class ProductDetail extends React.Component {
   }
 
   render() {
-
-    // picStyle should toggle with each click of button on Header
-    // PROBLEM: picStyle is toggling in index.js, but isn't sending new object
+    // -picStyle should toggle with each click of button on Header
+    // -That info sent to index.js for toggle
+    // -PROBLEM: picStyle is toggling in index.js, but isn't sending new object
     //    back (this.state.picStyle), which should then re-render this page
-    var picStyle = this.state.picStyle;
+    // -UPDATE: now working. Changed to this.props.picStyle.  But I can't figure
+    //     out why this.state.picStyle not changing, even though it's set to
+    //     this.props.picStyle (just for my own info. Currently not being utilized)
 
-
-    console.log(picStyle);
+    var picStyle = this.props.picStyle;
+    // console to verify picStyle when ProductDetail called
+    console.log(this.props.picStyle);
+    
     return (
       <div key={this.props.product.id}>
 

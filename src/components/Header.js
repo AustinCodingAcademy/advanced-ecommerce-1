@@ -8,14 +8,15 @@ class Header extends React.Component {
     }
   }
 
-
   picToggle = (e) => {
     e.preventDefault();
+    // call the alterPic from index.js to set picStyle to current picFull (Boolean)
     this.props.alterPic(this.state.picFull);
-
+    // toggle picFull
     this.setState(prevState => ({
       picFull: !prevState.picFull
     }));
+    // console to verify toggling
     console.log(this.state.picFull);
   }
 
