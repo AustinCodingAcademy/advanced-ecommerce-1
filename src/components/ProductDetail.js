@@ -1,5 +1,45 @@
 import React from 'react';
 
+
+
+class ProductDetail extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      picStyle: this.props.picStyle
+    };
+  }
+
+  render() {
+    var picStyle = this.state.picStyle;
+    console.log(picStyle);
+    return (
+      <div key={this.props.product.id}>
+
+        <div className="col-sm-4 col-lg-4 col-md-4">
+            <div className="thumbnail">
+                <img style={{picStyle}} src={this.props.product.imgUrl} alt=""/>
+                <div className="caption">
+                    <h4 className="pull-right">{this.props.product.price}</h4>
+                    <h4><a href="#">{this.props.product.name}</a>
+                    </h4>
+                    <p>{this.props.product.description}<a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                </div>
+                <div className="ratings">
+                    <p className="pull-right">{this.props.product.reviews}</p>
+                    <p>
+                        {starMaker(this.props.product.rating)}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    )
+  }
+
+}
+
 function starMaker(stars) {
   var starObj = [];
   for (var i=1; i<=5; i++) {
@@ -10,32 +50,6 @@ function starMaker(stars) {
     }
   }
   return starObj;
-}
-
-function ProductDetail(props) {
-  return (
-    <div>
-
-      <div className="col-sm-4 col-lg-4 col-md-4">
-          <div className="thumbnail">
-              <img src={props.product.imgUrl} alt=""/>
-              <div className="caption">
-                  <h4 className="pull-right">{props.product.price}</h4>
-                  <h4><a href="#">{props.product.name}</a>
-                  </h4>
-                  <p>{props.product.description}<a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-              </div>
-              <div className="ratings">
-                  <p className="pull-right">{props.product.reviews}</p>
-                  <p>
-                      {starMaker(props.product.rating)}
-                  </p>
-              </div>
-          </div>
-      </div>
-
-    </div>
-  )
 }
 
 export default ProductDetail;

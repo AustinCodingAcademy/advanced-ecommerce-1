@@ -10,7 +10,7 @@ import Carousel from './components/Carousel';
 function App(props) {
 
   var productDiv = props.products.map((p) => {
-    return <ProductDetail product={p} />
+    return <ProductDetail key={p.id} product={p} picStyle={props.picStyle}/>
   })
 
   return (
@@ -18,7 +18,7 @@ function App(props) {
 
       <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
           <div className="container">
-              <Header />
+              <Header alterPic={props.alterPic} />
           </div>
       </nav>
 
