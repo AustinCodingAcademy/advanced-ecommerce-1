@@ -1,10 +1,5 @@
 import React from 'react';
 
-
-
-
-
-
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -16,10 +11,11 @@ class Header extends React.Component {
 
   picToggle = (e) => {
     e.preventDefault();
+    this.props.alterPic(this.state.picFull);
+
     this.setState(prevState => ({
       picFull: !prevState.picFull
     }));
-    this.props.alterPic(this.state.picFull);
     console.log(this.state.picFull);
   }
 
@@ -47,7 +43,7 @@ class Header extends React.Component {
                     <a href="#">Contact</a>
                 </li>
                 <li>
-                    <button onClick={this.picToggle}>Change </button>
+                    <button onClick={this.picToggle}>Push me to change thumbnail effect </button>
                 </li>
 
             </ul>

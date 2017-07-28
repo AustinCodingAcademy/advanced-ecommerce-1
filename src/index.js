@@ -4,15 +4,15 @@ import App from './App';
 import './index.css';
 import state from './state';
 
-var picStyle = '"width" : "100%"';
+var picStyle = {width: 50 + "%",};
 
 function alterPic(styleChange) {
   if (styleChange) {
-    picStyle = '"width" : "100%"'
+    picStyle = {width: 100 + "%",};
     console.log(picStyle);
   }
   else {
-    picStyle = '"width" : "15em"';
+    picStyle = {width: 15.0 + "em",};;
     console.log(picStyle);
   }
 }
