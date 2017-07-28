@@ -23,6 +23,7 @@ function Header() {
               <li>
                   <a href="#">Contact</a>
               </li>
+
           </ul>
       </div>
 
