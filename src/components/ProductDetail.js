@@ -23,11 +23,8 @@ function ProductDetail(props) {
             <div className="ratings">
                 <p className="pull-right">{props.product.reviews}</p>
                 <p>
-                    <span className="glyphicon glyphicon-star"></span>
-                    <span className="glyphicon glyphicon-star"></span>
-                    <span className="glyphicon glyphicon-star"></span>
-                    <span className="glyphicon glyphicon-star"></span>
-                    <span className="glyphicon glyphicon-star"></span>
+                    {starRatings(props.product.rating)}
+
                 </p>
               </div>
             </div>

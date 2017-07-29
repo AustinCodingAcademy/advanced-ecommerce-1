@@ -13,9 +13,7 @@ function App(props) {
     return <ProductDetail key={pro.id} product={pro} />
   })
   return(
-    <div>
-      {data}
-    </div>
+    <div><ProductDetail /></div>
   )
 }
 
