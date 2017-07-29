@@ -13,8 +13,12 @@ function App(props) {
     return <ProductDetail key={pro.id} product={pro} />
   })
   return(
-    <div><ProductDetail /></div>
+    <div>
+      {data}
+    </div>
   )
+
+
 }
 
 export default App;
