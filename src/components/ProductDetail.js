@@ -1,11 +1,14 @@
 import React from "react";
 import state from "../state.js";
 
-function starRatings(props) {
-   const starContent = [];
-   for(var i=1; i<=props.rating; i++) {
+function StarRatings(rating) {
+   var starContent = [];
+   for(var i=1; i<=rating; i++) {
          starContent.push(<span key={i} className="glyphicon glyphicon-star"></span>)
       }
+   return starContent;
+   console.log(starContent);
+
 }
 
 function ProductDetail(props) {
@@ -23,14 +26,19 @@ function ProductDetail(props) {
             <div className="ratings">
                 <p className="pull-right">{props.product.reviews}</p>
                 <p>
-                    {starRatings(props.product.rating)}
+               {StarRatings(props.product.rating)}
                </p>
+               <p>
+            {StarRatings}
+            </p>
+
               </div>
             </div>
         </div>
    </div>
 );
 }
+
 
 
 
