@@ -1,10 +1,9 @@
 import React from 'react';
 
 function ProductDetail(props) {
-    let starray = Array(props.product.rating).fill(null);
-    let stars = starray.map(star => {
+    let stars = Array(props.product.rating).fill(null).map(star => {
         return <span className="glyphicon glyphicon-star"></span>;
-    })
+    });
     return (
         <div className="col-sm-4 col-lg-4 col-md-4">
             <div className="thumbnail">
