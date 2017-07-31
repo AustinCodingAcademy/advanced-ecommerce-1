@@ -1,10 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
-import './index.css';
-import state from './state';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
+import "./index.css";
+import state from "./state";
+
+const products = state.products;
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+  <App products={products} />,
+  document.getElementById("root")
 );
