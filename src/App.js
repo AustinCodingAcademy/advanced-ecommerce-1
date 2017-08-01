@@ -1,36 +1,15 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Header from "./component/Carousel";
 import ProductDetail from "./component/ProductDetail";
+import Header from "./component/Header";
 import Footer from "./component/Footer";
 import Carousel from "./component/Carousel";
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div className="container">
-          <Header />
-
-          <div
-            className="collapse navbar-collapse"
-            id="bs-example-navbar-collapse-1"
-          >
-            <ul className="nav navbar-nav">
-              <li>
-                <a href="#">About</a>
-              </li>
-              <li>
-                <a href="#">Services</a>
-              </li>
-              <li>
-                <a href="#">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       <div className="container">
         <div className="row">
@@ -51,10 +30,7 @@ function App() {
 
           <div className="col-md-9">
             <Carousel />
-
-            <div className="row">
-              <ProductDetail />
-            </div>
+            <ProductDetail product={props.products} />
           </div>
         </div>
       </div>

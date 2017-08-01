@@ -1,6 +1,8 @@
+import React from "react";
+
 function Footer() {
 
-  return (
+  return(
     <footer>
         <div className="row">
             <div className="col-lg-12">
@@ -11,4 +13,4 @@ function Footer() {
   );
 }
 
-export defaut Footer;
+export default Footer;

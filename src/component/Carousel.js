@@ -1,6 +1,8 @@
+import React from "react";
+
 function Carousel() {
 
-  return (
+  return(
     <div className="row carousel-holder">
 
         <div className="col-md-12">
