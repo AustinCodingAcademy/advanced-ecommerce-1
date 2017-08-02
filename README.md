@@ -13,8 +13,8 @@ Fork, clone, run yarn install, yarn start, pull request
 * Make sure each component is in its own file and imported into App.js
   header - DONE
   Carousel - DONE
-  ProductDetail -
-* Use the provided data in state.js to dynamically populate information instead of the hard coded html that is there now.
+  ProductDetail - DONE (push)
+* DONE*** Use the provided data in state.js to dynamically populate information instead of the hard coded html that is there now.
 * DONE*** In index.js provide App with a prop called "products" sending in the product array
 * App should use the product prop and map the array of products into an array of ProductDetail components
-* DONE*** Make the star images represent the number rating from data
+* Make the star images represent the number rating from data

@@ -2,7 +2,7 @@ import React from 'react';
 import Stars from './StarRating.js';
 
 function ProductDetail(props) {
-
+  console.log(props);
   return (
     <div className="col-sm-4 col-lg-4 col-md-4">
         <div className="thumbnail">

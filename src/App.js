@@ -8,13 +8,24 @@ import Footer from './components/Footer';
 import SideNav from './components/SideNav';
 
 function App(props) {
-    const productDiv = props.products.map((product) => {
-      return (
-        <ProductDetail
-          key={product.id}
-          product={product} />
-      )
+  // console.log(props);
+  // when coding logic, needs to be before return. beyond return, just display stuff
+  // when in doubt, for loop.
+    var productDivs = [];
+    // for (var i = 0; i < props.products.length; i++){
+    //   var p = props.products[i];
+    //   productDivs.push(<ProductDetail product={p} />);
+    //   // think about how to store multiple things without overriding? Use array
+    // }
+
+    productDivs = props.products.map((p) => {
+      return <ProductDetail product={p} />;
     });
+// console.log("this is my product divs array",productDivs);
+
+// Why use map? It just makes it easier. Code less.
+// map takes one argument here, one single product object from products array.
+// exactly the same as what the long for loop does.
 
     return (
       <div>
@@ -25,8 +36,8 @@ function App(props) {
             <SideNav />
               <div className="col-md-9">
                   <Carousel />
-                  {productDiv}
                   <div className="row">
+                  {productDivs}
                       <div className="col-sm-4 col-lg-4 col-md-4">
                           <h4><a href="#">Like this template?</a>
                           </h4>
