@@ -25,7 +25,7 @@ function App(props) {
             <SideNav />
               <div className="col-md-9">
                   <Carousel />
-                  <ProductDetail product={props.products} />
+                  {productDiv}
                   <div className="row">
                       <div className="col-sm-4 col-lg-4 col-md-4">
                           <h4><a href="#">Like this template?</a>
