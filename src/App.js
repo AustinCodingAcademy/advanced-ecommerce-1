@@ -8,163 +8,48 @@ import Footer from './components/Footer';
 import SideNav from './components/SideNav';
 
 function App(props) {
+    const productDiv = props.products.map((product) => {
+      return (
+        <ProductDetail
+          key={product.id}
+          product={product} />
+      )
+    });
+
     return (
-      <div className="App">
-      <Header />
-
-    <div className="container">
-
-        <div className="row">
-
-          <SideNav />
-
-            <div className="col-md-9">
-
-                <Carousel />
-
-                <div className="row">
-                  <ProductDetail product={props.product} />
-                    <div className="col-sm-4 col-lg-4 col-md-4">
-                        <div className="thumbnail">
-                            <img src="http://placehold.it/320x150" alt=""/>
-                            <div className="caption">
-                                <h4 className="pull-right">$24.99</h4>
-                                <h4><a href="#">First Product</a>
-                                </h4>
-                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-                            </div>
-                            <div className="ratings">
-                                <p className="pull-right">15 reviews</p>
-                                <p>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-sm-4 col-lg-4 col-md-4">
-                        <div className="thumbnail">
-                            <img src="http://placehold.it/320x150" alt=""/>
-                            <div className="caption">
-                                <h4 className="pull-right">$64.99</h4>
-                                <h4><a href="#">Second Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div className="ratings">
-                                <p className="pull-right">12 reviews</p>
-                                <p>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star-empty"></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-sm-4 col-lg-4 col-md-4">
-                        <div className="thumbnail">
-                            <img src="http://placehold.it/320x150" alt=""/>
-                            <div className="caption">
-                                <h4 className="pull-right">$74.99</h4>
-                                <h4><a href="#">Third Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div className="ratings">
-                                <p className="pull-right">31 reviews</p>
-                                <p>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star-empty"></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-sm-4 col-lg-4 col-md-4">
-                        <div className="thumbnail">
-                            <img src="http://placehold.it/320x150" alt=""/>
-                            <div className="caption">
-                                <h4 className="pull-right">$84.99</h4>
-                                <h4><a href="#">Fourth Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div className="ratings">
-                                <p className="pull-right">6 reviews</p>
-                                <p>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star-empty"></span>
-                                    <span className="glyphicon glyphicon-star-empty"></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-sm-4 col-lg-4 col-md-4">
-                        <div className="thumbnail">
-                            <img src="http://placehold.it/320x150" alt=""/>
-                            <div className="caption">
-                                <h4 className="pull-right">$94.99</h4>
-                                <h4><a href="#">Fifth Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div className="ratings">
-                                <p className="pull-right">18 reviews</p>
-                                <p>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star-empty"></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-sm-4 col-lg-4 col-md-4">
-                        <h4><a href="#">Like this template?</a>
-                        </h4>
-                        <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
-                        <a className="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div className="container">
-
-        <hr/>
-
-
-        <footer>
+      <div>
+        <div className="App">
+        <Header />
+          <div className="container">
             <div className="row">
-                <div className="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
+            <SideNav />
+              <div className="col-md-9">
+                  <Carousel />
+                  <ProductDetail product={props.products} />
+                  <div className="row">
+                      <div className="col-sm-4 col-lg-4 col-md-4">
+                          <h4><a href="#">Like this template?</a>
+                          </h4>
+                          <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
+                          <a className="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
+                      </div>
+                  </div>
+              </div>
             </div>
-        </footer>
-
-    </div>
-      </div>
-    );
+          </div>
+          <div className="container">
+          <hr/>
+            <footer>
+                <div className="row">
+                    <div className="col-lg-12">
+                        <p>Copyright &copy; Your Website 2014</p>
+                    </div>
+                </div>
+            </footer>
+            </div>
+          </div>
+        </div>
+      );
 }
 
 export default App;
