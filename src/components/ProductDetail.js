@@ -1,5 +1,4 @@
 import React from 'react';
-import Stars from './StarRating.js';
 
 function ProductDetail(props) {
   console.log(props);
@@ -15,11 +14,23 @@ function ProductDetail(props) {
             </div>
             <div className="ratings">
                 <p className="pull-right">{props.product.reviews}</p>
-                <Stars rating={props.product.rating} />
+                {stars(props.product.rating)}
             </div>
         </div>
     </div>
   );
+}
+
+function stars(r) {
+  const starRating = [];
+  for (var i = 1; i <= 5; i++) {
+    if (r >= i) {
+      starRating.push(<span className="glyphicon glyphicon-star"></span>)
+    } else {
+    starRating.push(<span className="glyphicon glyphicon-star-empty"></span>)
+    }
+  }
+  return starRating
 }
 
 
