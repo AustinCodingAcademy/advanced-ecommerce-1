@@ -1,6 +1,6 @@
 import React from 'react';
 
-function () {
+function Carousel () {
   return (
     <div className="row carousel-holder">
 
