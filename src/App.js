@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Carousel from './components/Carousel';
 import ProductDetail from './components/ProductDetail';
 import Footer from './components/Footer';
+import SideNav from './components/SideNav';
 
 function App(props) {
     return (
@@ -15,50 +16,14 @@ function App(props) {
 
         <div className="row">
 
-            <div className="col-md-3">
-                <p className="lead">Shop Name</p>
-                <div className="list-group">
-                    <a href="#" className="list-group-item">Category 1</a>
-                    <a href="#" className="list-group-item">Category 2</a>
-                    <a href="#" className="list-group-item">Category 3</a>
-                </div>
-            </div>
+          <SideNav />
 
             <div className="col-md-9">
 
-                <div className="row carousel-holder">
-
-                    <div className="col-md-12">
-                        <div id="carousel-example-generic" className="carousel slide" data-ride="carousel">
-                            <ol className="carousel-indicators">
-                                <li data-target="#carousel-example-generic" data-slide-to="0" className="active"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                            </ol>
-                            <div className="carousel-inner">
-                                <div className="item active">
-                                    <img className="slide-image" src="http://placehold.it/800x300" alt=""/>
-                                </div>
-                                <div className="item">
-                                    <img className="slide-image" src="http://placehold.it/800x300" alt=""/>
-                                </div>
-                                <div className="item">
-                                    <img className="slide-image" src="http://placehold.it/800x300" alt=""/>
-                                </div>
-                            </div>
-                            <a className="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                                <span className="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a className="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                                <span className="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
+                <Carousel />
 
                 <div className="row">
-
+                  <ProductDetail product={props.product} />
                     <div className="col-sm-4 col-lg-4 col-md-4">
                         <div className="thumbnail">
                             <img src="http://placehold.it/320x150" alt=""/>
