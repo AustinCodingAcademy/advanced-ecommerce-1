@@ -3,33 +3,27 @@ import Rating from "./Rating";
 
 function ProductDetail(props) {
 
-  const productDivs = props.product.map(product => {
-    return (
-      <div className="col-sm-4 col-lg-4 col-md-4" key={product.id}>
-        <div className="thumbnail">
-          <img src={product.imgUrl} alt=""/>
-          <div className="caption">
-              <h4 className="pull-right">{product.price}</h4>
-              <h4><a href="#">{product.name}</a>
-              </h4>
-              <p>{product.description}</p>
-          </div>
-          <div className="ratings">
-              <p className="pull-right">{product.reviews} reviews</p>
+  return (
+      <div className="row">
+        <div className="col-sm-4 col-lg-4 col-md-4" key={props.product.id}>
+          <div className="thumbnail">
+            <img src={props.product.imgUrl} alt=""/>
+            <div className="caption">
+                <h4 className="pull-right">{props.product.price}</h4>
+                <h4><a href="#">{props.product.name}</a>
+                </h4>
+                <p>{props.product.description}</p>
+            </div>
+            <div className="ratings">
+                <p className="pull-right">{props.product.reviews} reviews</p>
 
-                <Rating rating={product.rating} />
+                  <Rating rating={props.product.rating} />
 
+            </div>
           </div>
         </div>
       </div>
     );
-  });
-
-  return(
-    <div className="row">
-      {productDivs}
-    </div>
-  );
-}
+  }
 
 export default ProductDetail;

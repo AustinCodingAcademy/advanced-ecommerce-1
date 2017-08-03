@@ -7,6 +7,11 @@ import Footer from "./component/Footer";
 import Carousel from "./component/Carousel";
 
 function App(props) {
+
+  const productDivs = props.products.map(product => {
+    return <ProductDetail key={product.id} product={product}/>
+    });
+
   return (
     <div className="App">
       <Header />
@@ -30,18 +35,20 @@ function App(props) {
 
           <div className="col-md-9">
             <Carousel />
-            <ProductDetail product={props.products} />
+
+            {productDivs}
+
+            </div>
           </div>
         </div>
+
+        <div className="container">
+          <hr />
+
+          <Footer />
+        </div>
       </div>
+    );
+  }
 
-      <div className="container">
-        <hr />
-
-        <Footer />
-      </div>
-    </div>
-  );
-}
-
-export default App;
+  export default App;
