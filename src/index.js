@@ -5,6 +5,6 @@ import './index.css';
 import state from './state';
 
 ReactDOM.render(
-  <App />,
+  <App state={state} />,
   document.getElementById('root')
 );
