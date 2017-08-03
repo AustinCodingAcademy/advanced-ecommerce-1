@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import ProcutDetail from "./components/ProductDetail";
+import ProductDetail from "./components/ProductDetail";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Carousel from "./components/Carousel";
@@ -38,27 +38,7 @@ function App(props) {
 
                 <div className="row">
 
-                    <div className="col-sm-4 col-lg-4 col-md-4">
-                        <div className="thumbnail">
-                            <img src="http://placehold.it/320x150" alt=""/>
-                            <div className="caption">
-                                <h4 className="pull-right">$24.99</h4>
-                                <h4><a href="#">First Product</a>
-                                </h4>
-                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-                            </div>
-                            <div className="ratings">
-                                <p className="pull-right">15 reviews</p>
-                                <p>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                    <span className="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <ProductDetail />
 
                     <div className="col-sm-4 col-lg-4 col-md-4">
                         <div className="thumbnail">
