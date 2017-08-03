@@ -10,7 +10,7 @@ export default {
   }, {
     "id": 2,
     "name": "Topiramate",
-    "description": "You will be so happy when you use this product",
+    "description": "Injury of ulnar nerve at forearm level, left arm, sequela",
     "reviews": 2,
     "rating": 2,
     "imgUrl": "http://dummyimage.com/125x134.jpg/cc0000/ffffff",
@@ -42,7 +42,7 @@ export default {
   }, {
     "id": 6,
     "name": "Fresh Sugar Honey Tinted Lip Treatment SPF15",
-    "description": "this stuff is awesome",
+    "description": "Unspecified open wound of vagina and vulva",
     "reviews": 79,
     "rating": 3,
     "imgUrl": "http://dummyimage.com/211x227.bmp/5fa2dd/ffffff",
@@ -50,7 +50,7 @@ export default {
   }, {
     "id": 7,
     "name": "LBel",
-    "description": "The best product ever",
+    "description": "Toxic effect of 2-Propanol, intentional self-harm, init",
     "reviews": 76,
     "rating": 3,
     "imgUrl": "http://dummyimage.com/212x144.jpg/ff4444/ffffff",
@@ -58,7 +58,7 @@ export default {
   }, {
     "id": 8,
     "name": "Cholestyramine",
-    "description": "Product 3",
+    "description": "Laceration without foreign body of trachea, sequela",
     "reviews": 74,
     "rating": 3,
     "imgUrl": "http://dummyimage.com/204x175.jpg/5fa2dd/ffffff",
@@ -66,7 +66,7 @@ export default {
   }, {
     "id": 9,
     "name": "Risperidone",
-    "description": " cephalospor/oth beta-lactm antibiot, undet, sequela",
+    "description": "Poisn by cephalospor/oth beta-lactm antibiot, undet, sequela",
     "reviews": 9,
     "rating": 1,
     "imgUrl": "http://dummyimage.com/212x108.bmp/cc0000/ffffff",
