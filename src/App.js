@@ -35,9 +35,9 @@ function App(props) {
 
           <div className="col-md-9">
             <Carousel />
-
-            {productDivs}
-
+            <div className="row">
+              {productDivs}
+            </div>
             </div>
           </div>
         </div>
