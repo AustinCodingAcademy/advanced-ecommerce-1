@@ -4,7 +4,7 @@ import Rating from "./Rating";
 function ProductDetail(props) {
 
   return (
-      <div className="row">
+
         <div className="col-sm-4 col-lg-4 col-md-4" key={props.product.id}>
           <div className="thumbnail">
             <img src={props.product.imgUrl} alt=""/>
@@ -22,7 +22,7 @@ function ProductDetail(props) {
             </div>
           </div>
         </div>
-      </div>
+      
     );
   }
 
