@@ -18,6 +18,22 @@
   font-size: large;
 }
 
+button {
+  margin: 10px;
+}
+
+.thumbnail>img {
+  height: 15em;
+}
+
+/*.thumbnail>img {
+  width: 100%;
+}*/
+
+/*.thumbnail>img {
+  width: 15em;
+}*/
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
