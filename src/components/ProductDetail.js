@@ -22,15 +22,15 @@ function ProductDetail(props) {
 }
 
 function stars(r) {
-  const starRating = [];
-  for (var i = 1; i <= 5; i++) {
-    if (r >= i) {
-      starRating.push(<span className="glyphicon glyphicon-star"></span>)
+  const StarRating = [];
+  for (var i=1; i<=5; i++) {
+    if (r>=i) {
+      StarRating.push(<span className="glyphicon glyphicon-star"></span>)
     } else {
-    starRating.push(<span className="glyphicon glyphicon-star-empty"></span>)
+      StarRating.push(<span className="glyphicon glyphicon-star-empty"></span>)
     }
   }
-  return starRating
+  return StarRating
 }
 
 
