@@ -5,6 +5,7 @@ import ProductDetail from "./components/ProductDetail";
 import Footer from "./components/Header";
 import state from "./state";
 // test
+//test 2
 
 function App() {
   return (
