@@ -4,16 +4,7 @@ import Header from "./components/Header";
 import ProductDetail from "./components/ProductDetail";
 import Footer from "./components/Header";
 import state from "./state";
-// test
-//test 2
-// test 3
-// test 4
-// test 5
-// test 6
-// test 7
-// test 8
-//test 9
-//12
+
 
 function App() {
   return (
