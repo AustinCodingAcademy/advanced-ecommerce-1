@@ -1,6 +1,8 @@
 import React from "react";
+import StarRating from "./StarRating.js";
 
 function ProductDetail(props) {
+
 
   return (
     <div className="col-sm-4 col-lg-4 col-md-4">
@@ -14,12 +16,7 @@ function ProductDetail(props) {
             </div>
             <div className="ratings">
                 <p className="pull-right">{props.product.reviews} reviews</p>
-                <p>
-                    <span className="glyphicon glyphicon-star"></span>
-                    <span className="glyphicon glyphicon-star"></span>
-                    <span className="glyphicon glyphicon-star"></span>
-                    <span className="glyphicon glyphicon-star"></span>
-                    <span className="glyphicon glyphicon-star"></span>
+                <p><StarRating rating={props.product.rating} />
                 </p>
             </div>
         </div>

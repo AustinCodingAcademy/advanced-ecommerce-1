@@ -5,6 +5,7 @@ import ProductDetail from "./components/ProductDetail";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Carousel from "./components/Carousel";
+import SideCategories from "./components/SideCategories";
 
 function App(props) {
 
@@ -23,14 +24,7 @@ function App(props) {
 
         <div className="row">
 
-            <div className="col-md-3">
-                <p className="lead">Shop Name</p>
-                <div className="list-group">
-                    <a href="#" className="list-group-item">Category 1</a>
-                    <a href="#" className="list-group-item">Category 2</a>
-                    <a href="#" className="list-group-item">Category 3</a>
-                </div>
-            </div>
+            <SideCategories />
 
             <div className="col-md-9">
 
