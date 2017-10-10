@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export default function StarDisplay(props) {
+function StarDisplay(props) {
   const starRating = [];
   let r = 5 - props.stars;
   for (let i = 1; i <= props.stars; i++) {
@@ -12,3 +12,5 @@ export default function StarDisplay(props) {
   }
   return <div>{starRating}</div>
 }
+
+export default StarDisplay;
