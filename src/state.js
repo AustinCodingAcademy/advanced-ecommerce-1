@@ -1,5 +1,5 @@
 export default {
-  products:[{
+  products: [{
     "id": 1,
     "name": "Body Luxuries Sweet Lavender Hand Sanitizer",
     "description": "Psychotropic drugs, not elsewhere classified",
