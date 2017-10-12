@@ -10,11 +10,11 @@ import StarDisplay from "./StarDisplay";
 // removed className "pull-right" on product.price for spacing
 // <h4 className="pull-right">{product.price}</h4>
 
- function ProductDetail(props) {
-   const products = props.product.products;
-   return (
-     <div>
-       {products.map((product, i) =>
+function ProductDetail(props) {
+  const products = props.product;
+  return (
+    <div>
+      {products.map((product, i) =>
          <div key={i} className="col-sm-4 col-lg-4 col-md-4">
            <div className="thumbnail">
              <img src={product.imgUrl} alt={product.name} />

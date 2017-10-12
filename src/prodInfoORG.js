@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 <div className="col-sm-4 col-lg-4 col-md-4">
     <div className="thumbnail">
         <img src="http://placehold.it/320x150" alt=""/>
