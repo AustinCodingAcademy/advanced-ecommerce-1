@@ -6,28 +6,37 @@ import Carousel from "./Components/Carousel";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import ProductDetail from "./Components/ProductDetail";
+import StarDisplay from "./Components/StarDisplay";
 
-// App should use the product prop and
-// map the array of products into an array
-// of ProductDetail components
+//App should use the product prop and
+//map the array of products into an array
+//of ProductDetail components
 
 function App(props) {
 
-  const productListings = props.products.map((p, i) => {
-    return <ProductDetail product={p} key={i} />;
-  });
+let productListings = props.products.map((p, i)=> {
+  return <ProductDetail product={p} key={i} />;
+});
 
-  return (
-    <div className="App">
+/*
+  for (let i = 0; i < props.products.length; i ++) {
+    let p = props.products[i];
+    <ProductDetail product={p} />
+    productListings.push(<ProductDetail product={p} />);
+  }
+  */
 
-      <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    return (
+      <div className="App">
+
+    <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div className="container">
 
           <Header />
 
-          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul className="nav navbar-nav">
-              <li>
+            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul className="nav navbar-nav">
+                    <li>
                         <a href="#">About</a>
                     </li>
                     <li>
@@ -63,6 +72,7 @@ function App(props) {
 
                 <div className="row">
 
+                  this is where it was
                   {productListings}
 
                     <div className="col-sm-4 col-lg-4 col-md-4">

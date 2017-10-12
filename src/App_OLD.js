@@ -6,28 +6,24 @@ import Carousel from "./Components/Carousel";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import ProductDetail from "./Components/ProductDetail";
+import StarDisplay from "./Components/StarDisplay";
 
-// App should use the product prop and
-// map the array of products into an array
-// of ProductDetail components
+//App should use the product prop and
+//map the array of products into an array
+//of ProductDetail components
 
 function App(props) {
+    return (
+      <div className="App">
 
-  const productListings = props.products.map((p, i) => {
-    return <ProductDetail product={p} key={i} />;
-  });
-
-  return (
-    <div className="App">
-
-      <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div className="container">
 
           <Header />
 
-          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul className="nav navbar-nav">
-              <li>
+            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul className="nav navbar-nav">
+                    <li>
                         <a href="#">About</a>
                     </li>
                     <li>
@@ -63,7 +59,7 @@ function App(props) {
 
                 <div className="row">
 
-                  {productListings}
+                  <ProductDetail product={props.products} />
 
                     <div className="col-sm-4 col-lg-4 col-md-4">
                         <h4><a href="#">Like this template?</a>
