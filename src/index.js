@@ -4,7 +4,4 @@ import App from './App';
 import './index.css';
 import state from './state';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+ReactDOM.render(<App products={state.products} />, document.getElementById('root'));
