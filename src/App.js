@@ -11,17 +11,17 @@ function App(props) {
 //FRESH CODE SPACE = CODE ANYTHING YOU NEED HERE TO BE CALLED LATER. IS THIS THE BEST LOCATION FOR MAP FUNCTION?
 // console.log(props.products);
 
+    // let productDetails = [];
+    // for (var i = 0; i < props.products.length; i++){
+    //     productDetails.push(<ProductDetail products={props.products[i]}/> );
+    // let productDetails = [];
+    let data = props.products;
     let productDetails = [];
-    for (var i = 0; i < props.products.length; i++){
-        productDetails.push(<ProductDetail products={props.products[i]}/> );
-
-
-    // const productDetails = props.products.map(
-
-    // (props.products) => [<ProductDetail products={props.products[i]}/>
     
-    // ]);
-    }
+    data.map((item) => {
+        productDetails.push(<ProductDetail products={item}/>)})
+
+    
 
     return (
       <div className="App">
