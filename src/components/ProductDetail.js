@@ -1,5 +1,5 @@
 import React from "react";
-//OR IS THIS THE BEST LOCATION FOR MAP FUNCTION?
+
 function ProductDetail(props) {
 
     return (
