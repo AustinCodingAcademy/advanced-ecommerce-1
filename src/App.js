@@ -8,7 +8,7 @@ import './App.css';
 
 function App(props) {
 
-//FRESH CODE SPACE. CODE ANYTHING YOU NEED HERE TO BE CALLED LATER
+//FRESH CODE SPACE = CODE ANYTHING YOU NEED HERE TO BE CALLED LATER. IS THIS THE BEST LOCATION FOR MAP FUNCTION?
 // console.log(props.products);
 
     let productDetails = [];
