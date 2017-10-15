@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
-import state from './state';
+import state from './state.js';
 
 ReactDOM.render(
-  <App />,
+  <App products={state.products}/>,
   document.getElementById('root')
 );

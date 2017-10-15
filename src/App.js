@@ -1,8 +1,13 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {  } from 'react';
+// import logo from './logo.svg';
 import './App.css';
+// import Header from './Header';
+// import Carousel from './Carousel';
+import ProductDetail from './ProductDetail.js';
+// import Footer from './Footer';
+// import SideNav from './SideNav';
 
-function App() {
+function App(props) {
     return (
       <div className="App">
      
@@ -83,6 +88,8 @@ function App() {
                     </div>
 
                 </div>
+
+
 
                 <div className="row">
 
@@ -195,6 +202,8 @@ function App() {
                             </div>
                         </div>
                     </div>
+
+
 
                     <div className="col-sm-4 col-lg-4 col-md-4">
                         <h4><a href="#">Like this template?</a>
