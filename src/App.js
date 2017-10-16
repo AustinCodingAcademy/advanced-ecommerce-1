@@ -6,6 +6,7 @@ import State from './state';
 import ProductDetail from './components/ProductDetail';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
+
 function App(props) {
   let productDivs = props.products.map( (p, idx) => {
     return <ProductDetail key={idx} product={p} />
