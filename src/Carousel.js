@@ -35,3 +35,5 @@ function Carousel(props) {
                         </div>
     );
 }
+
+export default Carousel;

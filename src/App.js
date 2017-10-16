@@ -1,11 +1,11 @@
 import React, {  } from 'react';
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
-// import Header from './Header';
-// import Carousel from './Carousel';
-import ProductDetail from './ProductDetail.js';
-// import Footer from './Footer';
-// import SideNav from './SideNav';
+import Header from './Header';
+import Carousel from './Carousel';
+import ProductDetail from './ProductDetail';
+import Footer from './Footer';
+import SideNav from './SideNav';
 
 function App(props) {
     var productDivs = [];
@@ -31,6 +31,8 @@ function App(props) {
                 </button>
                 <a className="navbar-brand" href="#">Start Bootstrap</a>
             </div> */}
+
+            <SideNav />
           
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul className="nav navbar-nav">
@@ -53,7 +55,7 @@ function App(props) {
  
     <div className="container">
 
-        <div className="row">
+         <div className="row">
 
             <div className="col-md-3">
                 <p className="lead">Shop Name</p>
@@ -102,7 +104,7 @@ function App(props) {
                 <div className="row">
                     {productDivs}
 
-                    <div className="col-sm-4 col-lg-4 col-md-4">
+                    {/* <div className="col-sm-4 col-lg-4 col-md-4">
                         <div className="thumbnail">
                             <img src="http://placehold.it/320x150" alt=""/>
                             <div className="caption">
@@ -209,7 +211,7 @@ function App(props) {
                                     <span className="glyphicon glyphicon-star-empty"></span>
                                 </p>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
 
@@ -233,15 +235,16 @@ function App(props) {
 
         <hr/>
 
-      
+{/*       
         <footer>
             <div className="row">
                 <div className="col-lg-12">
                     <p>Copyright &copy; Your Website 2014</p>
                 </div>
             </div>
-        </footer>
-
+        </footer> */}
+    <footer />
+    
     </div>
       </div>
     );
