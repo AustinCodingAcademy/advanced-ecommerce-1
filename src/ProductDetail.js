@@ -14,15 +14,11 @@ function ProductDetail(props) {
         </div>
         <div className="ratings">
             <p className="pull-right">{props.product.reviews}</p>
-            <p>
-                <span className="glyphicon glyphicon-star"></span>
-                <span className="glyphicon glyphicon-star"></span>
-                <span className="glyphicon glyphicon-star"></span>
-                <span className="glyphicon glyphicon-star"></span>
-                <span className="glyphicon glyphicon-star"></span>
-            </p>
+           
         </div>
     </div>
 </div>
     );
 }
+
+export default ProductDetail;
