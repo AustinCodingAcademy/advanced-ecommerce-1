@@ -1,15 +1,28 @@
-import React, { Component } from 'react';
+import React, {  } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
+import Carousel from './Carousel';
+import ProductDetail from './ProductDetail';
+import Footer from './Footer';
+import SideNav from './SideNav';
 
-function App() {
+function App(props) {
+    var productDivs = [];
+    for(var i=0; i < props.products.length; i++){
+        var p = props.products[i];
+        productDivs.push(<ProductDetail product={p} />)
+    };
+};
+
     return (
-      <div className="App">
+        <div className="App">
+          
      
     <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div className="container">
           
-            <div className="navbar-header">
+            {/* <div className="navbar-header">
                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span className="sr-only">Toggle navigation</span>
                     <span className="icon-bar"></span>
@@ -17,7 +30,9 @@ function App() {
                     <span className="icon-bar"></span>
                 </button>
                 <a className="navbar-brand" href="#">Start Bootstrap</a>
-            </div>
+            </div> */}
+
+            <SideNav />
           
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul className="nav navbar-nav">
@@ -40,7 +55,7 @@ function App() {
  
     <div className="container">
 
-        <div className="row">
+         <div className="row">
 
             <div className="col-md-3">
                 <p className="lead">Shop Name</p>
@@ -84,9 +99,12 @@ function App() {
 
                 </div>
 
-                <div className="row">
 
-                    <div className="col-sm-4 col-lg-4 col-md-4">
+
+                <div className="row">
+                    {productDivs}
+
+                    {/* <div className="col-sm-4 col-lg-4 col-md-4">
                         <div className="thumbnail">
                             <img src="http://placehold.it/320x150" alt=""/>
                             <div className="caption">
@@ -193,8 +211,10 @@ function App() {
                                     <span className="glyphicon glyphicon-star-empty"></span>
                                 </p>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
+
+
 
                     <div className="col-sm-4 col-lg-4 col-md-4">
                         <h4><a href="#">Like this template?</a>
@@ -209,21 +229,22 @@ function App() {
 
         </div>
 
-    </div>
+    </div> 
    
     <div className="container">
 
         <hr/>
 
-      
+{/*       
         <footer>
             <div className="row">
                 <div className="col-lg-12">
                     <p>Copyright &copy; Your Website 2014</p>
                 </div>
             </div>
-        </footer>
-
+        </footer> */}
+    <footer />
+    
     </div>
       </div>
     );
