@@ -6,7 +6,18 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Carousel from './components/Carousel';
 
+//let props = {myProducts:[]}
+//App()
+
 function App(props) {
+  console.log(props.myProducts);
+
+  let newArray = [];
+  for(let i = 0; i < props.myProducts.length; i++){
+     let product= props.myProducts[i];
+     newArray.push(<ProductDetail product={product}/>);
+  }
+
     return (
       <div className="App">
 
@@ -64,7 +75,7 @@ function App(props) {
 
                 <div className="row">
 
-                  <ProductDetail />
+                  {newArray}
 
 
                     <div className="col-sm-4 col-lg-4 col-md-4">
@@ -88,7 +99,7 @@ function App(props) {
 
 
       <Footer />
-            
+
 
     </div>
       </div>
