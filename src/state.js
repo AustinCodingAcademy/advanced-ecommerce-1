@@ -80,4 +80,4 @@ export default {
     "imgUrl": "http://dummyimage.com/189x109.png/cc0000/ffffff",
     "price": "$74.37"
   }]
-}
+};
