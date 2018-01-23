@@ -7,14 +7,14 @@ import Carousel from "./newModules/Carousel";
 import ProductDetail from "./newModules/ProductDetail";
 import Footer from "./newModules/Footer";
 
-function App() {
+function App(props) {
   return (
     <div className="App">
 
       <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div className="container">
 
-          <Header />
+          <Header prod={props.prod} />
 
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav">
@@ -40,7 +40,7 @@ function App() {
         <div className="row">
 
           <div className="col-md-3">
-            <p className="lead">Shop Name</p>
+            <p className="lead">The Shop</p>
             <div className="list-group">
               <a href="#" className="list-group-item">Category 1</a>
               <a href="#" className="list-group-item">Category 2</a>
@@ -50,26 +50,21 @@ function App() {
 
           <div className="col-md-9">
 
-            <Carousel />
+            <Carousel prod={props.prod} />
 
             <div className="row">
 
-              <ProductDetail />
+              <ProductDetail prod={props.prod} index={0} />
 
-              <ProductDetail />
+              <ProductDetail prod={props.prod} index={1} />
 
-              <ProductDetail />
+              <ProductDetail prod={props.prod} index={2} />
 
-              <ProductDetail />
+              <ProductDetail prod={props.prod} index={3} />
 
-              <ProductDetail />
+              <ProductDetail prod={props.prod} index={4} />
 
-              <div className="col-sm-4 col-lg-4 col-md-4">
-                <h4><a href="#">Like this template?</a>
-                </h4>
-                <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
-                <a className="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
-              </div>
+              <ProductDetail prod={props.prod} index={5} />
 
             </div>
 

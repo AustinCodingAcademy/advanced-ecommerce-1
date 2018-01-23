@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header() {
+function Carousel(props) {
   return (
     <div className="row carousel-holder">
 
@@ -13,13 +13,13 @@ function Header() {
           </ol>
           <div className="carousel-inner">
             <div className="item active">
-              <img className="slide-image" src="http://placehold.it/800x300" alt="" />
+              <img className="slide-image" src={props.prod.products[0].imgUrl} alt="" />
             </div>
             <div className="item">
-              <img className="slide-image" src="http://placehold.it/800x300" alt="" />
+              <img className="slide-image" src={props.prod.products[1].imgUrl} alt="" />
             </div>
             <div className="item">
-              <img className="slide-image" src="http://placehold.it/800x300" alt="" />
+              <img className="slide-image" src={props.prod.products[2].imgUrl} alt="" />
             </div>
           </div>
           <a className="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -36,4 +36,4 @@ function Header() {
   )
 }
 
-export default Header;
+export default Carousel;

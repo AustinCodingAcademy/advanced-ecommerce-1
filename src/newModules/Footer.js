@@ -1,7 +1,7 @@
 
 import React from "react";
 
-function Footer() {
+function Footer(props) {
   return (
     <footer>
       <div className="row">
