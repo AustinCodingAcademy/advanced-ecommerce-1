@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from './Header';
+import Footer from './Footer';
 
 function App() {
     return (
@@ -209,13 +210,7 @@ function App() {
         <hr/>
 
 
-        <footer>
-            <div className="row">
-                <div className="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
-            </div>
-        </footer>
+      <Footer />
 
     </div>
       </div>
