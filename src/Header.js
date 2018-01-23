@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header(props){
+function Header(){
   return (
     <div className="navbar-header">
         <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
