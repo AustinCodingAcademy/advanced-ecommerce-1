@@ -5,9 +5,9 @@ Fork, clone, run yarn install, yarn start, pull request
  * Create a component folder to hold component files
  * Organize this web page into appropriate components
    * ProductDetail - find a div with className="col-sm-4 col-lg-4 col-md-4"
-   * Header - find a div with className="navbar-header"
-   * Footer - find a footer element
-   * Carousel - find a div with className="row carousel-holder"
+   <!-- * Header - find a div with className="navbar-header" -->
+   <!-- * Footer - find a footer element -->
+   <!-- * Carousel - find a div with className="row carousel-holder" -->
 * The ProductDetail should repesent only one single product
 * The ProductDetail should take a prop called product with is an object, and use it to populate price, name, description reviews and stars.
 * Make sure each component is in its own file and imported into App.js
