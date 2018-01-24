@@ -8,6 +8,12 @@ import ProductDetail from "./newModules/ProductDetail";
 import Footer from "./newModules/Footer";
 
 function App(props) {
+
+  let p = props.prod;
+  let prodDetails = p.products.map((product) => {
+    return <ProductDetail prod={product} />;
+  });
+
   return (
     <div className="App">
 
@@ -54,17 +60,7 @@ function App(props) {
 
             <div className="row">
 
-              <ProductDetail prod={props.prod} index={0} />
-
-              <ProductDetail prod={props.prod} index={1} />
-
-              <ProductDetail prod={props.prod} index={2} />
-
-              <ProductDetail prod={props.prod} index={3} />
-
-              <ProductDetail prod={props.prod} index={4} />
-
-              <ProductDetail prod={props.prod} index={5} />
+              {prodDetails}
 
             </div>
 

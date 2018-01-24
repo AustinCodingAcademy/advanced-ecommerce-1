@@ -1,28 +1,29 @@
 import React from "react";
 
-function stars(num) {
-  let arr = [];
-  for (let i = 1; i < num + 1; i++) {
-    arr.push(<span className="glyphicon glyphicon-star" key={i} />);
-  }
-  return arr;
-}
-
 function ProductDetail(props) {
+
+  function stars(num) {
+    let arr = [];
+    for (let i = 1; i < num + 1; i++) {
+      arr.push(<span className="glyphicon glyphicon-star" key={i} />);
+    }
+    return arr;
+  }
+
   return (
     <div className="col-sm-4 col-lg-4 col-md-4">
       <div className="thumbnail">
-        <img src={props.prod.products[props.index].imgUrl} alt="" />
+        <img src={props.prod.imgUrl} alt="" />
         <div className="caption">
-          <h4 className="pull-right">{props.prod.products[props.index].price}</h4>
-          <h4><a href="#">{props.prod.products[props.index].name.length > 13 ? props.prod.products[props.index].name.substring(0, 14) + "..." : props.prod.products[props.index].name}</a>
+          <h4 className="pull-right">{props.prod.price}</h4>
+          <h4><a href="#">{props.prod.name.length > 13 ? props.prod.name.substring(0, 14) + "..." : props.prod.name}</a>
           </h4>
-          <p>{props.prod.products[props.index].description}</p>
+          <p>{props.prod.description}</p>
         </div>
         <div className="ratings">
-          <p className="pull-right">{props.prod.products[props.index].reviews} reviews</p>
+          <p className="pull-right">{props.prod.reviews} reviews</p>
           <p>
-            {stars(props.prod.products[props.index].rating)}
+            {stars(props.prod.rating)}
           </p>
         </div>
       </div>
