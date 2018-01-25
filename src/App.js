@@ -3,8 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './component/Header'; 
 import ProductDetail from './component/ProductDetail'; 
+import Carousel from './component/Carousel';
+import Footer from './component/Footer';
 
 function App(props) {
+    var productDivs = [];
+    productDivs = props.products.map((p)=> {
+        return <ProductDetail product={p} />;
+    });   
+console.log("heey", productDivs);
     return (
       <div className="App">
      
@@ -20,6 +27,7 @@ function App(props) {
                     <span className="icon-bar"></span>
                 </button>
                 <a className="navbar-brand" href="#">Start Bootstrap</a>
+            </div>
             </div>
            */}
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -55,7 +63,8 @@ function App(props) {
             </div>
 
             <div className="col-md-9">
-
+                <Carousel />
+{/* 
                 <div className="row carousel-holder">
 
                     <div className="col-md-12">
@@ -86,8 +95,9 @@ function App(props) {
                     </div>
 
                 </div>
-
+  */}
                 <div className="row">
+                {productDivs}
                 <ProductDetail product={props.products[4]}/>
 
 {/* 
@@ -221,11 +231,11 @@ function App(props) {
 
         <hr/>
 
-      
+        <Footer />      
         <footer>
             <div className="row">
                 <div className="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; 2018</p>
                 </div>
             </div>
         </footer>
