@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from './component/Header'; 
+import ProductDetail from './component/ProductDetail'; 
 
-function App() {
+function App(props) {
     return (
       <div className="App">
      
     <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div className="container">
-          
+        <Header/> 
+        {/*           
             <div className="navbar-header">
                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span className="sr-only">Toggle navigation</span>
@@ -18,7 +21,7 @@ function App() {
                 </button>
                 <a className="navbar-brand" href="#">Start Bootstrap</a>
             </div>
-          
+           */}
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul className="nav navbar-nav">
                     <li>
@@ -85,7 +88,9 @@ function App() {
                 </div>
 
                 <div className="row">
+                <ProductDetail product={props.products[4]}/>
 
+{/* 
                     <div className="col-sm-4 col-lg-4 col-md-4">
                         <div className="thumbnail">
                             <img src="http://placehold.it/320x150" alt=""/>
@@ -107,6 +112,7 @@ function App() {
                             </div>
                         </div>
                     </div>
+ */}
 
                     <div className="col-sm-4 col-lg-4 col-md-4">
                         <div className="thumbnail">
