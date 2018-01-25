@@ -5,7 +5,7 @@ import LeftColumn from './modules/Left-column';
 import Carousel from './modules/Carousel';
 import ProductBox from './modules/ProductBox';
 import Foot from './modules/Footer';
-{/* <ProductBox product={ props.products.products[ind] } */ }
+
 const App = (props) => {
   const test =
     props.products.products.map(
