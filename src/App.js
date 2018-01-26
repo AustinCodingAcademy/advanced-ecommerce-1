@@ -5,7 +5,7 @@ import './App.css';
 function App() {
     return (
       <div className="App">
-     
+     {/*<Header>*/}
     <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div className="container">
           
@@ -30,13 +30,16 @@ function App() {
                     <li>
                         <a href="#">Contact</a>
                     </li>
+                    <li >
+                        <a href="#">Items In Cart (0)</a>
+                    </li>
                 </ul>
             </div>
          
         </div>
       
     </nav>
-
+{/*</Header>*/}
  
     <div className="container">
 
@@ -52,7 +55,7 @@ function App() {
             </div>
 
             <div className="col-md-9">
-
+                {/*<Carousel>*/}
                 <div className="row carousel-holder">
 
                     <div className="col-md-12">
@@ -83,9 +86,9 @@ function App() {
                     </div>
 
                 </div>
-
+                {/*</Carousel>*/}
                 <div className="row">
-
+                    {/*<ProductDetail>*/}
                     <div className="col-sm-4 col-lg-4 col-md-4">
                         <div className="thumbnail">
                             <img src="http://placehold.it/320x150" alt=""/>
@@ -107,7 +110,7 @@ function App() {
                             </div>
                         </div>
                     </div>
-
+                    {/*</ProductDetail>*/}
                     <div className="col-sm-4 col-lg-4 col-md-4">
                         <div className="thumbnail">
                             <img src="http://placehold.it/320x150" alt=""/>
@@ -195,14 +198,14 @@ function App() {
                             </div>
                         </div>
                     </div>
-
+{/*
                     <div className="col-sm-4 col-lg-4 col-md-4">
                         <h4><a href="#">Like this template?</a>
                         </h4>
                         <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
                         <a className="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
                     </div>
-
+*/}
                 </div>
 
             </div>
@@ -215,7 +218,7 @@ function App() {
 
         <hr/>
 
-      
+      {/*<Footer>*/}
         <footer>
             <div className="row">
                 <div className="col-lg-12">
@@ -223,7 +226,7 @@ function App() {
                 </div>
             </div>
         </footer>
-
+       {/*</Footer>*/}
     </div>
       </div>
     );
