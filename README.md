@@ -16,6 +16,7 @@ Fork, clone, run yarn install, yarn start, pull request
 * In index.js provide App with a prop called "products" sending in the product array 
 * App should use the product prop and map the array of products into an array of ProductDetail components
 * Make the star images represent the number rating from data.
+* Bonus. Notice the grey stars.
 
 ### Add Item To Cart
 * Add a button to ProductDetail "Add To Cart"
