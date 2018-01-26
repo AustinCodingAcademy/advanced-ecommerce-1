@@ -6,6 +6,7 @@ import Carousel from './modules/Carousel';
 import ProductBox from './modules/ProductBox';
 import Foot from './modules/Footer';
 
+
 const App = (props) => {
   const test =
     props.products.products.map(
@@ -20,6 +21,7 @@ const App = (props) => {
       <div className="container">
         <div className="row">
           <LeftColumn />
+         
           <div className="col-md-9">
             <Carousel />
             <div className="row">

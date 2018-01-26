@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchBar from './Search';
 
 const LeftColumn = () => {
 
@@ -10,6 +11,7 @@ return (
     <a href="#" className="list-group-item">Category 2</a>
     <a href="#" className="list-group-item">Category 3</a>
 </div>
+<SearchBar />
 </div>
 )
 }
