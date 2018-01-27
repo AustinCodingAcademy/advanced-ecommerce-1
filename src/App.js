@@ -11,7 +11,7 @@ function App(props) {
     productDivs = props.products.map((p)=> {
         return <ProductDetail product={p} />;
     });   
-console.log("heey", productDivs);
+console.log("LoggingProductDivs", productDivs);
     return (
       <div className="App">
      
@@ -98,7 +98,7 @@ console.log("heey", productDivs);
   */}
                 <div className="row">
                 {productDivs}
-                <ProductDetail product={props.products[4]}/>
+                {/* <ProductDetail product={props.products[4]}/> */}
 
 {/* 
                     <div className="col-sm-4 col-lg-4 col-md-4">
