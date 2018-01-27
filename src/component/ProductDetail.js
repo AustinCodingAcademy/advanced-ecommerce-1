@@ -2,10 +2,14 @@ import React from 'react';
 function ProductDetail(props){
     let starRating = props.product.rating; 
     let totalStars = [];
+    let emptyStarsNum = 5 - starRating;
+    let emptyStars = [];
     for(var i=0; i< starRating; i++){ 
         totalStars.push(<span className="glyphicon glyphicon-star"></span>)
     }
-
+    for(var j=0; j< emptyStarsNum; j++){
+        emptyStars.push(<span className="glyphicon glyphicon-star-empty"></span>)
+    }
 
     return ( 
         // {props.product.name}
@@ -22,10 +26,10 @@ function ProductDetail(props){
                             {/* <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p> */}
                         </div>
                         <div className="ratings">
-                            <p> {props.product.rating} {starRating}</p>
+                            <p> {starRating} Star Rating</p>
                             <p className="pull-right">{props.product.reviews} Reviews</p>
                             <p>
-                                 {totalStars} 
+                                 {totalStars} {emptyStars}
                                 {/* <span className="glyphicon glyphicon-star"></span>
                                 <span className="glyphicon glyphicon-star"></span>
                                 <span className="glyphicon glyphicon-star"></span>

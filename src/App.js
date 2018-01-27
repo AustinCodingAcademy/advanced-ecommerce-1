@@ -54,11 +54,11 @@ console.log("LoggingProductDivs", productDivs);
         <div className="row">
 
             <div className="col-md-3">
-                <p className="lead">Shop Name</p>
+                <p className="lead">SpacePandaArtShop</p>
                 <div className="list-group">
                     <a href="#" className="list-group-item">Category 1</a>
-                    <a href="#" className="list-group-item">Category 2</a>
-                    <a href="#" className="list-group-item">Category 3</a>
+                    <a href="#" className="list-group-item">Music</a>
+                    <a href="#" className="list-group-item">Art For Sale</a>
                 </div>
             </div>
 
@@ -124,7 +124,7 @@ console.log("LoggingProductDivs", productDivs);
                     </div>
  */}
 
-                    <div className="col-sm-4 col-lg-4 col-md-4">
+                    {/* <div className="col-sm-4 col-lg-4 col-md-4">
                         <div className="thumbnail">
                             <img src="http://placehold.it/320x150" alt=""/>
                             <div className="caption">
@@ -210,13 +210,13 @@ console.log("LoggingProductDivs", productDivs);
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="col-sm-4 col-lg-4 col-md-4">
-                        <h4><a href="#">Like this template?</a>
+                        <h4><a href="#">Like this?</a>
                         </h4>
-                        <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
-                        <a className="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
+                        <p>If you like this, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this link</a> on how to build your online store!</p>
+                        <a className="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View</a>
                     </div>
 
                 </div>
