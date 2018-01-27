@@ -60,7 +60,7 @@ function App() {
                                 <h4 className="pull-right">$24.99</h4>
                                 <h4><a href="#">First Product</a>
                                 </h4>
-                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                                <p>See ore snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
                             </div>
                             <div className="ratings">
                                 <p className="pull-right">15 reviews</p>
