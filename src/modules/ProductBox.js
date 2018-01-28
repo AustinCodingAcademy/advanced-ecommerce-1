@@ -1,6 +1,16 @@
 import React from 'react';
 
 const FirstProduct = (props) => {
+
+  const stars = props.product.rating
+  const displayStars = () => {
+    const starArr = [];
+  for(let i = 0; i < stars; i++){
+       starArr.push(<span className="glyphicon glyphicon-star" key={i}></span>)
+    }
+    return starArr;
+  }
+
   return (
     <div className="col-sm-4 col-lg-4 col-md-4">
       <div className="thumbnail">
@@ -14,11 +24,8 @@ const FirstProduct = (props) => {
         <div className="ratings">
           <p className="pull-right">{props.product.reviews} reviews</p>
           <p>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
+            {displayStars()}
+
           </p>
         </div>
       </div>
