@@ -1,11 +1,12 @@
 export default {
-  products:[{
+  numberOfItemsInCart: 0,
+  products: [ {
     "id": 1,
     "name": "Body Luxuries Sweet Lavender Hand Sanitizer",
     "description": "Psychotropic drugs, not elsewhere classified",
     "reviews": 46,
     "rating": 2,
-    "imgUrl": "http://dummyimage.com/136x167.bmp/cc0000/ffffff",
+    "imgUrl": "http://vinpro.co.za/wp-content/uploads/2015/10/Alcohol_Thumbnail.jpg",
     "price": "$95.11"
   }, {
     "id": 2,
@@ -13,7 +14,7 @@ export default {
     "description": "You will be so happy when you use this product",
     "reviews": 2,
     "rating": 2,
-    "imgUrl": "http://dummyimage.com/125x134.jpg/cc0000/ffffff",
+    "imgUrl": "http://www.iheartradio.ca/image/policy:1.3042979:1502188239/CKTB-NEWS-WINE.jpg?f=default&$p$f=7665852&w=663&$w=4b85173",
     "price": "$37.09"
   }, {
     "id": 3,
@@ -21,7 +22,7 @@ export default {
     "description": "Other disorders of continuity of bone, unsp tibia and fibula",
     "reviews": 27,
     "rating": 5,
-    "imgUrl": "http://dummyimage.com/149x190.jpg/dddddd/000000",
+    "imgUrl": "http://www.clker.com/cliparts/c/U/M/Z/e/Q/champagne-glasses-md.png",
     "price": "$51.83"
   }, {
     "id": 4,
@@ -29,7 +30,7 @@ export default {
     "description": "Orchard as the place of occurrence of the external cause",
     "reviews": 60,
     "rating": 3,
-    "imgUrl": "http://dummyimage.com/162x153.jpg/cc0000/ffffff",
+    "imgUrl": "http://www.zastavki.com/pictures/originals/2014/Food___Drinks_Two_glasses_of_wine_082123_.jpg",
     "price": "$86.93"
   }, {
     "id": 5,
@@ -37,7 +38,7 @@ export default {
     "description": "Injury of prostate",
     "reviews": 20,
     "rating": 1,
-    "imgUrl": "http://dummyimage.com/120x245.jpg/cc0000/ffffff",
+    "imgUrl": "https://www.athenasphere.com/wp-content/uploads/edd/2017/02/valentines-day-wine-picture.jpg",
     "price": "$70.10"
   }, {
     "id": 6,
@@ -45,7 +46,7 @@ export default {
     "description": "this stuff is awesome",
     "reviews": 79,
     "rating": 3,
-    "imgUrl": "http://dummyimage.com/211x227.bmp/5fa2dd/ffffff",
+    "imgUrl": "http://hauteliving.com/wp-content/uploads/2015/10/shutterstock_115127932.jpg",
     "price": "$39.25"
   }, {
     "id": 7,
@@ -53,7 +54,7 @@ export default {
     "description": "The best product ever",
     "reviews": 76,
     "rating": 3,
-    "imgUrl": "http://dummyimage.com/212x144.jpg/ff4444/ffffff",
+    "imgUrl": "http://www.goldengatefields.com/wp-content/uploads/2017/05/four-glasses.jpg",
     "price": "$99.91"
   }, {
     "id": 8,
@@ -61,7 +62,7 @@ export default {
     "description": "Product 3",
     "reviews": 74,
     "rating": 3,
-    "imgUrl": "http://dummyimage.com/204x175.jpg/5fa2dd/ffffff",
+    "imgUrl": "https://sites.psu.edu/siowfa15/files/2015/11/wine-club.jpg",
     "price": "$67.17"
   }, {
     "id": 9,
@@ -69,7 +70,7 @@ export default {
     "description": " cephalospor/oth beta-lactm antibiot, undet, sequela",
     "reviews": 9,
     "rating": 1,
-    "imgUrl": "http://dummyimage.com/212x108.bmp/cc0000/ffffff",
+    "imgUrl": "https://www.residenzamaritti.com/wp-content/uploads/2016/09/Tour-gastronomico-derale-edegustazione-vini.jpg",
     "price": "$96.84"
   }, {
     "id": 10,
@@ -77,7 +78,7 @@ export default {
     "description": "Other Gram-negative sepsis",
     "reviews": 45,
     "rating": 2,
-    "imgUrl": "http://dummyimage.com/189x109.png/cc0000/ffffff",
+    "imgUrl": "http://www.vintagewinebarbistro.com/wp-content/uploads/2011/07/red-wine-bottles-wallpaper.jpg",
     "price": "$74.37"
   }]
 }
