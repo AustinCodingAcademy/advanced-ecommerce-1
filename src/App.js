@@ -8,7 +8,6 @@ import ProductDetail from './ComponentFolder/ProductDetail';
 
 function App(props) {
   const prodDetails = props.products.map((product, keys) => {
-  console.log(product);
   return <ProductDetail products={product} key={keys} />;
 });
 
