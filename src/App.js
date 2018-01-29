@@ -7,10 +7,13 @@ import Carousel from './ComponentFolder/Carousel';
 import ProductDetail from './ComponentFolder/ProductDetail';
 
 function App(props) {
+
+  // MAPPING THROUGH THE PRODUCTS
   const prodDetails = props.products.map((product, keys) => {
   return <ProductDetail products={product} key={keys} />;
 });
 
+  // WHAT YOURE GOING TO SHOW
     return (
       <div className="App">
 
@@ -43,7 +46,7 @@ function App(props) {
         <div className="row">
 
             <div className="col-md-3">
-                <p className="lead">Shop Name</p>
+                <p className="lead">Collins Random Ass Shit</p>
                 <div className="list-group">
                     <a href="#" className="list-group-item">Category 1</a>
                     <a href="#" className="list-group-item">Category 2</a>
