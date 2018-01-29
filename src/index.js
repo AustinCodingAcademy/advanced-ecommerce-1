@@ -4,7 +4,11 @@ import App from './App';
 import './index.css';
 import state from './state';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+//
+// function increaseCart(){
+//   console.log(state.numberOfItemsInCart +=1);
+//   reactDom.render(<App state={state} />, document.getElementById("root"));
+// }
+
+ReactDOM.render(<App products={state.products} />, document.getElementById('root'));
+//this variabel "products" is equal to {state.products} and when using variable name "props"will preceed. i.e. props.product.

@@ -1,7 +1,7 @@
 export default {
   products:[{
     "id": 1,
-    "name": "Body Luxuries Sweet Lavender Hand Sanitizer",
+    "name": "Too many Words",
     "description": "Psychotropic drugs, not elsewhere classified",
     "reviews": 46,
     "rating": 2,
@@ -41,7 +41,7 @@ export default {
     "price": "$70.10"
   }, {
     "id": 6,
-    "name": "Fresh Sugar Honey Tinted Lip Treatment SPF15",
+    "name": "Less Werds",
     "description": "this stuff is awesome",
     "reviews": 79,
     "rating": 3,

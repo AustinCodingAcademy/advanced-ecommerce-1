@@ -7,8 +7,10 @@ import Carousel from './ComponentFolder/Carousel';
 import ProductDetail from './ComponentFolder/ProductDetail';
 
 function App(props) {
-
-
+  const prodDetails = props.products.map((product, keys) => {
+  console.log(product);
+  return <ProductDetail products={product} key={keys} />;
+});
 
     return (
       <div className="App">
@@ -57,7 +59,7 @@ function App(props) {
                 <div className="row">
 
 
-                    <ProductDetail />
+                    {prodDetails}
 
                 </div>
 
