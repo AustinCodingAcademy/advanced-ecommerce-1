@@ -17,7 +17,7 @@ function App(props) {
     return (
       <div className="App">
      {/*<Header>*/}
-    <Header numberOfItemsInCart = {props.state.numberOfItemsInCart} />
+    <Header checkout={props.checkout} numberOfItemsInCart = {props.state.cart.length} />
     {/*</Header>*/}
  
     <div className="container">

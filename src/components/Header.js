@@ -30,6 +30,14 @@ return (
             <li >
                 <a href="#">Items In Cart ({props.numberOfItemsInCart})</a>
             </li>
+            <li >
+                <a href="#"
+                onClick={()=>{
+                        props.checkout();
+                    }
+                }
+                >Checkout </a>
+            </li>
         </ul>
     </div>
  
