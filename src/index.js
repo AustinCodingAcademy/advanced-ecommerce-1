@@ -4,7 +4,17 @@ import App from './App';
 import './index.css';
 import state from './state';
 
-ReactDOM.render(
-  <App state={state} />,
-  document.getElementById('root')
-);
+function addItemToCart(){
+  state.numberOfItemsInCart += 1;
+  render();
+}
+
+function render(){
+  ReactDOM.render(
+    <App 
+    addItemToCart={addItemToCart}
+    state={state} />,
+    document.getElementById('root')
+  );
+}
+render();

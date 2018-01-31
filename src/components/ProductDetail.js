@@ -25,7 +25,14 @@ function ProductDetail(props) {
           <p>
             {stars(props.prod.rating)}
           </p>
+          <button
+          onClick={
+            ()=>{
+              props.addItemToCart();
+            }
+          }
           
+          >Add Item To Cart</button>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 function App(props) {
 
     let prodDetails = props.state.products.map((product) => {
-        return <ProductDetail   prod={product} />;
+        return <ProductDetail addItemToCart={props.addItemToCart}  prod={product} />;
       });
 
     return (
