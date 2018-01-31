@@ -15,5 +15,25 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "orders": [
+    {
+      "id": 7,
+      "name": "LBel",
+      "description": "The best product ever",
+      "reviews": 76,
+      "rating": 3,
+      "imgUrl": "http://dummyimage.com/212x144.jpg/ff4444/ffffff",
+      "price": "$99.91"
+    },
+    {
+      "id": 5,
+      "name": "Decolorized Iodine",
+      "description": "Injury of prostate",
+      "reviews": 20,
+      "rating": 1,
+      "imgUrl": "http://dummyimage.com/120x245.jpg/cc0000/ffffff",
+      "price": "$70.10"
+    }
+  ]
 }

@@ -10,7 +10,16 @@ function addItemToCart(product) {
 }
 function checkout(){
   console.log("checked out");
+  
+  const webRequestPromise = fetch("http://localhost:4000/orders", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(state.cart)
+  });
   state.cart = [];
+  
   render();
 }
 function render() {
