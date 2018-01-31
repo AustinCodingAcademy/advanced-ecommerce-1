@@ -25,3 +25,22 @@ Fork, clone, run yarn install, yarn start, pull request
 * How does Header get that information in order to show it?
 * How do you update Header so that it shows the number when it changes?
 * How do you make one component affect something in another component?
+
+
+### Add Item To Cart V2
+* Adding 1 to a counter is not a realistic way to add an item to the shopping cart
+* How would you alter the structure of the state object to represent a realistic way to do this
+* How would you alter the data in the state object to represent adding an item to a cart
+* How would Header now show how many items are in cart
+* Add a checkout button
+
+### Checkout
+* Let's create a very simple checkout process
+* When you click the checkout button, whatever products are in the cart should somehow be processed so a person knows to ship those products to the customer
+* What should happen in your webpage when this button is clicked?
+* Notice the file in the root directory db.json. 
+* When the user does a checkout the cart should be saved in db.json 
+* You can save information to this file by doing an HTTP Post to the URL http://localhost:4000/orders
+* How do we make HTTP requests in code?
+* Empty the cart
+
