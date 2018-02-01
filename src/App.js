@@ -32,17 +32,7 @@ function App(props) {
 
                         <div className="row">
 
-                            {props.products.map(function(element) {
-                                return <ProductDetail 
-                                    id={element["id"]}
-                                    name={element["name"]}
-                                    description={element["description"]}
-                                    reviews={element["reviews"]}
-                                    rating={element["rating"]}
-                                    imgUrl={element["imgUrl"]}
-                                    price={element["price"]}
-                                />
-                            })}
+                            {props.products.map(element => <ProductDetail product={element} />)}
 
                         </div>
 
