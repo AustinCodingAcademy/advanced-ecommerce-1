@@ -10,7 +10,7 @@ function App(props) {
     return (
         <div className="App">
             {/*<Header>*/}
-            <Header state={props.state} />
+            <Header state={props.state} checkout={props.checkout} />
             {/*</Header>*/}
     
         <div className="container">
@@ -28,7 +28,7 @@ function App(props) {
                     <div className="row">
                         {/*<ProductDetail>*/}
                         {props.state.products.map(function(product) {
-                            return <ProductDetail increaseCart={props.increaseCart} key={product.id} product={product} />
+                            return <ProductDetail rerender={props.rerender} key={product.id} product={product} state={props.state} />
                         })}
                         {/*</ProductDetail>*/}
                     </div>

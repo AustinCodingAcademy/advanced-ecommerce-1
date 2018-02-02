@@ -27,9 +27,11 @@ function Header(props) {
                             <a href="#">Contact</a>
                         </li>
                         <li >
-                            <a href="#">Items In Cart ({props.state.numberOfItemsInCart})</a>
+                            <a href="#">Items In Cart ({props.state.itemsInCart.length})</a>
                         </li>
                     </ul>
+
+                    <button onClick={props.checkout} className="btn btn-sm btn-success navbar-btn pull-right">Checkout</button>
                 </div>
             
             </div>
