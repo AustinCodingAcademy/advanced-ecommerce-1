@@ -13,13 +13,13 @@ function Carousel(props) {
                 </ol>
                 <div className="carousel-inner">
                     <div className="item active">
-                        <img className="slide-image" src="http://placehold.it/800x300" alt=""/>
+                        <img className="slide-image" src="./carouselimg/product1.png" alt=""/>
                     </div>
                     <div className="item">
-                        <img className="slide-image" src="http://placehold.it/800x300" alt=""/>
+                        <img className="slide-image" src="./carouselimg/product2.jpg" alt=""/>
                     </div>
                     <div className="item">
-                        <img className="slide-image" src="http://placehold.it/800x300" alt=""/>
+                        <img className="slide-image" src="./carouselimg/product3.jpg" alt=""/>
                     </div>
                 </div>
                 <a className="left carousel-control" href="#carousel-example-generic" data-slide="prev">

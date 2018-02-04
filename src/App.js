@@ -7,31 +7,17 @@ import Footer from "./Footer";
 import ProductDetail from "./ProductDetail";
 
 function App(props) {
+
+    let prodDetails = props.state.products.map((product)=> {
+      console.log("Product (map input):",product);
+      console.log("App props.state:",props.state);
+      return <ProductDetail increase={props.increase} state={props.state} numberOfItemsInCart={props.numberOfItemsInCart} prod={product} />;
+    });
+
     return (
       <div className="App">
+    <Header numberOfItemsInCart = {props.state.numberOfItemsInCart} />
 
-    <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div className="container">
-
-          <Header />
-
-            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul className="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-
-    </nav>
 
 
     <div className="container">
@@ -53,15 +39,7 @@ function App(props) {
 
                 <div className="row">
 
-                    <ProductDetail products={props.products} magicNumber={1}/>
-
-                    <ProductDetail products={props.products} magicNumber={2}/>
-
-                    <ProductDetail products={props.products} magicNumber={3}/>
-
-                    <ProductDetail products={props.products} magicNumber={4}/>
-
-                    <ProductDetail products={props.products} magicNumber={5}/>
+                    {prodDetails}
 
                     <div className="col-sm-4 col-lg-4 col-md-4">
                         <h4><a href="#">Like this template?</a>
