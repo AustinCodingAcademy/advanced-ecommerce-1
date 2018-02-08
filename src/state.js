@@ -1,4 +1,5 @@
 export default {
+  "numberOfItemsInCart": 0,
   products:[{
     "id": 1,
     "name": "Body Luxuries Sweet Lavender Hand Sanitizer",

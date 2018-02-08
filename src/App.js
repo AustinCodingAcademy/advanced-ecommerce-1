@@ -11,7 +11,7 @@ function App(props) {
     return (
         <div className="App">
      
-            <Header />
+            <Header  checkout={props.checkout} numberOfItemsInCart={props.state.numberOfItemsInCart}/>
 
             <div className="container">
 
@@ -32,7 +32,7 @@ function App(props) {
 
                         <div className="row">
 
-                            {props.products.map(element => <ProductDetail product={element} />)}
+                            {props.state.products.map(element => <ProductDetail increaseCart={props.increaseCart} product={element} />)}
 
                         </div>
 

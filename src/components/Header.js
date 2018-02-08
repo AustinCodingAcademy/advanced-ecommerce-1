@@ -26,6 +26,14 @@ function Header(props) {
                         <li>
                             <a href="#">Contact</a>
                         </li>
+                        <li>
+                            <a href="#">Cart({props.numberOfItemsInCart})</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <button onClick={()=>{props.checkout();}} type="button">checkout</button>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 
