@@ -9,11 +9,11 @@ Fork, clone, run yarn install, yarn start, pull request
    * Footer
    * Carousel
    * Think of some other components you could make
-* The ProductDetail should repesent only one single product
+* The ProductDetail should represent only one single product
 * The ProductDetail should take a prop called product with is an object, and use it to populate price, name, description reviews and stars.
 * Make sure each component is in its own file and imported into App.js
 * Use the provided data in state.js to dynamically populate information instead of the hard coded html that is there now.
-* In index.js provide App with a prop called "products" sending in the product array 
+* In index.js provide App with a prop called "products" sending in the product array
 * App should use the product prop and map the array of products into an array of ProductDetail components
 * Make the star images represent the number rating from data.
 * Bonus. Notice the grey stars.
@@ -38,9 +38,8 @@ Fork, clone, run yarn install, yarn start, pull request
 * Let's create a very simple checkout process
 * When you click the checkout button, whatever products are in the cart should somehow be processed so a person knows to ship those products to the customer
 * What should happen in your webpage when this button is clicked?
-* Notice the file in the root directory db.json. 
-* When the user does a checkout the cart should be saved in db.json 
+* Notice the file in the root directory db.json.
+* When the user does a checkout the cart should be saved in db.json
 * You can save information to this file by doing an HTTP Post to the URL http://localhost:4000/orders
 * How do we make HTTP requests in code?
 * Empty the cart
-
