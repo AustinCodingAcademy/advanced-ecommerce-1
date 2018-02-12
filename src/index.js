@@ -4,8 +4,9 @@ import App from './App';
 import './index.css';
 import state from './state';
 
-function increaseCart(){
+function increaseCart(itemId){
   state.numberOfItemsInCart += 1;
+  state.cartContents.hasOwnProperty(itemId) ? state.cartContents[itemId]++ : state.cartContents[itemId] = 1;
   ReactDOM.render(
     <App increaseCart={increaseCart} checkout={checkout} state={state} />,
     document.getElementById("root")
@@ -14,7 +15,8 @@ function increaseCart(){
 
  function checkout(){
   state.numberOfItemsInCart = 0;
-  ReactDOM.render(
+  state.cartContents = {};
+    ReactDOM.render(
     <App increaseCart={increaseCart} checkout={checkout} state={state} />,
     document.getElementById("root")
    );

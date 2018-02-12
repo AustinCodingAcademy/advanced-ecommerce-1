@@ -25,7 +25,7 @@ function ProductDetail(props) {
                         )}
                     </p>
                 </div>
-                <button onClick={()=>{props.increaseCart();}} type="button">Add To Cart</button>
+                <button onClick={()=>{props.increaseCart(props.product.id);}} type="button">Add To Cart</button>
             </div>
         </div>
     );
