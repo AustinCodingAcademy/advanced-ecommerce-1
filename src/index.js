@@ -14,6 +14,16 @@ function increaseCart(itemId){
  }
 
  function checkout(){
+  fetch('https://localhost:3001/orders', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(
+      state.cartContents
+    )
+  }).then(alert('Order Submitted'));
   state.numberOfItemsInCart = 0;
   state.cartContents = {};
     ReactDOM.render(

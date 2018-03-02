@@ -20,7 +20,7 @@
     "start": "react-scripts start",
     "lint": "eslint src",
     "react-app": "react-scripts start",
-    "api": "json-server --id _id --watch --port 4000 db.json",
+    "api": "json-server --id _id --watch db.json --port 3001",
     "build": "react-scripts build",
     "test": "npm run lint && react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
