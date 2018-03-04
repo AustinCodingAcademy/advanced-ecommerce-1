@@ -14,10 +14,9 @@ function increaseCart(itemId){
  }
 
  function checkout(){
-  fetch('https://localhost:3001/orders', {
+  fetch('http://localhost:3001', {
     method: 'POST',
     headers: {
-      'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(
