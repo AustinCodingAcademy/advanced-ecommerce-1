@@ -38,9 +38,5 @@ Fork, clone, run npm install, npm start, pull request
 * Let's create a very simple checkout process
 * When you click the checkout button, whatever products are in the cart should somehow be processed so a person knows to ship those products to the customer
 * What should happen in your webpage when this button is clicked?
-* Notice the file in the root directory db.json. 
-* When the user does a checkout the cart should be saved in db.json 
-* You can save information to this file by doing an HTTP Post to the URL http://localhost:4000/orders
-* How do we make HTTP requests in code?
-* Empty the cart
+
 
