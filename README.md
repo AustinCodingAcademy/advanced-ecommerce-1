@@ -1,5 +1,5 @@
 #### Setup
-Fork, clone, run yarn install, yarn start, pull request
+Fork, clone, run npm install, npm start, pull request
 
 #### Do
  * Create a component folder to hold component files
