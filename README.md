@@ -37,6 +37,7 @@ Fork, clone, run npm install, npm start, pull request
 ### Checkout
 * Let's create a very simple checkout process
 * When you click the checkout button, whatever products are in the cart should somehow be processed so a person knows to ship those products to the customer
-* What should happen in your webpage when this button is clicked?
+* The products in the cart need to be sent to the server to be saved as an order
+* When the products are recieved by the server, they need to be saved in a database 
 
 
