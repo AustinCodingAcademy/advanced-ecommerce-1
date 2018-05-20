@@ -17,10 +17,17 @@ Fork, clone, run npm install, npm start, pull request
 * App should use the product prop and map the array of products into an array of ProductDetail components
 * Make the star images represent the number rating from data.
 * Bonus. Notice the grey stars.
+* Change App into a class component
 
 #### Server
 * Create a database for this project
-* Create a web server for ths projectt
+* Create a web server for ths project
+* Create routes for products and orders
+
+
+#### Fetch
+* Use fetch to retrieve products from your web api
+* Where should the fetch call be made?
 
 
 ### Add Item To Cart
