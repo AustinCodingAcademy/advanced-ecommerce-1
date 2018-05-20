@@ -18,6 +18,11 @@ Fork, clone, run npm install, npm start, pull request
 * Make the star images represent the number rating from data.
 * Bonus. Notice the grey stars.
 
+#### Server
+* Create a database for this project
+* Create a web server for ths projectt
+
+
 ### Add Item To Cart
 * Add a button to ProductDetail "Add To Cart"
 * When the button is clicked it should increase the value of the state numberOfItemsInCart by 1
