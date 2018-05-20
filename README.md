@@ -1,7 +1,7 @@
 #### Setup
 Fork, clone, run npm install, npm start, pull request
 
-#### Do
+#### Client
  * Create a component folder to hold component files
  * Organize this web page into appropriate components
    * ProductDetail
