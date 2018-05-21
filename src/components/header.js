@@ -1,9 +1,13 @@
 
 import React from "react";
 import "../App.css";
-
+import sendCart from "./postOrder";
 
 function Header(props) {
+
+  const sendOrder = (data) => {
+    sendCart.order(data);
+  };
 
   return (
 
@@ -33,6 +37,9 @@ function Header(props) {
             </li>
             <li >
               <a href="#">Items In Cart ({props.count})</a>
+            </li>
+            <li >
+              <button style={{marginTop: "12px"}} onClick={() => sendOrder(props.cart)}> Checkout </button>
             </li>
           </ul>
         </div>

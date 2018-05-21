@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import ProductDetail from "./components/ProductDetail";
 import Header from "./components/header";
 import Carousel from "./components/carousel";
 import Footer from "./components/footer";
-import Side from "./components/side";
+import Side from "./components/side"; 
 
 class App extends Component {
 
@@ -14,15 +14,16 @@ class App extends Component {
   }
 
   addItem = (e) => {
-    const currentItem = e.target.parentElement.parentElement.parentElement.id;
+    const currentItem = Number(e.target.parentElement.parentElement.parentElement.id);
     const tempArr = this.props.products.find((item) => {
-      return currentItem == item.id;
+      return currentItem === item.id;
     });
     this.props.cart.push(tempArr);
     console.log(this.props.cart);
     this.setState({numberOfItemsInCart: this.props.cart.length});
    
   }
+
 
   renderProductDetail = () => {
     return this.props.products.map((prod, key) => {
@@ -33,7 +34,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header count={this.state.numberOfItemsInCart} />
+        <Header count={this.state.numberOfItemsInCart} cart={this.props.cart} />
 
         <div className="container">
 
