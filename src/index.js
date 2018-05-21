@@ -7,6 +7,6 @@ import state from "./state";
 
 
 ReactDOM.render(
-  <App products={state.products} />,
+  <App products={state.products} cart={state.cart} />,
   document.getElementById("root")
 );

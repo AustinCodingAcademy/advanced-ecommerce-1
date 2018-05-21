@@ -2,9 +2,8 @@
 import React from "react";
 import "../App.css";
 
-function Header() {
 
-
+function Header(props) {
 
   return (
 
@@ -33,7 +32,7 @@ function Header() {
               <a href="#">Contact</a>
             </li>
             <li >
-              <a href="#">Items In Cart (0)</a>
+              <a href="#">Items In Cart ({props.count})</a>
             </li>
           </ul>
         </div>

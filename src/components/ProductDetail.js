@@ -35,6 +35,7 @@ function ProductDetail(props) {
           <p>
             {determineStars()}
           </p>
+          <button onClick={props.addItem}>Add to Cart</button>
         </div>
       </div>
     </div>
