@@ -3,6 +3,22 @@ import "../App.css";
 
 function ProductDetail(props) {
   // console.log(props);
+
+  const determineStars = () => {
+    const stars = [];
+    for (let index = 0; index < props.product.rating; index++) {
+      stars.push(<span className="glyphicon glyphicon-star" />);
+    }
+    for (let index = 0; index < 5 - props.product.rating; index++) {
+      stars.push(<span className="glyphicon glyphicon-star-empty" />);
+    }
+    return stars.map((star) => {
+      return star;
+    });
+    
+  };
+  
+
   
   return (
     <div className="col-sm-4 col-lg-4 col-md-4">
@@ -17,11 +33,7 @@ function ProductDetail(props) {
         <div className="ratings">
           <p className="pull-right">{props.product.reviews} reviews</p>
           <p>
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star" />
+            {determineStars()}
           </p>
         </div>
       </div>
