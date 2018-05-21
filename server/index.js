@@ -1,32 +1,27 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-app.use(bodyParser.json());
 const Order = require("./order");
 const mongoose = require("mongoose");
+
+app.use(bodyParser.json());
+
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://mimitch:Bladerunner80@ds129560.mlab.com:29560/advanced-homework-1");
 
-// const orders = [];
-
-
+let newId = 1;
 app.post("/newOrders", function (req, res) { 
-//   console.log(req.body);
   const newOrder = new Order(
-    {order: [...req.body]}
+    {_id: newId, order: [...req.body]}
   );
   newOrder.save().then(savedOrder => {
-    // console.log(savedOrder);
     return res.json(savedOrder);
   });
+  newId++;
 });
 
 
-
-
-
-
-const port = 3001;
+const port = 3001; // easily change port #
 
 app.listen(port, (err) => {
   if (err) {

@@ -4,10 +4,6 @@ import App from "./App";
 import "./index.css";
 import state from "./state";
 
-// const sendOrder = () => {
-
- 
-// };
 
 ReactDOM.render(
   <App products={state.products} cart={state.cart} />,

@@ -1,21 +1,15 @@
 
 import React from "react";
-import "../App.css";
-import sendCart from "./postOrder";
+import postOrder from "./postOrder";
 
 function Header(props) {
-
-  const sendOrder = (data) => {
-    sendCart.order(data);
-  };
-
   return (
-
     <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div className="container">
       
         <div className="navbar-header">
-          <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <button type="button" className="navbar-toggle" data-toggle="collapse" 
+            data-target="#bs-example-navbar-collapse-1">
             <span className="sr-only">Toggle navigation</span>
             <span className="icon-bar" />
             <span className="icon-bar" />
@@ -39,7 +33,8 @@ function Header(props) {
               <a href="#">Items In Cart ({props.count})</a>
             </li>
             <li >
-              <button style={{marginTop: "12px"}} onClick={() => sendOrder(props.cart)}> Checkout </button>
+              <button style={{marginTop: "12px"}} 
+                onClick={() => postOrder.order(props.cart)}> Checkout </button>
             </li>
           </ul>
         </div>
