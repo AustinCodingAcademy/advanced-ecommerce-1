@@ -1,5 +1,6 @@
 export default {
   numberOfItemsInCart: 0,
+  cart: [],
   products: [ {
     id: 1,
     name: "Body Luxuries Sweet Lavender Hand Sanitizer",
@@ -80,6 +81,5 @@ export default {
     rating: 2,
     imgUrl: "http://dummyimage.com/189x109.png/cc0000/ffffff",
     price: "$74.37"
-  }],
-  cart: ["HELLO"]
+  }]
 };

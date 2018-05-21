@@ -10,12 +10,17 @@ import Side from "./components/side";
 class App extends Component {
 
   state = {
-    itemsInCart: 0
+    numberOfItemsInCart: this.props.cart.length
   }
 
-  addItem = () => {
-    // console.log("here");
-    this.setState({itemsInCart: this.state.itemsInCart + 1});
+  addItem = (e) => {
+    const currentItem = e.target.parentElement.parentElement.parentElement.id;
+    const tempArr = this.props.products.find((item) => {
+      return currentItem == item.id;
+    });
+    this.props.cart.push(tempArr);
+    console.log(this.props.cart);
+    this.setState({numberOfItemsInCart: this.props.cart.length});
    
   }
 
@@ -28,7 +33,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header count={this.state.itemsInCart} />
+        <Header count={this.state.numberOfItemsInCart} />
 
         <div className="container">
 

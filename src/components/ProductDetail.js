@@ -2,7 +2,6 @@ import React from "react";
 import "../App.css";
 
 function ProductDetail(props) {
-  // console.log(props);
 
   const determineStars = () => {
     const stars = [];
@@ -15,13 +14,10 @@ function ProductDetail(props) {
     return stars.map((star) => {
       return star;
     });
-    
   };
   
-
-  
   return (
-    <div className="col-sm-4 col-lg-4 col-md-4">
+    <div className="col-sm-4 col-lg-4 col-md-4" id={props.product.id} >
       <div className="thumbnail">
         <img src={props.product.imgUrl} alt="" />
         <div className="caption">
@@ -35,8 +31,9 @@ function ProductDetail(props) {
           <p>
             {determineStars()}
           </p>
-          <button onClick={props.addItem}>Add to Cart</button>
+          
         </div>
+        <div><button onClick={props.addItem}>Add to Cart</button></div>
       </div>
     </div>
   );
