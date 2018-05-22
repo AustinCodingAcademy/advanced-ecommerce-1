@@ -3,6 +3,14 @@ import React from "react";
 import postOrder from "./postOrder";
 
 function Header(props) {
+   
+  function handleClick() {
+    postOrder.data();
+    postOrder.order(props.cart);
+    props.clear();
+   
+  }
+
   return (
     <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div className="container">
@@ -34,7 +42,7 @@ function Header(props) {
             </li>
             <li >
               <button style={{marginTop: "12px"}} 
-                onClick={() => postOrder.order(props.cart)}> Checkout </button>
+                onClick={handleClick}> Checkout </button>
             </li>
           </ul>
         </div>

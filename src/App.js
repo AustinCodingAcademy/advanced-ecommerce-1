@@ -8,17 +8,28 @@ import Side from "./components/side";
 
 class App extends Component {
 
+
   state = {
+    cart: this.props.cart,
     numberOfItemsInCart: this.props.cart.length
   }
+  
 
   addItem = (e) => {
     const currentItem = Number(e.target.parentElement.parentElement.parentElement.id);
     const tempArr = this.props.products.find((item) => {
       return currentItem === item.id;
     });
-    this.props.cart.push(tempArr);
-    this.setState({numberOfItemsInCart: this.props.cart.length});
+    this.state.cart.push(tempArr);
+    this.setState({numberOfItemsInCart: this.state.cart.length});
+  }
+
+  clearCartOnSubmit = () => {
+    this.setState({cart: []});
+    // console.log(this.state.cart);
+    setTimeout(() => {
+      this.setState({numberOfItemsInCart: this.state.cart.length});
+    }, 500);
   }
 
   renderProductDetail = () => {
@@ -30,7 +41,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header count={this.state.numberOfItemsInCart} cart={this.props.cart} />
+        <Header count={this.state.numberOfItemsInCart} cart={this.state.cart} 
+          clear={this.clearCartOnSubmit} />
         <div className="container">
           <div className="row">
             <Side />
