@@ -19,11 +19,13 @@ function updateData() {
   
 updateData();
 
-app.get("/newOrders", function (req, res) {
+app.get("/newOrders", function () {
   updateData();
 });
 
 let newId = 0;
+console.log("cartContent", cartContent);
+
 app.post("/newOrders", function (req, res) { 
   updateData();
   if (cartContent.length > 0) {
