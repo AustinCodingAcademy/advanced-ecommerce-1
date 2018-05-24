@@ -4,7 +4,11 @@ export default function ProductDetail(props) {
   const { name, price, description, reviews, rating} = props.product;
   const starSpans = [];
   for (let index = 0; index < rating; index++) {
-    starSpans.push(<span key={index} className="glyphicon glyphicon-star" />);    
+    starSpans.push(<span key={index} className="glyphicon glyphicon-star" />);
+  }
+  const emptyStarSpans = [];
+  for (let index = 0; index < 5 - rating; index++) {
+    emptyStarSpans.push(<span key={index} className="glyphicon glyphicon-star-empty" />);
   }
   return (
     <div className="col-sm-4 col-lg-4 col-md-4">
@@ -25,7 +29,7 @@ export default function ProductDetail(props) {
         <div className="ratings">
           <p className="pull-right">{reviews} reviews</p>
           <p>
-            {starSpans}
+            {starSpans}{emptyStarSpans}
           </p>
         </div>
       </div>
