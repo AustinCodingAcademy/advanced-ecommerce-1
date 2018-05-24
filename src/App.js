@@ -9,37 +9,61 @@ import ProductDetail from "./components/ProductDetail";
 import logo from "./logo.svg";
 import "./App.css";
 
-function App(props) {
-  const productDetails = props.products.map((p) => {
-    return <ProductDetail key={p.id} product={p} />;
-  });
+class App extends Component {
+  state = {
+    cartItems: [],
+  };
 
-  return (
-    <div className="App">
-      <Header />
+  constructor(props) {
+    super(props);
+    this.addItemToCart = this.addItemToCart.bind(this);
+  }
 
-      <div className="container">
-        <div className="row">
-          <div className="col-md-3">
-            <p className="lead">Shop Name</p>
-            <div className="list-group">
-              <a href="#" className="list-group-item">
-                Category 1
-              </a>
-              <a href="#" className="list-group-item">
-                Category 2
-              </a>
-              <a href="#" className="list-group-item">
-                Category 3
-              </a>
+  addItemToCart(item) {
+    const items = this.state.cartItems.slice();
+    items.push(item);
+    this.setState({
+      cartItems: items
+    });
+  }
+
+  render() {
+    const productDetails = this.props.products.map((p) => {
+      return (
+        <ProductDetail
+          key={p.id}
+          product={p}
+          onAddItemToCart={this.addItemToCart}
+        />
+      );
+    });
+
+    return (
+      <div className="App">
+        <Header numberOfItemsInCart={this.state.cartItems.length} />
+
+        <div className="container">
+          <div className="row">
+            <div className="col-md-3">
+              <p className="lead">Shop Name</p>
+              <div className="list-group">
+                <a href="#" className="list-group-item">
+                  Category 1
+                </a>
+                <a href="#" className="list-group-item">
+                  Category 2
+                </a>
+                <a href="#" className="list-group-item">
+                  Category 3
+                </a>
+              </div>
             </div>
-          </div>
 
-          <div className="col-md-9">
-            <Carousel />
-            <div className="row">
-              {productDetails}
-              {/*
+            <div className="col-md-9">
+              <Carousel />
+              <div className="row">
+                {productDetails}
+                {/*
                     <div className="col-sm-4 col-lg-4 col-md-4">
                         <h4><a href="#">Like this template?</a>
                         </h4>
@@ -47,18 +71,19 @@ function App(props) {
                         <a className="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
                     </div>
 */}
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="container">
-        <hr />
+        <div className="container">
+          <hr />
 
-        <Footer />
+          <Footer />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 App.propTypes = {
