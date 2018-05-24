@@ -8,6 +8,7 @@ function ProductDetail(props) {
     for (let index = 0; index < props.product.rating; index++) {
       stars.push(<span className="glyphicon glyphicon-star" />);
     }
+    
     for (let index = 0; index < 5 - props.product.rating; index++) {
       stars.push(<span className="glyphicon glyphicon-star-empty" />);
     }

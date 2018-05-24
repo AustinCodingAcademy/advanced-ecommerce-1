@@ -8,7 +8,6 @@ import Side from "./components/side";
 
 class App extends Component {
 
-
   state = {
     cart: this.props.cart,
     numberOfItemsInCart: this.props.cart.length
