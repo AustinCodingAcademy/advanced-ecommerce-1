@@ -8,7 +8,7 @@ Fork, clone, run npm install, npm start, pull request
    <!-- * Header -->
    <!-- * Footer -->
    <!-- * Carousel -->
-   * Think of some other components you could make
+   <!-- * Think of some other components you could make -->
 * The ProductDetail should repesent only one single product
 * The ProductDetail should take a prop called product with is an object, and use it to populate price, name, description reviews and stars.
 * Make sure each component is in its own file and imported into App.js

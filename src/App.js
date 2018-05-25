@@ -5,9 +5,11 @@ import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
 import ProductDetail from "./components/ProductDetail";
 import MenuLeft from "./components/MenuLeft";
+// import Template from "./components/Template";
+import PropTypes from "prop-types";
 import "./App.css";
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <Header />
@@ -19,15 +21,8 @@ function App() {
           <div className="col-md-9">
             <Carousel />
             <div className="row">
-              <ProductDetail />            
-              {/*
-                    <div className="col-sm-4 col-lg-4 col-md-4">
-                        <h4><a href="#">Like this template?</a>
-                        </h4>
-                        <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
-                        <a className="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
-                    </div>
-               */}
+              <ProductDetail product={props.products} />            
+              {/* <Template /> */}
             </div>
           </div>
         </div>
@@ -39,5 +34,9 @@ function App() {
     </div>
   );
 }
+
+App.propTypes = {
+  products: PropTypes.array.isRequired
+};
 
 export default App;

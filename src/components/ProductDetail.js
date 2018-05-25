@@ -5,14 +5,15 @@ import ThirdProduct from "./products/ThirdProduct";
 import FourthProduct from "./products/FourthProduct";
 import FifthProduct from "./products/FifthProduct";
 
-function ProductDetail() {
+function ProductDetail(props) {
   return (
     <div> 
-      <FirstProduct />
+      <FirstProduct product={props.product} />
       <SecondProduct />
       <ThirdProduct />
       <FourthProduct />
       <FifthProduct />
+      {console.log(props.product + "product detail")}
     </div>
   );
 }

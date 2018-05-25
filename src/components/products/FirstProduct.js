@@ -1,19 +1,20 @@
 import React from "react";
 
-function FirstProduct() {
+function FirstProduct(props) {
   return (
     <div className="col-sm-4 col-lg-4 col-md-4">
       <div className="thumbnail">
-        <img src="http://placehold.it/320x150" alt="" />
+        <img src={props.product[0].imgUrl} alt="" />
         <div className="caption">
-          <h4 className="pull-right">$24.99</h4>
-          <h4><a href="#">First Product</a>
+          <h4 className="pull-right">{props.product[0].price}</h4>
+          <h4><a href="#">{props.product[0].name}</a>
           </h4>
-          <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+          <p>{props.product[0].description}</p>
         </div>
         <div className="ratings">
-          <p className="pull-right">15 reviews</p>
+          <p className="pull-right">{props.product[0].reviews} reviews</p>
           <p>
+            {/* need to make function to display stars */}
             <span className="glyphicon glyphicon-star" />
             <span className="glyphicon glyphicon-star" />
             <span className="glyphicon glyphicon-star" />
