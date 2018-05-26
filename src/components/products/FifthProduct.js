@@ -1,25 +1,25 @@
 import React from "react";
 
-function FifthProduct() {
+function FifthProduct(props) {
   return (
     <div className="col-sm-4 col-lg-4 col-md-4">
       <div className="thumbnail">
-        <img src="http://placehold.it/320x150" alt="" />
+        <img src={props.product.imgUrl} alt="" />
         <div className="caption">
-          <h4 className="pull-right">$94.99</h4>
-          <h4><a href="#">Fifth Product</a>
+          <h4 className="pull-right">{props.product.price}</h4>
+          <h4><a href="#">{props.product.name}</a>
           </h4>
-          <p>This is a short description. Lorem ipsum dolor sit amet, 
-              consectetur adipiscing elit.</p>
+          <p>{props.product.description}</p>
         </div>
         <div className="ratings">
-          <p className="pull-right">18 reviews</p>
+          <p className="pull-right">{props.product.reviews} reviews</p>
           <p>
+            {/* need to make function to display stars */}
             <span className="glyphicon glyphicon-star" />
             <span className="glyphicon glyphicon-star" />
             <span className="glyphicon glyphicon-star" />
             <span className="glyphicon glyphicon-star" />
-            <span className="glyphicon glyphicon-star-empty" />
+            <span className="glyphicon glyphicon-star" />
           </p>
         </div>
       </div>
