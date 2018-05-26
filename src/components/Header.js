@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-function Header() {
+function Header(props) {
   return (
     <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div className="container">
@@ -26,7 +27,7 @@ function Header() {
               <a href="#">Contact</a>
             </li>
             <li >
-              <a href="#">Items In Cart (0)</a>
+              <a href="#">Items In Cart ({props.numberOfItemsInCart})</a>
             </li>
           </ul>
         </div>
@@ -34,5 +35,9 @@ function Header() {
     </nav>
   );
 }
+
+Header.propTypes = {
+  numberOfItemsInCart: PropTypes.number.isRequired
+};
 
 export default Header;

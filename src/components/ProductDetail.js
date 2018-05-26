@@ -1,20 +1,35 @@
 import React from "react";
-import FirstProduct from "./products/FirstProduct";
-import SecondProduct from "./products/SecondProduct";
-import ThirdProduct from "./products/ThirdProduct";
-import FourthProduct from "./products/FourthProduct";
-import FifthProduct from "./products/FifthProduct";
+import PropTypes from "prop-types";
 
 function ProductDetail(props) {
   return (
-    <div> 
-      <FirstProduct product={props.product[0]} />
-      <SecondProduct product={props.product[1]} />
-      <ThirdProduct product={props.product[2]} />
-      <FourthProduct product={props.product[3]} />
-      <FifthProduct product={props.product[4]} />
+    <div className="col-sm-4 col-lg-4 col-md-4">
+      <div className="thumbnail">
+        <img src={props.product.imgUrl} alt="" />
+        <div className="caption">
+          <h4 className="pull-right">{props.product.price}</h4>
+          <h4><a href="#">{props.product.name}</a>
+          </h4>
+          <p>{props.product.description}</p>
+        </div>
+        <div className="add-button">
+          <button>Add to cart</button>
+        </div>
+        <div className="ratings">
+          <p className="pull-right">{props.product.reviews} reviews</p>
+          <p>
+            {/* need to turn this into a loop */}
+            {props.product.rating}
+            <span className="glyphicon glyphicon-star" />
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
+
+ProductDetail.propTypes = {
+  product: PropTypes.object.isRequired
+};
 
 export default ProductDetail;
