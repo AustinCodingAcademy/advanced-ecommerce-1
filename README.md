@@ -22,11 +22,11 @@ Fork, clone, run npm install, npm start, pull request
 
 ### Add Item To Cart
 <!-- * Add a button to ProductDetail "Add To Cart" -->
-* When the button is clicked it should increase the value of the state numberOfItemsInCart by 1
-* The Header should update to show the current value of numberOfItemsInCart
-* How does Header get that information in order to show it?
-* How do you update Header so that it shows the number when it changes?
-* How do you make one component affect something in another component?
+<!-- * When the button is clicked it should increase the value of the state numberOfItemsInCart by 1 -->
+<!-- * The Header should update to show the current value of numberOfItemsInCart -->
+<!-- * How does Header get that information in order to show it? -->
+<!-- * How do you update Header so that it shows the number when it changes? -->
+<!-- * How do you make one component affect something in another component? -->
 
 
 ### Add Item To Cart V2

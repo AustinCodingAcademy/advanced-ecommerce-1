@@ -12,17 +12,33 @@ import "./App.css";
 
 
 export class App extends Component {
+  state={
+    numberOfItemsInCart: 0,
+    cart: []
+  }
+  handleAddToCart = (product) => {
+    const cartArr = [...this.state.cart];
+    console.log(cartArr.length);
+    cartArr.push({item: product.name, price: product.price, description: product.description});
+    console.log(cartArr);
+    this.setState({numberOfItemsInCart: this.state.numberOfItemsInCart + 1,
+      cart: cartArr}); 
+  }
+
   render() {
     const productDiv = this.props.products.map((p, index) => 
       <ProductDetail
         product={p}
         key={index}
+        clickEvent={this.handleAddToCart}
       />
     );
 
+    
+
     return (
       <div className="App">
-        <Header numberOfItemsInCart={this.props.numberOfItemsInCart} />
+        <Header numberOfItemsInCart={this.state.numberOfItemsInCart} />
         <div className="container">
           <div className="row">
             <div className="col-md-3">
