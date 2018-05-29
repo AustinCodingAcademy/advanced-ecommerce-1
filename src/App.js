@@ -18,7 +18,6 @@ export class App extends Component {
   }
   handleAddToCart = (product) => {
     const cartArr = [...this.state.cart];
-    console.log(cartArr.length);
     cartArr.push({item: product.name, price: product.price, description: product.description});
     console.log(cartArr);
     this.setState({numberOfItemsInCart: this.state.numberOfItemsInCart + 1,
@@ -38,7 +37,10 @@ export class App extends Component {
 
     return (
       <div className="App">
-        <Header numberOfItemsInCart={this.state.numberOfItemsInCart} />
+        <Header 
+          numberOfItemsInCart={this.state.numberOfItemsInCart} 
+          cart={this.state.cart}
+        />
         <div className="container">
           <div className="row">
             <div className="col-md-3">
