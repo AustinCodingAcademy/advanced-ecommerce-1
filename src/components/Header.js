@@ -1,22 +1,20 @@
 import React, { Component } from 'react'
 import Cart from "../components/Cart"
-import { cartTotal } from "./Calculations"
 
 export default class Header extends Component{
 
-    //calculate the cart total
-    // cartTotal = ()=>this.props.cartItems.map((item,i)=>{
-    //     return item.price.replace("$","")
-    // }).reduce((s,c)=>{
-    //     return (Number(s)+Number(c)).toFixed(2)})
-    sumCart = () =>  <span>{cartTotal(this.props.cartItems)}</span>
+    // calculate the cart total
+    cartTotal = ()=>this.props.cartItems.map((item,i)=>{
+        return item.price.replace("$","")
+    }).reduce((s,c)=>{
+        return (Number(s)+Number(c)).toFixed(2)})
 
     render(){
         //show the items in the cart
         const getCart = this.props.cartItems.map((item,i)=><Cart cartItem={item} key={i}/>)
         //determine if I should show a checkout button
         const checkOutBttn = this.props.cartItems.length!==0 
-        ? <button className="btn btn-primary btn-block pull-right" data-toggle="modal" data-target="#checkOut">Proceed to Checkout ${this.sumCart()}</button>
+        ? <button className="btn btn-primary btn-block pull-right" data-toggle="modal" data-target="#checkOut">Proceed to Checkout ${this.cartTotal()}</button>
         : <i className="glyphicon glyphicon-hourglass">{`Waiting on you...\n Go ahead and add something`}</i>
     return(
       <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -53,7 +51,6 @@ export default class Header extends Component{
                         </li>
                     </ul>
               </div>
-          
           </div>
         
       </nav>

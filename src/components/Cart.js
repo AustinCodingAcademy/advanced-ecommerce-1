@@ -13,10 +13,6 @@ export default class Cart extends Component{
           <p className="list-group-item-text">{description}</p>
         </a>
       </div>
-
-      // <li className="list-group-item">{item}
-      // <span className="badge">{price}</span>
-      // </li>
     )
   }
 }

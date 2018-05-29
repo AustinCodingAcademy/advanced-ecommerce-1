@@ -9,7 +9,8 @@ export default class CartItem extends Component{
             <h3 className="panel-title">{this.props.order.item}</h3>
           </div>
           <div className="panel-body">
-            {this.props.order.description}
+            <p>{this.props.order.description}</p>
+            <p>{this.props.order.price}</p>
           </div>
         </div>
       </div>

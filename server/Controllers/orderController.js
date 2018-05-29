@@ -18,9 +18,9 @@ module.exports.show = ((req, res)=>{
 
 module.exports.create = ((req, res)=>{
   newOrder = new Order ({
-    Product: 'Test',
-    Amount: 40,
-    ProductId: 1234
+    'Product': req.body.Product,
+    'Amount': req.body.Amount,
+    'ProductId': req.body.ProductId
   })
   
   newOrder.save()

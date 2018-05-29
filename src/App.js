@@ -14,7 +14,6 @@ export default class App extends Component{
     state={
         numberOfItemsInCart: 0,
         cart: [],
-        cartVisible: false
     }
      handleAddtoCart = (product)=>{
         let cartArr = [...this.state.cart]

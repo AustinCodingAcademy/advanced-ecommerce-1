@@ -2,15 +2,15 @@ const mon = require('mongoose')
 
 const schema = new mon.Schema({
   Product:{
-    required: true,
+    required: false,
     type: String
   },
   Amount:{
-    required: true,
+    required: false,
     type: Number
   },
   ProductId:{
-    required: true,
+    required: false,
     type: Number
   }
 })

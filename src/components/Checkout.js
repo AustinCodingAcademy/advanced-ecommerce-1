@@ -2,6 +2,28 @@ import React, { Component } from 'react'
 import CartItem from './CartItem'
 
 export default class Checkout extends Component{
+
+  handleOrder(order){
+    console.log(order[0])
+    const url = 'http://localhost:3001/orders';
+    let data = {
+      'Product': order[0].item,
+      'Amount': 100,
+      'ProductId': 123
+    }
+
+    fetch(url, {
+      method: 'POST', // or 'PUT'
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      mode: 'no-cors',
+      body: data
+    })
+    .then(function(res){ console.log(res) })
+    .catch(function(res){ console.log(res) })
+  }
+
   render(){
     const orderPanel = this.props.order.map((x,i)=> <CartItem order={x} key={i}/> )
     return(
@@ -16,7 +38,7 @@ export default class Checkout extends Component{
             {orderPanel}
           </div>
           <div className="modal-footer">
-            <button type="button" className="btn btn-primary" data-dismiss="modal">Submit Order</button>
+            <button type="button" onClick={()=>this.handleOrder(this.props.order)} className="btn btn-primary" data-dismiss="modal">Submit Order</button>
           </div>
         </div>
       </div>

@@ -1,10 +1,12 @@
-export function cartTotal (arr){
-  arr.map(function(item,i){
-    console.log(arr)
-    return Number(item.price.replace("$",""))
-}).reduce(function(s,c){
-    console.log(`number ${s} and ${Number(s)}`)
-    console.log(`number ${c} and ${Number(c)}`)
-    console.log(s+c)
-     return s+c})
+export function cartTotal(arr){
+  const myList = []
+  arr.forEach((item,i)=>{
+    myList.push(Number(item.price.replace("$","")))
+  })
+  
+  const reduced = myList.reduce((s,c)=>{
+    return(Number(s) , Number(c))
+  },0)
+
+  return(reduced)
 }
