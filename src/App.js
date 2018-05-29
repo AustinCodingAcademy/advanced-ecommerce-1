@@ -10,7 +10,6 @@ import PropTypes from "prop-types";
 import "./App.css";
 
 
-
 export class App extends Component {
   state={
     numberOfItemsInCart: 0,

@@ -5,12 +5,10 @@ import PropTypes from "prop-types";
 export default class Header extends Component {
   render() {
     const checkOutBttn = this.props.cart.length !== 0 ? 
-      <button 
-        className="btn btn-primary btn-block pull-right" 
-        data-toggle="modal" 
-        data-target="#checkOut">
-        Proceed to Checkout
+      <button type="button" className="btn btn-info btn-lg" 
+        data-toggle="modal" data-target="#myModal">Checkout
       </button> : "Nothing in cart";
+      
 
     return (
       <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -42,6 +40,26 @@ export default class Header extends Component {
                 <span className="caret" /></a>
                 <ul className="dropdown-menu">
                   <li><a href="#">{checkOutBttn}</a></li>
+                  <div>
+                    <div className="modal fade" id="myModal" role="dialog">
+                      <div className="modal-dialog modal-lg">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <button type="button" className="close" 
+                              data-dismiss="modal">&times;</button>
+                            <h4 className="modal-title">Modal Header</h4>
+                          </div>
+                          <div className="modal-body">
+                            <p>This is a large modal.</p>
+                          </div>
+                          <div className="modal-footer">
+                            <button type="button" className="btn btn-default" 
+                              data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </ul>
               </li>
             </ul>
