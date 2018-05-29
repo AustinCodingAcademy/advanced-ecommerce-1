@@ -30,10 +30,10 @@ Fork, clone, run npm install, npm start, pull request
 
 
 ### Add Item To Cart V2
-* Adding 1 to a counter is not a realistic way to add an item to the shopping cart
-* How would you alter the structure of the state object to represent a realistic way to do this
-* How would you alter the data in the state object to represent adding an item to a cart
-* How would Header now show how many items are in cart
+<!-- * Adding 1 to a counter is not a realistic way to add an item to the shopping cart -->
+<!-- * How would you alter the structure of the state object to represent a realistic way to do this -->
+<!-- * How would you alter the data in the state object to represent adding an item to a cart -->
+<!-- * How would Header now show how many items are in cart -->
 * Add a checkout button
 
 ### Checkout
