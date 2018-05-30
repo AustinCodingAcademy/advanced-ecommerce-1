@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header(){
+function Header(props){
     return(
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div className="container">
@@ -27,13 +27,12 @@ function Header(){
                         <a href="#">Contact</a>
                     </li>
                     <li >
-                        <a href="#">Items In Cart {this.numberOfItemsInCart}</a>
+                        <a href="#">Items In Cart {this.props.numberOfItemsInCart}</a>
                     </li>
                 </ul>
             </div>
          
-        </div>
-      
+        </div> 
     </nav>);
 }
 
