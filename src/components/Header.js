@@ -27,7 +27,7 @@ function Header(props){
                         <a href="#">Contact</a>
                     </li>
                     <li >
-                        <a href="#">Items In Cart {this.props.numberOfItemsInCart}</a>
+                        <a href="#">Items In Cart {this.props.numberOfItemsInCart})</a>
                     </li>
                 </ul>
             </div>

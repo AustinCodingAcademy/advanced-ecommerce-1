@@ -1,6 +1,7 @@
-import React from "react"
+import { Component } from "react"
 
-function ProductDetail(props){
+class ProductDetail extends Component{
+    render(){
     const showStars = (i) => {
         const stars = [];
         for (i = 0; i < props.product.rating; i++) {
@@ -39,6 +40,7 @@ function ProductDetail(props){
             </div>
         </div>
     );
-}
+};
+};
 
 export default ProductDetail;

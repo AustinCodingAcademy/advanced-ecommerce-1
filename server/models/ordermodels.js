@@ -9,7 +9,7 @@ const schema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  items: [orderItemSchema]
+  // items: [schema] - need to create a schema for the items
 });
 
 module.exports = mongoose.model("OrderModel", schema);
