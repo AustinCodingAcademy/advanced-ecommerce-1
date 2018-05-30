@@ -27,7 +27,7 @@ function Header(){
                         <a href="#">Contact</a>
                     </li>
                     <li >
-                        <a href="#">Items In Cart (0)</a>
+                        <a href="#">Items In Cart {this.numberOfItemsInCart}</a>
                     </li>
                 </ul>
             </div>

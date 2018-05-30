@@ -8,11 +8,11 @@ import Carousel from "./components/Carousel"
 
 class App extends Component {
     state = {
-        itemsInCart: 0,
+        numberOfItemsInCart: 0,
     };
 
     addItem = () => {
-        this.setState({itemsInCart: this.state.itemsInCart + 1});
+        this.setState({numberOfItemsInCart: this.state.numberOfItemsInCart + 1});
        
       }
 
