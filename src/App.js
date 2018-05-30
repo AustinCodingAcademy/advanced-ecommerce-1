@@ -7,11 +7,8 @@ import Footer from "./components/Footer"
 import Carousel from "./components/Carousel"
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-    };
 
-    ProductArray() {
+    ProductArray(products) {
         return this.props.products.map((prod, key) => {
           return <ProductArray product={prod} key={key} addItem={this.addItem} />;
         });
