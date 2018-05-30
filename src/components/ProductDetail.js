@@ -1,6 +1,20 @@
 import React from "react"
 
 function ProductDetail(props){
+    const showStars = () => {
+        const stars = [];
+        for (i = 0; i < props.product.rating; i++) {
+          stars.push(<span className="glyphicon glyphicon-star" />);
+        }
+
+        for (i = 0; i < 5 - props.product.rating; i++) {
+            stars.push(<span className="glyphicon glyphicon-star-empty" />);
+          }
+          return stars.map((star) => {
+            return star;
+          });
+        };
+
     return(
         <div className="col-sm-4 col-lg-4 col-md-4">
         <div className="thumbnail">
