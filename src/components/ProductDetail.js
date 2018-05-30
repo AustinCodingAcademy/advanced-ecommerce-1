@@ -11,7 +11,7 @@ export default class ProductDetail extends Component {
       star.push(<span key={index} className="glyphicon glyphicon-star" />);
     }
     const starEmpty = [];
-    for (let index = 0; index < 5- product.rating; index++) {
+    for (let index = 0; index < 5 - product.rating; index++) {
       starEmpty.push(<span key={index} className="glyphicon glyphicon-star-empty" />);
     }
 
@@ -36,7 +36,6 @@ export default class ProductDetail extends Component {
           <div className="ratings">
             <p className="pull-right">{product.reviews} reviews</p>
             <p>
-              {/* need to turn this into a loop */}
               {star}
               {starEmpty}
             </p>
