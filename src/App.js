@@ -7,10 +7,18 @@ import Footer from "./components/Footer"
 import Carousel from "./components/Carousel"
 
 class App extends Component {
+    state = {
+        itemsInCart: 0,
+    };
 
-    ProductArray(products) {
+    addItem = () => {
+        this.setState({itemsInCart: this.state.itemsInCart + 1});
+       
+      }
+
+    productArray(products) {
         return this.props.products.map((prod, key) => {
-          return <ProductArray product={prod} key={key} addItem={this.addItem} />;
+          return <ProductDetail product={prod} key={key} addItem={this.addItem} />;
         });
       };
 
@@ -34,7 +42,7 @@ class App extends Component {
                 <div className="col-md-9">
                     <Carousel />
                     <div className="row">
-                        <p>{productArray()}</p>
+                        <p>{this.productArray()}</p>
                     </div>
 
                 </div>
