@@ -3,9 +3,19 @@ import PropTypes from "prop-types";
 
 
 export default class ProductDetail extends Component {
-  
   render() {
+
     const product = this.props.product;
+    const star = [];
+    for (let index = 0; index < product.rating; index++) {
+      star.push(<span key={index} className="glyphicon glyphicon-star" />);
+    }
+    const starEmpty = [];
+    for (let index = 0; index < 5- product.rating; index++) {
+      starEmpty.push(<span key={index} className="glyphicon glyphicon-star-empty" />);
+    }
+
+
     return (
       <div className="col-sm-4 col-lg-4 col-md-4">
         <div className="thumbnail">
@@ -27,8 +37,8 @@ export default class ProductDetail extends Component {
             <p className="pull-right">{product.reviews} reviews</p>
             <p>
               {/* need to turn this into a loop */}
-              {product.rating}
-              <span className="glyphicon glyphicon-star" />
+              {star}
+              {starEmpty}
             </p>
           </div>
         </div>

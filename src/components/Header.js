@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import createData from "../createData";
 
 
 export default class Header extends Component {
+  
+  handleCheckout = (cart) => {
+    console.log(cart);
+    createData.checkout({cart});
+  }
+
   render() {
-    const checkOutBttn = this.props.cart.length !== 0 ? 
-      <button type="button" className="btn btn-info btn-lg" 
-        data-toggle="modal" data-target="#myModal">Checkout
-      </button> : "Nothing in cart";
-      
 
     return (
       <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -39,8 +41,9 @@ export default class Header extends Component {
                   Items in Cart ({this.props.numberOfItemsInCart})
                 <span className="caret" /></a>
                 <ul className="dropdown-menu">
-                  <li><a href="#">{checkOutBttn}</a></li>
-                  <div>
+                  <li><button onClick={() => this.handleCheckout(this.props.cart)}>
+                    Checkout</button></li>
+                  {/* <div>
                     <div className="modal fade" id="myModal" role="dialog">
                       <div className="modal-dialog modal-lg">
                         <div className="modal-content">
@@ -59,7 +62,7 @@ export default class Header extends Component {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </ul>
               </li>
             </ul>
