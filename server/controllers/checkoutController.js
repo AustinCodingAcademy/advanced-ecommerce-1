@@ -7,17 +7,9 @@ module.exports.list = ((req, res) => {
     });
 });
 
-module.exports.show = ((req, res) => {
-  Checkout.findById({_id: req.params.id}).exec()
-    .then(checkoutItems => {
-      res.json(checkoutItems); 
-    });
-});
 
 module.exports.create = ((req, res) => {
-  const newOrder = new Checkout({
-    checkout: req.body.checkout
-  });
+  const newOrder = new Checkout(req.body.cart);
   newOrder.save()
     .then(savedOrder => {
       res.json(savedOrder);

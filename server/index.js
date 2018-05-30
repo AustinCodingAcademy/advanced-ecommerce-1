@@ -10,13 +10,13 @@ mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://ecommerce1:shelby@ds139970.mlab.com:39970/advanced-ecommerce-1");
 
 
-const checkoutCart = require("./routes/checkoutRoutes");
+const checkout = require("./routes/checkoutRoutes");
 
-app.use(checkoutCart);
+app.use(checkout);
 
 
 
-app.listen(3001, (err) => {
+app.listen(3000, (err) => {
   if (err) {
     return console.log("Error", err);
   }
