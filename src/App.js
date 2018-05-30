@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-// import PropTypes from "prop-types";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Carousel from "./components/Carousel";
 import ProductDetail from "./components/ProductDetail";
 
-// import logo from "./logo.svg";
 import "./App.css";
 
 class App extends Component {
@@ -116,9 +114,5 @@ class App extends Component {
     );
   }
 }
-
-// App.propTypes = {
-//   products: PropTypes.array.isRequired,
-// };
 
 export default App;
