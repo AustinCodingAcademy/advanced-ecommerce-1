@@ -15,8 +15,8 @@ Fork, clone, run npm install, npm start, pull request
 <!-- * Use the provided data in state.js to dynamically populate information instead of the hard coded html that is there now. -->
 <!-- * In index.js provide App with a prop called "products" sending in the product array  -->
 <!-- * App should use the product prop and map the array of products into an array of ProductDetail components -->
-* Make the star images represent the number rating from data.
-* Bonus. Notice the grey stars.
+<!-- * Make the star images represent the number rating from data. -->
+<!-- * Bonus. Notice the grey stars. -->
 <!-- * Change App into a class component -->
 
 
@@ -34,19 +34,20 @@ Fork, clone, run npm install, npm start, pull request
 <!-- * How would you alter the structure of the state object to represent a realistic way to do this -->
 <!-- * How would you alter the data in the state object to represent adding an item to a cart -->
 <!-- * How would Header now show how many items are in cart -->
-* Add a checkout button
+<!-- * Add a checkout button -->
 
 ### Checkout
 * Let's create a very simple checkout process
 * When you click the checkout button, whatever products are in the cart should somehow be processed so a person knows to ship those products to the customer
 * The products in the cart need to be sent to the server to be saved as an order
 * When the products are recieved by the server, they need to be saved in a database 
+<!-- working on all of this, not sure how to do it  -->
 
 
 #### Server
-* Create a database for this project
-* Create a web server for ths project
-* Create routes for products and orders
+<!-- * Create a database for this project -->
+<!-- * Create a web server for ths project -->
+<!-- * Create routes for products and orders -->
 
 
 #### Fetch
