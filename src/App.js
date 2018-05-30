@@ -11,47 +11,50 @@ class App extends Component {
         super(props);
     };
 
-    ProductArray = () => {
+    ProductArray() {
         return this.props.products.map((prod, key) => {
           return <ProductArray product={prod} key={key} addItem={this.addItem} />;
         });
       };
 
-    return (
-      <div className="App">
-    <Header /> 
-    <div className="container">
+    render(){
+        return (
+        <div className="App">
+        <Header /> 
+        <div className="container">
 
-        <div className="row">
+            <div className="row">
 
-            <div className="col-md-3">
-                <p className="lead">Shop Name</p>
-                <div className="list-group">
-                    <a href="#" className="list-group-item">Category 1</a>
-                    <a href="#" className="list-group-item">Category 2</a>
-                    <a href="#" className="list-group-item">Category 3</a>
+                <div className="col-md-3">
+                    <p className="lead">Shop Name</p>
+                    <div className="list-group">
+                        <a href="#" className="list-group-item">Category 1</a>
+                        <a href="#" className="list-group-item">Category 2</a>
+                        <a href="#" className="list-group-item">Category 3</a>
+                    </div>
                 </div>
-            </div>
 
-            <div className="col-md-9">
-                <Carousel />
-                <div className="row">
-                    <p>{productArray()}</p>
+                <div className="col-md-9">
+                    <Carousel />
+                    <div className="row">
+                        <p>{productArray()}</p>
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
+    
+        <div className="container">
 
-    </div>
-   
-    <div className="container">
-
-        <hr/>
-        <Footer />
-    </div>
-      </div>
-    );
-}
+            <hr/>
+            <Footer />
+        </div>
+        </div>
+        
+        );
+    };
+};
 
 export default App;

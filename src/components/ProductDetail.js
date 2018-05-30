@@ -1,7 +1,7 @@
 import React from "react"
 
 function ProductDetail(props){
-    const showStars = () => {
+    const showStars = (i) => {
         const stars = [];
         for (i = 0; i < props.product.rating; i++) {
           stars.push(<span className="glyphicon glyphicon-star" />);
