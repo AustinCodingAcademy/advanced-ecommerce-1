@@ -5,6 +5,9 @@ const mongoose = require("mongoose");
 
 app.use(bodyParser.json());
 
+app.use(require("./routes/orderroutes"));
+app.use(require("./routes/productroutes"));
+
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://aeadmin1:aeadmin1@ds135540.mlab.com:35540/advanced-ecommerce-1");
 
