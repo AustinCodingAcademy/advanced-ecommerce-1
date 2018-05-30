@@ -40,7 +40,11 @@ export default function Header(props) {
               <a href="#">Items In Cart ({props.numberOfItemsInCart})</a>
             </li>
             <li>
-              { props.numberOfItemsInCart > 0 ? <a href="#">Checkout</a> : null }
+              {props.numberOfItemsInCart > 0 ? (
+                <a href="#" onClick={props.onSubmitOrder}>
+                  Checkout
+                </a>
+              ) : null}
             </li>
           </ul>
         </div>
@@ -51,4 +55,5 @@ export default function Header(props) {
 
 Header.propTypes = {
   numberOfItemsInCart: PropTypes.number.isRequired,
+  onSubmitOrder: PropTypes.func.isRequired,
 };

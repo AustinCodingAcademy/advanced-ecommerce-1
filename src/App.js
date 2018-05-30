@@ -18,6 +18,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.addItemToCart = this.addItemToCart.bind(this);
+    this.submitOrder = this.submitOrder.bind(this);
   }
 
   addItemToCart(item) {
@@ -28,6 +29,21 @@ class App extends Component {
     });
   }
 
+  submitOrder() {
+    const order = {
+      date: Date(),
+      items: this.state.cartItems,
+    };
+    console.log("order submitted", order);
+    return fetch("/orders", {
+      body: JSON.stringify(order),
+      headers: {
+        "content-type": "application/json",
+      },
+      method: "POST",
+    }).then((response) => response.json());
+  }
+
   componentDidMount() {
     fetch("/products")
       .then((response) => {
@@ -35,7 +51,7 @@ class App extends Component {
       })
       .then((products) => {
         this.setState({
-          products
+          products,
         });
       });
   }
@@ -53,7 +69,10 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Header numberOfItemsInCart={this.state.cartItems.length} />
+        <Header
+          numberOfItemsInCart={this.state.cartItems.length}
+          onSubmitOrder={this.submitOrder}
+        />
 
         <div className="container">
           <div className="row">
