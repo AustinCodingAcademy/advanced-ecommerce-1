@@ -43,7 +43,6 @@ Fork, clone, run npm install, npm start, pull request
 * When the products are recieved by the server, they need to be saved in a database 
 
 
-
 #### Server
 * Create a database for this project
 * Create a web server for ths project
