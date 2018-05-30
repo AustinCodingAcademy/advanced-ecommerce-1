@@ -6,18 +6,20 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Carousel from "./components/Carousel"
 
-function App(props) {
+class App extends Component {
+    constructor(props) {
+        super(props);
+    };
 
-    const productArray = props.products.map(product => {
-        return <ProductDetail key={product.id} product={product} />
-    });
+    ProductArray = () => {
+        return this.props.products.map((prod, key) => {
+          return <ProductArray product={prod} key={key} addItem={this.addItem} />;
+        });
+      };
 
     return (
       <div className="App">
-     {/*<Header>*/}
-    <Header />
-{/*</Header>*/}
- 
+    <Header /> 
     <div className="container">
 
         <div className="row">
@@ -32,12 +34,9 @@ function App(props) {
             </div>
 
             <div className="col-md-9">
-                {/*<Carousel>*/}
                 <Carousel />
-                {/*</Carousel>*/}
                 <div className="row">
-                    {/*<ProductDetail>*/}
-                    <productArray />
+                    <p>{productArray()}</p>
 {/*
                     <div className="col-sm-4 col-lg-4 col-md-4">
                         <h4><a href="#">Like this template?</a>
