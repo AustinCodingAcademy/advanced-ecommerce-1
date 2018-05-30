@@ -39,6 +39,9 @@ export default function Header(props) {
             <li>
               <a href="#">Items In Cart ({props.numberOfItemsInCart})</a>
             </li>
+            <li>
+              { props.numberOfItemsInCart > 0 ? <a href="#">Checkout</a> : null }
+            </li>
           </ul>
         </div>
       </div>
