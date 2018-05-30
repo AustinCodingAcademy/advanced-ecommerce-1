@@ -34,7 +34,6 @@ class App extends Component {
       date: Date(),
       items: this.state.cartItems,
     };
-    console.log("order submitted", order);
     return fetch("/orders", {
       body: JSON.stringify(order),
       headers: {
