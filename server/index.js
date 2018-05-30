@@ -11,8 +11,10 @@ mongoose.connect("mongodb://ecommerce1:shelby@ds139970.mlab.com:39970/advanced-e
 
 
 const checkout = require("./routes/checkoutRoutes");
+const products = require("./routes/productRoutes");
 
 app.use(checkout);
+app.use(products);
 
 
 
