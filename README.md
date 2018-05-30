@@ -1,7 +1,7 @@
 #### Setup
 Fork, clone, run npm install, npm start, pull request
 
-#### Do
+#### Client
  * Create a component folder to hold component files
  * Organize this web page into appropriate components
    * ProductDetail
@@ -17,6 +17,8 @@ Fork, clone, run npm install, npm start, pull request
 * App should use the product prop and map the array of products into an array of ProductDetail components
 * Make the star images represent the number rating from data.
 * Bonus. Notice the grey stars.
+* Change App into a class component
+
 
 ### Add Item To Cart
 * Add a button to ProductDetail "Add To Cart"
@@ -41,3 +43,13 @@ Fork, clone, run npm install, npm start, pull request
 * When the products are recieved by the server, they need to be saved in a database 
 
 
+
+#### Server
+* Create a database for this project
+* Create a web server for ths project
+* Create routes for products and orders
+
+
+#### Fetch
+* Use fetch to retrieve products from your web api
+* Where should the fetch call be made?
