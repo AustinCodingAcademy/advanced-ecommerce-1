@@ -1,17 +1,18 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Carousel from "./components/Carousel";
 import ProductDetail from "./components/ProductDetail";
 
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 
 class App extends Component {
   state = {
     cartItems: [],
+    products: [],
   };
 
   constructor(props) {
@@ -23,12 +24,24 @@ class App extends Component {
     const items = this.state.cartItems.slice();
     items.push(item);
     this.setState({
-      cartItems: items
+      cartItems: items,
     });
   }
 
+  componentDidMount() {
+    fetch("/products")
+      .then((response) => {
+        return response.json();
+      })
+      .then((products) => {
+        this.setState({
+          products
+        });
+      });
+  }
+
   render() {
-    const productDetails = this.props.products.map((p) => {
+    const productDetails = this.state.products.map((p) => {
       return (
         <ProductDetail
           key={p.id}
@@ -86,8 +99,8 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
-  products: PropTypes.array.isRequired,
-};
+// App.propTypes = {
+//   products: PropTypes.array.isRequired,
+// };
 
 export default App;

@@ -6,6 +6,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(require("./routes/OrderRoutes"));
+app.use(require("./routes/ProductRoutes"));
 
 const mongoose = require("mongoose");
 const mlabUri = process.env.SECRET || "";

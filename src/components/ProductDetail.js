@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export default function ProductDetail(props) {
-  const { name, price, description, reviews, rating } = props.product;
+  const { name, price, description, reviews, rating, imgUrl } = props.product;
   const starSpans = [];
   for (let index = 0; index < rating; index++) {
     starSpans.push(<span key={index} className="glyphicon glyphicon-star" />);
@@ -16,7 +16,7 @@ export default function ProductDetail(props) {
   return (
     <div className="col-sm-4 col-lg-4 col-md-4">
       <div className="thumbnail">
-        <img src="http://placehold.it/320x150" alt="" />
+        <img src={imgUrl ? imgUrl : "http://placehold.it/320x150"} alt="" />
         <div className="caption">
           <h4 className="pull-right">{price}</h4>
           <h4>
