@@ -6,7 +6,7 @@ import ProductDetail from "./components/ProductDetail.js";
 import Sidebar from "./components/Sidebar.js";
 import logo from "./logo.svg";
 import "./App.css";
-let fetch = require('node-fetch');
+const fetch = require("node-fetch");
 
 class App extends Component {
 
@@ -17,24 +17,24 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3001/products").then(r=>r.json()).then(d=> {this.setState({products: d})}); 
+    fetch("http://localhost:3001/products").then(r => r.json()).then(d => {this.setState({products: d});}); 
   }  
 
   handleAddToCart=(product) => {
     const cartCopy = [...this.state.cart];
     cartCopy.push(product);
     this.setState({cart: cartCopy, numberOfItemsInCart: this.state.numberOfItemsInCart + 1 });
-}
+  }
 
  
   renderProductDetail() {
-    if(this.state.products !== null) {
+    if (this.state.products !== null) {
       return (
             this.state.products.map((product, key) => {
               return (<ProductDetail product={product} handleAddToCart={this.handleAddToCart} />);
             })   
-    );
-  }
+      );
+    }
   }
 
   
@@ -43,37 +43,28 @@ class App extends Component {
         
       <div className="App">
         {/* <Header>*/}
-        <Header numberOfItemsInCart={this.state.numberOfItemsInCart}/>
+        <Header numberOfItemsInCart={this.state.numberOfItemsInCart} />
         {/* </Header>*/}
  
         <div className="container">
 
           <div className="row">
 
-       <Sidebar />
+            <Sidebar />
 
-        <div className="col-md-9">
+            <div className="col-md-9">
                 
-            <Carousel />
+              <Carousel />
                
-            <div className="row">
+              <div className="row">
                    
                 {this.renderProductDetail()}
                     
-         
-                {/*
-                    <div className="col-sm-4 col-lg-4 col-md-4">
-                        <h4><a href="#">Like this template?</a>
-                        </h4>
-                        <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
-                        <a className="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
-                    </div>
-*/}
               </div>
 
-          </div>
+            </div>
 
-      </div>
+          </div>
 
         </div>
    
