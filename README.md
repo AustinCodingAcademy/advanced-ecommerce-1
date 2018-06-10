@@ -1,23 +1,23 @@
 #### Setup
-Fork, clone, run npm install, npm start, pull request
+X Fork, clone, run npm install, npm start, pull request
 
 #### Client
- * Create a component folder to hold component files
- * Organize this web page into appropriate components
-   * ProductDetail
-   * Header
-   * Footer
-   * Carousel
+ * X Create a component folder to hold component files
+ * X Organize this web page into appropriate components
+   * X ProductDetail
+   * X Header
+   * X Footer
+   * X Carousel
    * Think of some other components you could make
-* The ProductDetail should repesent only one single product
-* The ProductDetail should take a prop called product with is an object, and use it to populate price, name, description reviews and stars.
-* Make sure each component is in its own file and imported into App.js
-* Use the provided data in state.js to dynamically populate information instead of the hard coded html that is there now.
-* In index.js provide App with a prop called "products" sending in the product array 
-* App should use the product prop and map the array of products into an array of ProductDetail components
-* Make the star images represent the number rating from data.
-* Bonus. Notice the grey stars.
-* Change App into a class component
+* X The ProductDetail should repesent only one single product
+* X The ProductDetail should take a prop called product which is an object, and use it to populate price, name, description reviews and stars.
+* X Make sure each component is in its own file and imported into App.js
+* X Use the provided data in state.js to dynamically populate information instead of the hard coded html that is there now.
+* X In index.js provide App with a prop called "products" sending in the product array 
+* X App should use the product prop and map the array of products into an array of ProductDetail components
+* X Make the star images represent the number rating from data.
+* X Bonus. Notice the grey stars.
+* X Change App into a class component
 
 #### Server
 * Create a database for this project
