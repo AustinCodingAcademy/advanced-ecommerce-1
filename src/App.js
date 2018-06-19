@@ -7,7 +7,7 @@ import Carousel from "./components/Carousel"
 
 class App extends Component{
     productDetails = this.props.products.map((prod, i)=>{
-        return <ProductDetail key ={i} product={prod}/>
+        return <ProductDetail key={i} product={prod}/>
     })
 
     render() {

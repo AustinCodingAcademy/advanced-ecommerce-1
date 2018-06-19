@@ -4,10 +4,10 @@ class ProductDetail extends Component {
 
      populateStars = () => {
         const stars = []
-        for(let x=0; x<props.product.rating; x++){
+        for(let x=0; x<this.props.product.rating; x++){
             stars.push(<span className="glyphicon glyphicon-star"></span>)
         }
-        for(let y=0; y<5-props.product.rating; y++){
+        for(let y=0; y<5-this.props.product.rating; y++){
             stars.push(<span className="glyphicon glyphicon-star-empty"/>)
         } return stars
     }

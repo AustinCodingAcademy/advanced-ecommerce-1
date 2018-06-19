@@ -20,8 +20,8 @@ X Fork, clone, run npm install, npm start, pull request
 * X Change App into a class component
 
 #### Server
-* Create a database for this project
-* Create a web server for ths project
+* X Create a database for this project
+* X Create a web server for ths project
 * Create routes for products and orders
 
 
