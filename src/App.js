@@ -6,14 +6,38 @@ import ProductDetail from "./components/ProductDetail"
 import Carousel from "./components/Carousel"
 
 class App extends Component{
+    state = {
+        numberOfItemsInCart: 1,
+        itemsInCart: [],
+        cartOpen: false
+    }
+    
+    handleAddToCart = (product) => {
+        let itemsInCart = [...this.state.itemsInCart];
+        itemsInCart.push({name: product.name, amount: product.price, description: product.description})
+        this.setState({numberOfItemsInCart: this.state.numberOfItemsInCart + 1, itemsInCart: itemsInCart})
+    }
+
+    toggleCart = () => {
+        if(this.state.cartOpen) {
+            this.setState({cartOpen: false})
+        } else {
+            this.setState({cartOpen: true})
+        }
+    }
+
     productDetails = this.props.products.map((prod, i)=>{
-        return <ProductDetail key={i} product={prod}/>
+        return <ProductDetail key={i} product={prod} clickEvent={this.handleAddToCart}/>
     })
 
     render() {
         return(
             <div className="App">
-                <Header/>
+                <Header 
+                numberOfItemsInCart={this.state.numberOfItemsInCart}
+                 cartOpen={this.state.cartOpen} 
+                 toggleCart={this.toggleCart}
+                 itemsInCart={this.state.itemsInCart}/>
                 <div className="container">
                 <div className="row">
                     <div className="col-md-3">

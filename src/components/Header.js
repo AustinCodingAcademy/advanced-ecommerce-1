@@ -1,8 +1,24 @@
 import React, { Component } from 'react';
+import Cart from "./Cart"
 
 class Header extends Component {
 
+    renderCart = () => {
+        console.log(this.props.numberOfItemsInCart)
+        if (this.props.cartOpen) {
+            return (
+                <Cart itemsInCart={this.props.itemsInCart} numberOfItemsInCart={this.props.numberOfItemsInCart}/>
+            )
+        } else {
+            return null;
+        }
+    }
+
+
+
+
     render() {
+
         return (
             <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
                 <div className="container">
@@ -29,13 +45,13 @@ class Header extends Component {
                                 <a href="#">Contact</a>
                             </li>
                             <li >
-                                <a href="#">Items In Cart (0)</a>
+                                <a href="#" onClick={this.props.toggleCart}>Items In Cart ({this.props.numberOfItemsInCart})</a>
                             </li>
                         </ul>
                     </div>
                  
                 </div>
-              
+                {this.renderCart()}
             </nav>
             );
     }

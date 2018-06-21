@@ -13,4 +13,4 @@ const schema = new mongoose.Schema({
         type: Number
     }
 });
-module.exports = mongoose.model("Order", schema);
+module.exports = mongoose.model("Product", schema);

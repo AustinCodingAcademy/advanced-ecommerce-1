@@ -11,6 +11,7 @@ class ProductDetail extends Component {
             stars.push(<span className="glyphicon glyphicon-star-empty"/>)
         } return stars
     }
+
     render() {
         return (
             <div className="col-sm-4 col-lg-4 col-md-4">
@@ -29,6 +30,7 @@ class ProductDetail extends Component {
                         {this.populateStars()}
                     </p>
                 </div>
+                <button onClick={()=>this.props.clickEvent(this.props.product)}>ADD TO CART</button>
             </div>
         </div>
         )

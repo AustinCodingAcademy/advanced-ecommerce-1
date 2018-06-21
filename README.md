@@ -22,7 +22,7 @@ X Fork, clone, run npm install, npm start, pull request
 #### Server
 * X Create a database for this project
 * X Create a web server for ths project
-* Create routes for products and orders
+* X Create routes for products and orders
 
 
 #### Fetch
@@ -31,7 +31,7 @@ X Fork, clone, run npm install, npm start, pull request
 
 
 ### Add Item To Cart
-* Add a button to ProductDetail "Add To Cart"
+* X Add a button to ProductDetail "Add To Cart"
 * When the button is clicked it should increase the value of the state numberOfItemsInCart by 1
 * The Header should update to show the current value of numberOfItemsInCart
 * How does Header get that information in order to show it?
