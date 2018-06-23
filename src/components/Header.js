@@ -4,10 +4,15 @@ import Cart from "./Cart"
 class Header extends Component {
 
     renderCart = () => {
-        console.log(this.props.numberOfItemsInCart)
         if (this.props.cartOpen) {
             return (
-                <Cart itemsInCart={this.props.itemsInCart} numberOfItemsInCart={this.props.numberOfItemsInCart}/>
+                <Cart 
+                itemsInCart={this.props.itemsInCart} 
+                numberOfItemsInCart={this.props.numberOfItemsInCart}
+                checkout={this.props.checkout}
+                checkoutAvailable={this.props.checkoutAvailable}
+                orderPlaced={this.props.orderPlaced} //t/f
+                placeOrder={this.props.placeOrder}/> //func
             )
         } else {
             return null;

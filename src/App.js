@@ -7,15 +7,17 @@ import Carousel from "./components/Carousel"
 
 class App extends Component{
     state = {
-        numberOfItemsInCart: 1,
+        numberOfItemsInCart: 0,
         itemsInCart: [],
-        cartOpen: false
+        cartOpen: false,
+        checkoutAvailable: false,
+        orderPlaced: false
     }
     
     handleAddToCart = (product) => {
         let itemsInCart = [...this.state.itemsInCart];
         itemsInCart.push({name: product.name, amount: product.price, description: product.description})
-        this.setState({numberOfItemsInCart: this.state.numberOfItemsInCart + 1, itemsInCart: itemsInCart})
+        this.setState({numberOfItemsInCart: this.state.numberOfItemsInCart + 1, itemsInCart: itemsInCart, orderPlaced: false, cartOpen: false})
     }
 
     toggleCart = () => {
@@ -25,6 +27,23 @@ class App extends Component{
             this.setState({cartOpen: true})
         }
     }
+
+    handleCheckout = () => {
+        if(this.state.checkoutAvailable){
+            this.setState({checkoutAvailable: false});
+        } else {
+            this.setState({checkoutAvailable: true});
+        }
+    }
+
+    handlePlaceOrder = () => {
+        if(this.state.orderPlaced) {
+            this.setState({orderPlaced: false});
+        } else {
+            this.setState({orderPlaced: true, itemsInCart:[], numberOfItemsInCart: 0});
+        }
+    }
+
 
     productDetails = this.props.products.map((prod, i)=>{
         return <ProductDetail key={i} product={prod} clickEvent={this.handleAddToCart}/>
@@ -37,7 +56,11 @@ class App extends Component{
                 numberOfItemsInCart={this.state.numberOfItemsInCart}
                  cartOpen={this.state.cartOpen} 
                  toggleCart={this.toggleCart}
-                 itemsInCart={this.state.itemsInCart}/>
+                 itemsInCart={this.state.itemsInCart}
+                 checkout={this.handleCheckout}
+                 checkoutAvailable={this.state.checkoutAvailable}
+                 placeOrder={this.handlePlaceOrder}
+                 orderPlaced={this.state.orderPlaced}/>
                 <div className="container">
                 <div className="row">
                     <div className="col-md-3">
