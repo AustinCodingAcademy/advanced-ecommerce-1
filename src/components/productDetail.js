@@ -1,15 +1,11 @@
 import React from "react";
 export default class ProductDetail extends React.Component {
   
-  state = {
-    stars: <span className="glyphicon glyphicon-star" />,
-    
-  }
-
   getStars(props){
     const stars = []
+    
     for(let i = 0; i < this.props.info.rating; i++){
-      stars.push(this.state.stars)
+      stars.push(<span key={i} className="glyphicon glyphicon-star" />)
     }
     return stars
   }
