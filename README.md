@@ -1,7 +1,10 @@
+#### Intro
+The goal of this class is to confidently say you could build amazon.com. Let's start off smaller and built a light weight ecommerce system. We are focusing on building the front end but you should be able to build the backend server with the skills you have developed so far. First we need to decide what components there should be. Our simple site will list out some hard coded products. Is this realistic? Would a small company only sell the same 10 items in a year. A user needs to be able to add a product to their shopping cart by clicking a button. How do you atually code the act of adding a product to the a digital shopping cart?
+
 #### Setup
 Fork, clone, run npm install, npm start, pull request
 
-#### Client
+#### React components
  * Create a component folder to hold component files
  * Organize this web page into appropriate components
    * ProductDetail
