@@ -1,4 +1,6 @@
 {
+   
+
     "parser": "babel-eslint",
 
     "plugins": [
@@ -6,6 +8,7 @@
         "eslint-plugin-react",
         "react"
     ],
+        
 
     "extends": ["eslint:recommended", "plugin:react/recommended"],
 
@@ -43,6 +46,7 @@
     },
 
     "rules": {
+        "react/prop-types": 0,
         "babel/arrow-parens": [2, "as-needed"],
         "babel/array-bracket-spacing": [2, "always"],
         "babel/generator-star-spacing": [2, {"before": true, "after": false}],
@@ -94,7 +98,7 @@
         "no-catch-shadow": 0,
         "no-class-assign": 2,
         "no-cond-assign": 2,
-        "no-console": 1,
+        "no-console": 0,
         "no-const-assign": 2,
         "no-constant-condition": 2,
         "no-continue": 0,

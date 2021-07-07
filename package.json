@@ -10,6 +10,9 @@
     "react-scripts": "^0.9.5"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
@@ -18,5 +21,6 @@
     "build": "react-scripts build",
     "test": "npm run lint && react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "proxy": "http://localhost:3001"
 }
